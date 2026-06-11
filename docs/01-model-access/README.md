@@ -12,7 +12,7 @@ LLM 是 Agent 的大脑，这一章的目标是从应用开发者视角彻底搞
 
 | # | 文章 | 内容 |
 |---|------|------|
-| 01 | [什么是大语言模型](./llm-basics/01-what-is-llm.md) | LLM 的定义、与传统 NLP 的区别、发展脉络 |
+| 01 | [LLM 概述](./llm-basics/01-llm-overview.md) | LLM 的定义、与传统 NLP 的区别、发展脉络 |
 | 02 | [Token 与 Embedding](./llm-basics/02-token-and-embedding.md) | 文本如何变成数字、语义向量、为什么 Token 是一切的基础 |
 | 03 | [Transformer 架构直觉](./llm-basics/03-transformer-intuition.md) | 注意力机制、自回归生成、位置编码——只讲直觉不推公式 |
 | 04 | [模型训练流程概览](./llm-basics/04-training-pipeline.md) | 预训练 → 指令微调(SFT) → 对齐(RLHF)，知道模型是怎么来的 |
