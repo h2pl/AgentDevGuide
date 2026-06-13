@@ -18,23 +18,11 @@
 
 **大语言模型是一类基于深度神经网络（主要是 Transformer 架构）的语言模型，通过在海量文本数据上进行预训练，获得了通用的语言理解和生成能力。**
 
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/dvgodoy/dl-visuals/Transformers/full_transformer.png" alt="Transformer 完整架构" width="80%"/>
-  <br/>
-  <em>Transformer 架构图 — 现代 LLM 的基石（<a href="https://github.com/dvgodoy/dl-visuals" target="_blank">dvgodoy / CC BY</a>）</em>
-</p>
-
 拆开来理解：
 
 ### "大"（Large）
 
 指的是模型参数量巨大。GPT-3 有 1750 亿参数，GPT-4 的参数量未公开但估计在万亿级别。参数可以理解为模型"记忆"和"推理"的载体——参数越多，模型能学到的语言模式就越复杂。
-
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/dvgodoy/dl-visuals/Transformers/stacked_layers.png" alt="堆叠的 Transformer 层" width="65%"/>
-  <br/>
-  <em>多层 Transformer 堆叠 — "大"不仅体现在参数量，也体现在网络的深度（<a href="https://github.com/dvgodoy/dl-visuals" target="_blank">dvgodoy / CC BY</a>）</em>
-</p>
 
 但"大"的意义不只是"更强"，而是**质变**。研究人员发现了一个令人惊讶的现象：当模型参数量跨过某个阈值后，它会突然具备小模型完全没有的能力——比如做数学推理、写代码、理解幽默。这被称为**涌现能力（Emergent Abilities）**，就像水温降到 0 度突然结冰一样，量变引发了质变。
 
@@ -49,12 +37,6 @@
 ### "语言模型"（Language Model）
 
 本质上是一个概率模型——给定一段文本，预测下一个最可能出现的词（token）。这个看似简单的任务，在足够大的模型和足够多的数据上训练后，涌现出了令人惊讶的能力。
-
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/dvgodoy/dl-visuals/Attention/attention.png" alt="注意力机制示意图" width="75%"/>
-  <br/>
-  <em>注意力机制（Attention）— 让模型在预测每个 token 时关注上下文中的相关信息（<a href="https://github.com/dvgodoy/dl-visuals" target="_blank">dvgodoy / CC BY</a>）</em>
-</p>
 
 <p align="center">
   <img src="../../assets/01-llm-basics/autoregressive.svg" alt="自回归生成示意图" width="90%"/>
