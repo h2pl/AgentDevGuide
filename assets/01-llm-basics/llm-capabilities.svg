@@ -31,32 +31,38 @@
   <rect x="25" y="107" width="350" height="10" fill="url(#greenGrad)"/>
   <text x="200" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">✅ 核心能力</text>
 
-  <!-- Item 1: Text Understanding & Generation -->
-  <rect x="40" y="130" width="320" height="60" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="55" y="152" font-size="13" font-weight="bold" fill="#166534">文本理解与生成</text>
-  <text x="55" y="170" font-size="11" fill="#15803d">摘要 · 翻译 · 润色 · 扩写 · 风格改写</text>
-  <text x="55" y="186" font-size="10" fill="#4ade80">质量远超传统 NLP 方法</text>
+  <!-- Item 1: Language Understanding & Generation -->
+  <rect x="40" y="130" width="320" height="52" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="55" y="149" font-size="13" font-weight="bold" fill="#166534">语言理解与生成</text>
+  <text x="55" y="166" font-size="11" fill="#15803d">摘要 · 翻译 · 润色 · 扩写 · 风格改写</text>
+  <text x="55" y="178" font-size="10" fill="#4ade80">质量远超传统 NLP 方法</text>
 
-  <!-- Item 2: Code Generation -->
-  <rect x="40" y="198" width="320" height="60" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="55" y="220" font-size="13" font-weight="bold" fill="#166534">代码生成与分析</text>
-  <text x="55" y="238" font-size="11" fill="#15803d">编写代码 · 定位 Bug · 写单元测试</text>
-  <text x="55" y="254" font-size="10" fill="#4ade80">目前商业价值最大的领域之一</text>
+  <!-- Item 2: Knowledge QA & Reasoning -->
+  <rect x="40" y="188" width="320" height="52" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="55" y="207" font-size="13" font-weight="bold" fill="#166534">知识问答与推理</text>
+  <text x="55" y="224" font-size="11" fill="#15803d">多步推理 · 数学 · 逻辑 · 知识运用</text>
+  <text x="55" y="236" font-size="10" fill="#4ade80">推理模型（o 系列、DeepSeek-R1）使质变</text>
 
-  <!-- Item 3: Logical Reasoning -->
-  <rect x="40" y="266" width="320" height="60" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="55" y="288" font-size="13" font-weight="bold" fill="#166534">逻辑推理</text>
-  <text x="55" y="306" font-size="11" fill="#15803d">数学 · 规划 · 多步推理</text>
-  <text x="55" y="322" font-size="10" fill="#4ade80">推理模型（o 系列、DeepSeek-R1）使质变</text>
+  <!-- Item 3: Instruction Following & Planning -->
+  <rect x="40" y="246" width="320" height="52" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="55" y="265" font-size="13" font-weight="bold" fill="#166534">指令遵循与任务规划</text>
+  <text x="55" y="282" font-size="11" fill="#15803d">理解复杂指令 · 拆解执行步骤</text>
+  <text x="55" y="294" font-size="10" fill="#4ade80">Agent 场景的核心能力</text>
 
-  <!-- Item 4: In-context Learning -->
-  <rect x="40" y="334" width="320" height="60" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="55" y="356" font-size="13" font-weight="bold" fill="#166534">上下文学习</text>
-  <text x="55" y="374" font-size="11" fill="#15803d">无需重新训练，Prompt 给示例就能学会</text>
-  <text x="55" y="390" font-size="10" fill="#4ade80">LLM 灵活性的根源</text>
+  <!-- Item 4: Code Generation -->
+  <rect x="40" y="304" width="320" height="52" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="55" y="323" font-size="13" font-weight="bold" fill="#166534">代码生成与分析</text>
+  <text x="55" y="340" font-size="11" fill="#15803d">编写代码 · 定位 Bug · 写单元测试</text>
+  <text x="55" y="352" font-size="10" fill="#4ade80">目前商业价值最大的领域之一</text>
+
+  <!-- Item 5: Content Creation -->
+  <rect x="40" y="362" width="320" height="52" rx="6" fill="#fff" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="55" y="381" font-size="13" font-weight="bold" fill="#166534">内容创作与创意</text>
+  <text x="55" y="398" font-size="11" fill="#15803d">写文章 · 头脑风暴 · 营销文案</text>
+  <text x="55" y="410" font-size="10" fill="#4ade80">常能提供意想不到的角度</text>
 
   <!-- Bottom division -->
-  <line x1="200" y1="408" x2="200" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="200" y1="420" x2="200" y2="450" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
 
   <!-- ===== RIGHT SIDE: Limitations ===== -->
   <rect x="385" y="75" width="350" height="390" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2" filter="url(#shadow)"/>
