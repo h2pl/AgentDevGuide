@@ -11,14 +11,7 @@
 
 ---
 
-## 学习路线
-
-<div align="center">
-<img src="./assets/roadmap.svg" alt="AgentDevGuide 学习路线图" width="100%"/>
-</div>
-
 ---
-
 ## 目录
 
 | # | 章节 | 核心问题 | 产出 |
@@ -42,8 +35,6 @@
 
 ## 参考资料
 
-本指南参考了以下权威来源，不重复造轮子，只提供系统化路径：
-
 - [O'Reilly — The AI Agents Stack (2026)](https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/) — 6 层架构参考
 - [AI Agent Architecture — MCP/Skills/Agent 三层模型](https://shuji-bonji.github.io/ai-agent-architecture/) — 协议分层参考
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
@@ -52,19 +43,4 @@
 
 ---
 
-## 进度
 
-- [ ] 00 — 生态认知
-- [x] 01 — LLM 基础
-- [x] 02 — 模型接入
-- [ ] 03 — Prompt 工程
-- [ ] 04 — 工具调用
-- [ ] 05 — Agent 循环 ⭐
-- [ ] 06 — 知识检索
-- [ ] 07 — 框架与编排
-- [ ] 08 — 记忆与上下文
-- [ ] 09 — 扩展协议与标准
-- [ ] 10 — 多 Agent 协作
-- [ ] 11 — 评测与可观测
-- [ ] 12 — 安全与治理
-- [ ] 13 — 产品交付 🎯
