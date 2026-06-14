@@ -8,10 +8,14 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
 </div>
+## 学习路线
+
+<div align="center">
+<img src="./assets/roadmap.svg" alt="AgentDevGuide 学习路线图" width="100%"/>
+</div>
 
 ---
 
----
 ## 目录
 
 | # | 章节 | 核心问题 | 产出 |
