@@ -234,7 +234,7 @@ vec("北京") - vec("中国") + vec("法国") ≈ vec("巴黎")
 <p align="center">
   <img src="../../assets/01-llm-basics/word-embedding.png" alt="词嵌入向量映射" width="90%"/>
   <br/>
-  <em>Embedding 将词汇映射为固定长度的数值向量，语义相近的词在向量空间中距离更近</em>
+  <em>词嵌入向量空间映射</em>
 </p>
 
 ### 语义相似度
@@ -277,7 +277,7 @@ LLM 基于提供的资料生成回答
 <p align="center">
   <img src="../../assets/01-llm-basics/rag-workflow.png" alt="RAG 检索增强生成工作流程" width="90%"/>
   <br/>
-  <em>RAG 三阶段：离线索引（文档→向量数据库）→ 在线检索（问题编码为向量，搜索最相关的 Top-K 文档块）→ 生成（检索结果 + 原始问题一起输入 LLM）</em>
+  <em>RAG 三阶段工作流程</em>
 </p>
 
 Embedding 还有更多应用场景：
