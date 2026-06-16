@@ -54,6 +54,12 @@
 
 *以下为实际价格（每百万 Token，美元，数据来自 [LLM Stats](https://llm-stats.com/)）：*
 
+<p align="center">
+  <img src="../../assets/02-model-access/model-cost-comparison.png" alt="OpenAI API 价格演变" width="90%"/>
+  <br/>
+  <em>OpenAI API 价格演变（2023-2026）</em>
+</p>
+
 | 模型 | 输入价格 | 输出价格 | 速度 (tok/s) | 定位 |
 |------|---------|---------|-------------|------|
 | Claude Opus 4.8 | $5.00 | $25.00 | 53 | 旗舰全能 |

@@ -67,6 +67,12 @@ print(response.choices[0].message.content)
 
 在 API 中，只需要加上 `stream=True`：
 
+<p align="center">
+  <img src="../../assets/02-model-access/api-streaming-flow.png" alt="流式输出时序图" width="90%"/>
+  <br/>
+  <em>流式输出（Streaming）完整时序</em>
+</p>
+
 ```python
 response = client.chat.completions.create(
     model="gpt-4o",

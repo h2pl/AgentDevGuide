@@ -25,6 +25,13 @@
 取值范围通常是 `0.0` 到 `2.0`（有些模型上限是 1.0）。
 
 - **底层原理**：LLM 每次预测下一个词时，会计算出一个概率分布。Temperature 越低，模型越倾向于选择概率最高的那个词；Temperature 越高，模型越可能选择概率较低的词。
+
+<p align="center">
+  <img src="../../assets/02-model-access/temperature-distribution.png" alt="Temperature 对概率分布的影响" width="90%"/>
+  <br/>
+  <em>Temperature 对概率分布的影响</em>
+</p>
+
 - **`Temperature = 0.0`**：**绝对严谨**。模型几乎每次都会给出完全相同的回答。
   - **适用场景**：代码生成、数据提取（JSON 格式化）、数学计算、逻辑推理、RAG 问答。
   - **Agent 开发建议**：在 Agent 的核心决策循环（如判断下一步调用什么工具）中，**永远把 Temperature 设为 0**。
