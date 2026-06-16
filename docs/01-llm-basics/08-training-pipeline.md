@@ -117,6 +117,12 @@ RLHF（Reinforcement Learning from Human Feedback）的核心流程分三步：
 
 **第 3 步：用强化学习优化 LLM**。让 LLM 生成回答，奖励模型给回答打分，LLM 根据分数调整自己的生成策略（使用 PPO 算法）。高分行为被强化，低分行为被抑制。同时加一个约束：不能偏离 SFT 模型太远，防止为了讨好评分器而说出荒谬的话。
 
+<p align="center">
+  <img src="../../assets/01-llm-basics/rlhf-pipeline.png" alt="RLHF 训练流程" width="90%"/>
+  <br/>
+  <em>RLHF 三阶段：SFT → 奖励模型 → PPO 策略优化</em>
+</p>
+
 ### DPO：更简单、更稳定的替代方案
 
 DPO（Direct Preference Optimization）是 2023 年提出的对齐方法，现在已经成为主流选择。它**跳过了奖励模型和强化学习**，直接从偏好数据优化 LLM：
@@ -165,6 +171,12 @@ DPO:  偏好数据 → 直接优化LLM（一步训练，简单稳定）
 - **原理**：不修改原始模型的任何参数，而是给每个 Transformer Block 的注意力矩阵旁加一个小的"适配器"（低秩矩阵）。训练只更新这些适配器，原始参数冻结不动。
 - **成本对比**：全量微调需要更新所有参数（几十亿到上百亿），LoRA 只更新适配器（几百万参数），训练成本降 90% 以上。
 - **QLoRA**：LoRA + 模型量化（用 4bit 精度存储模型），进一步降低到可以在消费级 GPU（如 RTX 3090）上运行。
+
+<p align="center">
+  <img src="../../assets/01-llm-basics/lora-architecture.png" alt="LoRA 低秩适配原理" width="90%"/>
+  <br/>
+  <em>LoRA 冻结原始权重，仅训练低秩适配器</em>
+</p>
 
 **LoRA 的工作流**：训练适配器 → 合并适配器到原始模型 → 得到一个针对你特定任务优化的模型，同时保留通用能力。
 

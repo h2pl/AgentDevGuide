@@ -37,6 +37,12 @@
 输出向量 → 传给下一个 Block
 ```
 
+<p align="center">
+  <img src="../../assets/01-llm-basics/transformer-block.png" alt="Transformer Block 结构" width="90%"/>
+  <br/>
+  <em>Transformer Block 内部结构</em>
+</p>
+
 **两个关键角色的分工**：多头自注意力决定**看向哪里**（哪些 Token 之间有关联），前馈网络（FFN）决定**怎么处理**这些关联信息。它们通过残差连接（Add）串联，保证信息不会在层层传递中丢失。
 
 一个 GPT-4 级别的模型大约有 100+ 个这样的 Block。输入文本经过 Block 1 → Block 2 → ... → Block 100，每一层都在上一层的理解基础上进一步提炼语义。这就是为什么大模型理解能力更强——它有更多的"消化层次"。
@@ -54,6 +60,12 @@
 - **V（Value/值）**：每个 Token 实际携带的信息内容
 
 拿 Q 去和所有 K 匹配，匹配度越高就越关注那个 Token 的 V。
+
+<p align="center">
+  <img src="../../assets/01-llm-basics/self-attention-qkv.png" alt="自注意力 Q/K/V 计算流程" width="90%"/>
+  <br/>
+  <em>自注意力 Q/K/V 计算流程</em>
+</p>
 
 ### 数值计算示例
 
@@ -173,6 +185,12 @@ Transformer 一次性处理所有 Token，这带来了一个天然缺陷：**它
 3. 用自己的 Q 和缓存的 K/V 计算注意力
 
 每一步的计算量从 O(N²) 降低到 O(N)，推理速度大幅提升。
+
+<p align="center">
+  <img src="../../assets/01-llm-basics/kv-cache.png" alt="KV Cache 缓存原理" width="90%"/>
+  <br/>
+  <em>KV Cache 避免重复计算历史 K/V</em>
+</p>
 
 **对 Agent 开发者的实际影响**：
 
