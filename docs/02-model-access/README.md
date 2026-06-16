@@ -15,5 +15,6 @@
 | 05 | [深度思考与推理能力](./05-reasoning-models.md) | `reasoning_effort` 参数调用、成本权衡、Agent 规划层最佳实践 |
 | 06 | [本地部署实战](./06-local-deployment.md) | Ollama/vLLM 本地跑模型、量化（Q4/Q8）、GPU 需求与性能 |
 | 07 | [关键参数与调优](./07-key-parameters.md) | temperature / top_p / max_tokens 的实际效果、Agent 调参模板 |
+| 08 | [微调实战指南](./08-finetuning-guide.md) | 微调 vs Prompt vs RAG 决策、LoRA/QLoRA 实操、训练数据准备、常见坑 |
 
 > 学完本章后，请继续阅读 [03 — Prompt 工程](../03-prompt-engineering/README.md)，学习如何通过文字精确控制模型行为。
