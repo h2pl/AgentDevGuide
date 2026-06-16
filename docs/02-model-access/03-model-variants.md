@@ -12,7 +12,7 @@
 - [总结](#总结)
 - [参考链接](#参考链接)
 
-你好，我是江小湖。[主流模型对比与选型](./01-model-comparison.md)讲了不同厂商之间的横向对比。[调用方式与 API 实战](./02-api-calling.md)让你已经能跑通第一个 `hello world` 了。但实际开发中你还会遇到另一个问题：**同一个厂商的模型有好几个版本**——Claude 有 Haiku、Sonnet、Opus，GPT 有 4o-mini 和 4o，DeepSeek 有 V4-Flash 和 V4-Pro。
+你好，我是江小湖。[主流模型对比与选型：能力、成本与开源三维度决策](./01-model-comparison.md)讲了不同厂商之间的横向对比。[LLM API 调用实战：基础调用、流式输出与多模型统一路由](./02-api-calling.md)让你已经能跑通第一个 `hello world` 了。但实际开发中你还会遇到另一个问题：**同一个厂商的模型有好几个版本**——Claude 有 Haiku、Sonnet、Opus，GPT 有 4o-mini 和 4o，DeepSeek 有 V4-Flash 和 V4-Pro。
 
 这些不同尺寸/变体的模型到底有什么区别？什么时候该用小的、什么时候必须用大的？这篇从 Agent 开发的实际需求出发，给你一套可操作的决策框架。
 
