@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="sysGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#6366F1"/></linearGradient>
+    <linearGradient id="userGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#10B981"/></linearGradient>
+    <linearGradient id="asstGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D97706"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" rx="12" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">三种消息角色与 LLM 交互流程</text>
+
+  <!-- Left: Developer -->
+  <rect x="40" y="70" width="160" height="60" rx="8" fill="url(#sysGrad)" filter="url(#shadow)"/>
+  <text x="120" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="white">开发者</text>
+  <text x="120" y="118" text-anchor="middle" font-size="12" fill="#C7D2FE">编写 System Prompt</text>
+
+  <!-- Center: LLM -->
+  <rect x="300" y="180" width="200" height="80" rx="40" fill="#1E293B" filter="url(#shadow)"/>
+  <text x="400" y="215" text-anchor="middle" font-size="18" font-weight="bold" fill="white">LLM</text>
+  <text x="400" y="240" text-anchor="middle" font-size="12" fill="#94A3B8">逐 Token 生成回答</text>
+
+  <!-- Right: User -->
+  <rect x="600" y="70" width="160" height="60" rx="8" fill="url(#userGrad)" filter="url(#shadow)"/>
+  <text x="680" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="white">用户</text>
+  <text x="680" y="118" text-anchor="middle" font-size="12" fill="#A7F3D0">发送 User Prompt</text>
+
+  <!-- Arrow: Developer → LLM -->
+  <path d="M160 130 L300 200" stroke="#6366F1" stroke-width="2.5" fill="none" marker-end="url(#arrowSys)"/>
+  <defs><marker id="arrowSys" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#6366F1"/></marker></defs>
+  <rect x="170" y="145" width="120" height="28" rx="4" fill="#EEF2FF"/>
+  <text x="230" y="164" text-anchor="middle" font-size="11" fill="#4F46E5">system: 规则/角色</text>
+
+  <!-- Arrow: User → LLM -->
+  <path d="M640 130 L500 200" stroke="#10B981" stroke-width="2.5" fill="none" marker-end="url(#arrowUser)"/>
+  <defs><marker id="arrowUser" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#10B981"/></marker></defs>
+  <rect x="510" y="145" width="120" height="28" rx="4" fill="#ECFDF5"/>
+  <text x="570" y="164" text-anchor="middle" font-size="11" fill="#059669">user: 问题/指令</text>
+
+  <!-- Arrow: LLM → Output -->
+  <path d="M400 260 L400 310" stroke="#F59E0B" stroke-width="2.5" fill="none" marker-end="url(#arrowOut)"/>
+  <defs><marker id="arrowOut" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#F59E0B"/></marker></defs>
+
+  <!-- Output box -->
+  <rect x="250" y="310" width="300" height="50" rx="8" fill="url(#asstGrad)" filter="url(#shadow)"/>
+  <text x="400" y="336" text-anchor="middle" font-size="15" font-weight="bold" fill="white">assistant: 模型回复</text>
+  <text x="400" y="354" text-anchor="middle" font-size="12" fill="#FEF3C7">成为下一轮的上下文</text>
+
+  <!-- Bottom: feedback loop -->
+  <path d="M400 360 Q400 395 600 395 Q760 395 760 130" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,4" fill="none" marker-end="url(#arrowLoop)"/>
+  <defs><marker id="arrowLoop" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#94A3B8"/></marker></defs>
+  <text x="720" y="310" font-size="11" fill="#64748B" transform="rotate(-90 720 310)">多轮对话循环</text>
+
+  <!-- Weight labels -->
+  <rect x="40" y="380" width="12" height="12" rx="2" fill="#6366F1"/>
+  <text x="60" y="391" font-size="12" fill="#475569">System: 权重最高（模型优先遵循）</text>
+  <rect x="300" y="380" width="12" height="12" rx="2" fill="#10B981"/>
+  <text x="320" y="391" font-size="12" fill="#475569">User: 中等权重（模型据此回答）</text>
+  <rect x="560" y="380" width="12" height="12" rx="2" fill="#F59E0B"/>
+  <text x="580" y="391" font-size="12" fill="#475569">Assistant: 参考（保持风格一致）</text>
+</svg>
