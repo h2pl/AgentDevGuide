@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="700" height="520" rx="12" fill="#F8FAFC"/>
+
+  <text x="350" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">System Prompt 四段式结构</text>
+  <text x="350" y="54" text-anchor="middle" font-size="13" fill="#64748B">角色 → 规则 → 边界 → 输出：从"是谁"到"怎么说"的完整定义</text>
+
+  <!-- Block 1: Role -->
+  <rect x="50" y="80" width="600" height="95" rx="10" fill="white" stroke="#FECACA" stroke-width="2" filter="url(#sh)"/>
+  <rect x="50" y="80" width="8" height="95" rx="4" fill="#DC2626"/>
+  <rect x="75" y="88" width="120" height="26" rx="6" fill="#DC2626"/>
+  <text x="135" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="white">① 角色定义</text>
+  <text x="210" y="106" font-size="12" fill="#64748B">Who — Agent 是谁</text>
+  <text x="75" y="135" font-size="12" fill="#334155">• 具体领域：不是"程序员"，而是"Python 后端 + FastAPI + PostgreSQL"</text>
+  <text x="75" y="155" font-size="12" fill="#334155">• 能力范围：明确擅长什么、不擅长什么</text>
+  <text x="75" y="175" font-size="12" fill="#334155">• 语气基调：直接 / 温和 / 幽默 — 影响用户对 Agent 的信任感</text>
+
+  <!-- Block 2: Rules -->
+  <rect x="50" y="190" width="600" height="95" rx="10" fill="white" stroke="#FDE68A" stroke-width="2" filter="url(#sh)"/>
+  <rect x="50" y="190" width="8" height="95" rx="4" fill="#D97706"/>
+  <rect x="75" y="198" width="120" height="26" rx="6" fill="#D97706"/>
+  <text x="135" y="216" text-anchor="middle" font-size="13" font-weight="bold" fill="white">② 行为规则</text>
+  <text x="210" y="216" font-size="12" fill="#64748B">What & How — 能做 / 必须做 / 禁止做</text>
+  <text x="75" y="245" font-size="12" fill="#334155">• 优先做什么：如"优先指出逻辑缺陷和安全问题"</text>
+  <text x="75" y="265" font-size="12" fill="#334155">• 必须做什么：如"每个问题附带修改建议"</text>
+  <text x="75" y="285" font-size="12" fill="#334155">• 禁止做什么：如"不猜测不确定的领域"</text>
+
+  <!-- Block 3: Guardrails -->
+  <rect x="50" y="300" width="600" height="95" rx="10" fill="white" stroke="#BFDBFE" stroke-width="2" filter="url(#sh)"/>
+  <rect x="50" y="300" width="8" height="95" rx="4" fill="#2563EB"/>
+  <rect x="75" y="308" width="120" height="26" rx="6" fill="#2563EB"/>
+  <text x="135" y="326" text-anchor="middle" font-size="13" font-weight="bold" fill="white">③ 边界约束</text>
+  <text x="210" y="326" font-size="12" fill="#64748B">Guardrails — 安全 / 能力 / 业务三层防线</text>
+  <text x="75" y="355" font-size="12" fill="#334155">• 安全边界（最高优先级）：不执行破坏性操作、不泄露密钥</text>
+  <text x="75" y="375" font-size="12" fill="#334155">• 能力边界：不确定时说"我不确定"、不编造数据</text>
+  <text x="75" y="395" font-size="12" fill="#334155">• 业务边界：金额 &gt; ¥10000 需人工审核等场景规则</text>
+
+  <!-- Block 4: Output -->
+  <rect x="50" y="410" width="600" height="95" rx="10" fill="white" stroke="#BBF7D0" stroke-width="2" filter="url(#sh)"/>
+  <rect x="50" y="410" width="8" height="95" rx="4" fill="#16A34A"/>
+  <rect x="75" y="418" width="120" height="26" rx="6" fill="#16A34A"/>
+  <text x="135" y="436" text-anchor="middle" font-size="13" font-weight="bold" fill="white">④ 输出规范</text>
+  <text x="210" y="436" font-size="12" fill="#64748B">Output — Agent 怎么表达</text>
+  <text x="75" y="465" font-size="12" fill="#334155">• 结构：TL;DR 开头 → 详细内容 → 参考链接</text>
+  <text x="75" y="485" font-size="12" fill="#334155">• 格式：Markdown 表格优先、代码块标注语言、长度限制</text>
+  <text x="75" y="505" font-size="12" fill="#334155">• 风格：用"你"称呼用户、正面建议优于负面批评</text>
+</svg>

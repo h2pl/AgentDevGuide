@@ -5,6 +5,7 @@
 ## 目录
 
 - [System Prompt 的本质](#system-prompt-的本质)
+- [System Prompt 的实现原理](#system-prompt-的实现原理)
 - [结构化 System Prompt 设计](#结构化-system-prompt-设计)
   - [四段式结构](#四段式结构)
   - [用 XML 标签组织复杂 Prompt](#用-xml-标签组织复杂-prompt)
@@ -33,11 +34,41 @@
 
 **System Prompt 不是 User Prompt 的"升级版"——它解决的是另外的问题。** User Prompt 解决"这次要做什么"，System Prompt 解决"在这个 Agent 的世界里，什么是允许的、什么是期望的、什么是禁止的"。
 
+## System Prompt 的实现原理
+
+**System Prompt 的"特殊地位"是怎么实现的？** 很多人以为 System Prompt 有一条"特殊通道"——模型会优先读取、单独处理。事实并非如此。从底层看，System Prompt 和你输入的每句话一样，最终都被切成 Token（词元），拼成一条长序列，统一送进模型。
+
+```python
+# API 调用时的 messages 数组
+messages = [
+    {"role": "system", "content": "你是代码审查助手..."},  # System Prompt
+    {"role": "user",   "content": "帮我看看这段代码"},      # User Prompt
+]
+
+# 模型实际看到的 Token 序列（简化示意）
+# [SYSTEM] 你 是 代码 审查 助手 ... [USER] 帮 我 看看 这段 代码
+# ↑ 角色标记 Token     ↑ System 内容 Token     ↑ 角色标记   ↑ User 内容 Token
+```
+
+**没有"特殊通道"，但 System Prompt 的权重确实更高。** 这来自三个原因：
+
+| 原因 | 机制 | 影响 |
+|------|------|------|
+| **位置优势** | Transformer 的自注意力机制（Self-Attention）对序列开头的内容分配更高权重——学术论文称之为 "Lost in the Middle" 效应 | System Prompt 在最前面，天然获得更高注意力 |
+| **RLHF 对齐训练** | 模型在人类反馈强化学习（Reinforcement Learning from Human Feedback）阶段被反复训练"遵循 System 指令" | 模型学会了：system 角色的内容 = 必须遵守的规则 |
+| **平台保护** | API 提供商不会截断或修改 System Prompt，而长对话中的早期 User 消息可能被滑动窗口裁剪 | System Prompt 始终完整保留在上下文窗口中 |
+
 <p align="center">
-  <img src="../../assets/03-prompt-engineering/system-prompt-structure.png" alt="System Prompt 四段式结构" width="90%"/>
+  <img src="../../assets/03-prompt-engineering/system-prompt-mechanism.svg" alt="System Prompt 实现原理" width="90%"/>
   <br/>
-  <em>System Prompt 四段式结构：角色 → 规则 → 边界 → 输出</em>
+  <em>System Prompt 实现原理：API 调用 → Token 序列拼接 → LLM 统一处理</em>
 </p>
+
+理解了这一点，很多设计原则就有了底层解释：
+
+- **为什么 System Prompt 要放在最前面？** 因为 Transformer 对序列开头的注意力权重最高
+- **为什么不要用 System Prompt 传递大段知识库？** 因为它和所有内容共享上下文窗口，塞太多内容会稀释注意力
+- **为什么 System Prompt 能被越狱（Jailbreak）？** 因为本质上它只是一段 Token，和用户消息没有物理隔离——聪明的 Prompt 注入可以通过角色覆盖来绕过
 
 ## 结构化 System Prompt 设计
 
@@ -60,12 +91,6 @@
 ```
 
 一个完整的四段式 System Prompt 示例：
-
-<p align="center">
-  <img src="../../assets/03-prompt-engineering/prompt-engineering-workflow.png" alt="Prompt 工程工作流程" width="90%"/>
-  <br/>
-  <em>Prompt 工程工作流程：从设计到测试的迭代循环</em>
-</p>
 
 ```python
 system_prompt = """## 角色
@@ -264,6 +289,7 @@ def get_system_prompt(version: str = "v2.0") -> str:
 这篇文章建立了 System Prompt 的系统设计方法：
 
 - **本质**：System Prompt 是元指令，定义 Agent 的角色、边界和规范——与 User Prompt 在不同层级
+- **原理**：System Prompt 和用户消息一样被切成 Token 拼接后送入模型，没有"特殊通道"。权重更高来自位置优势、RLHF 训练和平台保护
 - **结构**：用四段式（角色 → 行为规则 → 边界约束 → 输出规范）+ XML 标签组织复杂 Prompt。结构化 = 可维护
 - **角色**：具体领域 + 能力范围 + 语气基调。越具体越有效，"AI 助手"等于没有角色
 - **边界**：安全边界 > 能力边界 > 业务边界。每条边界有明确的触发条件和响应方式

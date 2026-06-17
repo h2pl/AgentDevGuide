@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="sh4"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+    <marker id="arw" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#64748B"/></marker>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#F8FAFC"/>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">System Prompt 实现原理：本质上也是 Token 序列</text>
+  <text x="450" y="54" text-anchor="middle" font-size="13" fill="#64748B">System / User / Assistant 消息拼接后统一送入模型，没有"特殊通道"</text>
+
+  <!-- Step 1: API call -->
+  <rect x="30" y="75" width="250" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="30" y="75" width="250" height="32" rx="10" fill="#EEF2FF"/>
+  <rect x="30" y="97" width="250" height="10" fill="#EEF2FF"/>
+  <text x="155" y="97" text-anchor="middle" font-size="14" font-weight="bold" fill="#4F46E5">① API 调用 (你写的)</text>
+
+  <text x="45" y="130" font-size="11" fill="#334155" font-family="'Courier New', monospace">messages = [</text>
+  <rect x="50" y="138" width="220" height="20" rx="3" fill="#FEE2E2"/>
+  <text x="60" y="153" font-size="11" fill="#7F1D1D" font-family="'Courier New', monospace">  {"system": "你是客服助手"}</text>
+  <rect x="50" y="162" width="220" height="20" rx="3" fill="#DCFCE7"/>
+  <text x="60" y="177" font-size="11" fill="#166534" font-family="'Courier New', monospace">  {"user": "退货怎么操作"}</text>
+  <rect x="50" y="186" width="220" height="20" rx="3" fill="#FEF3C7"/>
+  <text x="60" y="201" font-size="11" fill="#78350F" font-family="'Courier New', monospace">  {"assistant": "7天无理由..."}</text>
+  <rect x="50" y="210" width="220" height="20" rx="3" fill="#DCFCE7"/>
+  <text x="60" y="225" font-size="11" fill="#166534" font-family="'Courier New', monospace">  {"user": "帮我退耳机"}</text>
+  <text x="45" y="253" font-size="11" fill="#334155" font-family="'Courier New', monospace">]</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M285 175 L318 175" stroke="#64748B" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="300" y="168" text-anchor="middle" font-size="10" fill="#94A3B8">拼接</text>
+
+  <!-- Step 2: Token sequence -->
+  <rect x="320" y="75" width="250" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="320" y="75" width="250" height="32" rx="10" fill="#FEF3C7"/>
+  <rect x="320" y="97" width="250" height="10" fill="#FEF3C7"/>
+  <text x="445" y="97" text-anchor="middle" font-size="14" font-weight="bold" fill="#B45309">② Token 序列 (模型看到的)</text>
+
+  <text x="335" y="128" font-size="11" fill="#64748B">API 在拼接时插入角色标记 Token：</text>
+
+  <rect x="335" y="138" width="220" height="18" rx="3" fill="#FEE2E2"/>
+  <text x="345" y="152" font-size="10" fill="#7F1D1D" font-family="'Courier New', monospace">&lt;|system|&gt; 你 是 客服 助手 &lt;|end|&gt;</text>
+
+  <rect x="335" y="162" width="220" height="18" rx="3" fill="#DCFCE7"/>
+  <text x="345" y="176" font-size="10" fill="#166534" font-family="'Courier New', monospace">&lt;|user|&gt; 退货 怎么 操作 &lt;|end|&gt;</text>
+
+  <rect x="335" y="186" width="220" height="18" rx="3" fill="#FEF3C7"/>
+  <text x="345" y="200" font-size="10" fill="#78350F" font-family="'Courier New', monospace">&lt;|assistant|&gt; 7 天 无理由 ... &lt;|end|&gt;</text>
+
+  <rect x="335" y="210" width="220" height="18" rx="3" fill="#DCFCE7"/>
+  <text x="345" y="224" font-size="10" fill="#166534" font-family="'Courier New', monospace">&lt;|user|&gt; 帮我 退 耳机 &lt;|end|&gt;</text>
+
+  <text x="445" y="260" text-anchor="middle" font-size="11" fill="#475569">一条连续的 Token 流，没有"特殊通道"</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M575 175 L608 175" stroke="#64748B" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="590" y="168" text-anchor="middle" font-size="10" fill="#94A3B8">送入</text>
+
+  <!-- Step 3: LLM -->
+  <rect x="610" y="75" width="260" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="610" y="75" width="260" height="32" rx="10" fill="#1E293B"/>
+  <rect x="610" y="97" width="260" height="10" fill="#1E293B"/>
+  <text x="740" y="97" text-anchor="middle" font-size="14" font-weight="bold" fill="white">③ LLM 处理</text>
+
+  <text x="625" y="128" font-size="12" fill="#334155">Transformer 对整条 Token 序列</text>
+  <text x="625" y="148" font-size="12" fill="#334155">做 <tspan font-weight="bold">自注意力计算</tspan></text>
+
+  <!-- Attention visualization -->
+  <rect x="625" y="165" width="230" height="70" rx="6" fill="#F1F5F9"/>
+  <text x="740" y="185" text-anchor="middle" font-size="11" fill="#64748B">System 部分的 Token</text>
+  <rect x="635" y="195" width="60" height="16" rx="3" fill="#DC2626" opacity="0.8"/>
+  <rect x="700" y="195" width="40" height="16" rx="3" fill="#F59E0B" opacity="0.5"/>
+  <rect x="745" y="195" width="50" height="16" rx="3" fill="#F59E0B" opacity="0.5"/>
+  <rect x="800" y="195" width="45" height="16" rx="3" fill="#16A34A" opacity="0.8"/>
+  <text x="665" y="230" text-anchor="middle" font-size="9" fill="#DC2626">高注意力</text>
+  <text x="820" y="230" text-anchor="middle" font-size="9" fill="#16A34A">高注意力</text>
+
+  <text x="625" y="260" font-size="11" fill="#475569">逐 Token 生成回复</text>
+
+  <!-- Bottom: Key insights -->
+  <rect x="30" y="300" width="840" height="195" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#sh4)"/>
+  <rect x="30" y="300" width="840" height="32" rx="10" fill="#F1F5F9"/>
+  <rect x="30" y="322" width="840" height="10" fill="#F1F5F9"/>
+  <text x="450" y="322" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">为什么 System Prompt "权重更高"？</text>
+
+  <!-- Reason 1 -->
+  <rect x="50" y="345" width="390" height="60" rx="6" fill="#FEF2F2"/>
+  <text x="60" y="365" font-size="12" font-weight="bold" fill="#DC2626">原因一：位置优势（注意力机制）</text>
+  <text x="60" y="385" font-size="11" fill="#7F1D1D">System 始终在最前面，开头位置天然获得更高注意力权重。</text>
+  <text x="60" y="400" font-size="11" fill="#7F1D1D">这是 Transformer 架构的固有特性，不是特殊机制。</text>
+
+  <!-- Reason 2 -->
+  <rect x="460" y="345" width="390" height="60" rx="6" fill="#ECFDF5"/>
+  <text x="470" y="365" font-size="12" font-weight="bold" fill="#16A34A">原因二：RLHF 对齐训练</text>
+  <text x="470" y="385" font-size="11" fill="#166534">模型在 RLHF 阶段被训练为"优先遵循 System 消息"。</text>
+  <text x="470" y="400" font-size="11" fill="#166534">这让它学会了在冲突时以 System 为准，而非 User。</text>
+
+  <!-- Reason 3 -->
+  <rect x="50" y="418" width="390" height="60" rx="6" fill="#EEF2FF"/>
+  <text x="60" y="438" font-size="12" font-weight="bold" fill="#4F46E5">原因三：平台保护（不被截断）</text>
+  <text x="60" y="458" font-size="11" fill="#1E40AF">各 API 平台保证 System 消息不会被上下文窗口截断。</text>
+  <text x="60" y="473" font-size="11" fill="#1E40AF">即使对话很长，System 内容始终保留在 Token 序列中。</text>
+
+  <!-- Key takeaway -->
+  <rect x="460" y="418" width="390" height="60" rx="6" fill="#FFF7ED"/>
+  <text x="470" y="438" font-size="12" font-weight="bold" fill="#9A3412">关键认知</text>
+  <text x="470" y="458" font-size="11" fill="#78350F">System Prompt 没有"特殊通道"——它和用户消息一样被切</text>
+  <text x="470" y="473" font-size="11" fill="#78350F">成 Token。"权重更高"来自位置优势 + RLHF 训练 + 平台保护。</text>
+</svg>
