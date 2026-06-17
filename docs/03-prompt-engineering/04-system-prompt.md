@@ -16,7 +16,7 @@
 - [总结](#总结)
 - [参考链接](#参考链接)
 
-你好，我是江湖哥。前两篇讲了 Prompt 模式怎么选、结构化输出怎么写。这篇进入更底层的问题——System Prompt。它是每个 Agent 的起点，定义了你这个 Agent 到底"是谁"、"能做什么"、"不能做什么"。写好了，Agent 行为稳定可控；写不好，再花哨的 Prompt 技巧也救不回来。
+你好，我是 AGI 课堂。前两篇讲了 Prompt 模式怎么选、结构化输出怎么写。这篇进入更底层的问题——System Prompt。它是每个 Agent 的起点，定义了你这个 Agent 到底"是谁"、"能做什么"、"不能做什么"。写好了，Agent 行为稳定可控；写不好，再花俏的 Prompt 技巧也救不回来。
 
 这篇文章回答一个架构级问题：**如何设计 System Prompt，让 Agent 的行为可预测、边界可控制、输出可依赖？** 不是给你一个"最好的 System Prompt 模板"，而是给你一套设计方法论——从结构、角色、边界、输出四个维度，建立你的 System Prompt 设计框架。每个维度都有清晰的原则和反例。
 
@@ -33,6 +33,12 @@
 | **典型内容** | 角色、规则、约束、格式 | 任务、问题、上下文 |
 
 **System Prompt 不是 User Prompt 的"升级版"——它解决的是另外的问题。** User Prompt 解决"这次要做什么"，System Prompt 解决"在这个 Agent 的世界里，什么是允许的、什么是期望的、什么是禁止的"。
+
+<p align="center">
+  <img src="../../assets/03-prompt-engineering/system-prompt-structure.svg" alt="System Prompt 四段式结构" width="90%"/>
+  <br/>
+  <em>System Prompt 四段式结构：角色 → 规则 → 边界 → 输出</em>
+</p>
 
 ## System Prompt 的实现原理
 
