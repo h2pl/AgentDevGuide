@@ -22,7 +22,7 @@
   <rect x="50" y="190" width="8" height="95" rx="4" fill="#D97706"/>
   <rect x="75" y="198" width="120" height="26" rx="6" fill="#D97706"/>
   <text x="135" y="216" text-anchor="middle" font-size="13" font-weight="bold" fill="white">② 行为规则</text>
-  <text x="210" y="216" font-size="12" fill="#64748B">What & How — 能做 / 必须做 / 禁止做</text>
+  <text x="210" y="216" font-size="12" fill="#64748B">What &amp; How — 能做 / 必须做 / 禁止做</text>
   <text x="75" y="245" font-size="12" fill="#334155">• 优先做什么：如"优先指出逻辑缺陷和安全问题"</text>
   <text x="75" y="265" font-size="12" fill="#334155">• 必须做什么：如"每个问题附带修改建议"</text>
   <text x="75" y="285" font-size="12" fill="#334155">• 禁止做什么：如"不猜测不确定的领域"</text>
