@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s3"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="900" height="480" rx="12" fill="#F8FAFC"/>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">四种模式的典型组合：一个完整 Agent Prompt 的构成</text>
+
+  <!-- Full prompt container -->
+  <rect x="30" y="55" width="840" height="395" rx="10" fill="white" stroke="#CBD5E1" stroke-width="1.5" filter="url(#s3)"/>
+  <text x="450" y="78" text-anchor="middle" font-size="14" fill="#64748B">一个电商客服 Agent 的完整 Prompt 结构</text>
+
+  <!-- Layer 1: Role Setting (System) -->
+  <rect x="50" y="92" width="800" height="85" rx="8" fill="#FEE2E2" stroke="#FECACA" stroke-width="1"/>
+  <rect x="50" y="92" width="180" height="28" rx="6" fill="#DC2626"/>
+  <text x="140" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="white">① 角色设定 (System)</text>
+  <text x="70" y="140" font-size="12" fill="#7F1D1D" font-family="'Courier New', monospace">你是"优选商城"的客服助手，工作范围仅限：订单查询、退货换货、物流追踪。</text>
+  <text x="70" y="160" font-size="12" fill="#7F1D1D" font-family="'Courier New', monospace">拒绝回答与购物无关的问题。语气礼貌专业，回复控制在 150 字以内。</text>
+
+  <!-- Layer 2: Few-shot Examples -->
+  <rect x="50" y="190" width="800" height="105" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
+  <rect x="50" y="190" width="180" height="28" rx="6" fill="#D97706"/>
+  <text x="140" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="white">② Few-shot 示例</text>
+  <text x="70" y="238" font-size="12" fill="#78350F" font-family="'Courier New', monospace">用户: "我要退货"  →  助手: "好的，请提供订单号，我帮您查询退货流程。"</text>
+  <text x="70" y="258" font-size="12" fill="#78350F" font-family="'Courier New', monospace">用户: "今天天气怎样" → 助手: "抱歉，我只能处理购物相关的问题，请问有什么可以帮您？"</text>
+  <text x="70" y="278" font-size="12" fill="#78350F" font-family="'Courier New', monospace">用户: "物流到哪了"  →  助手: "请提供订单号，我为您查询物流状态。"</text>
+
+  <!-- Layer 3: CoT -->
+  <rect x="50" y="308" width="800" height="72" rx="8" fill="#F3E8FF" stroke="#DDD6FE" stroke-width="1"/>
+  <rect x="50" y="308" width="180" height="28" rx="6" fill="#7C3AED"/>
+  <text x="140" y="328" text-anchor="middle" font-size="13" font-weight="bold" fill="white">③ CoT 思维链</text>
+  <text x="70" y="356" font-size="12" fill="#4C1D95" font-family="'Courier New', monospace">处理用户请求时，请先判断：1)是否在工作范围内 2)需要什么信息 3)如何回复。</text>
+  <text x="70" y="372" font-size="12" fill="#4C1D95" font-family="'Courier New', monospace">将判断过程放在 &lt;thinking&gt; 标签内，最终回复放在标签外。</text>
+
+  <!-- Layer 4: Zero-shot (actual user query) -->
+  <rect x="50" y="393" width="800" height="45" rx="8" fill="#DBEAFE" stroke="#BFDBFE" stroke-width="1"/>
+  <rect x="50" y="393" width="180" height="28" rx="6" fill="#2563EB"/>
+  <text x="140" y="413" text-anchor="middle" font-size="13" font-weight="bold" fill="white">④ Zero-shot (用户输入)</text>
+  <text x="70" y="432" font-size="13" fill="#1E3A5F" font-family="'Courier New', monospace">用户: "我昨天买的手机屏幕碎了，能换吗？订单号 2024031501"</text>
+
+  <!-- Labels on right side -->
+  <rect x="700" y="450" width="160" height="22" rx="4" fill="#F1F5F9"/>
+  <text x="780" y="466" text-anchor="middle" font-size="11" fill="#475569">四层组合 = 完整控制</text>
+
+  <!-- Annotation arrows -->
+  <text x="860" y="135" text-anchor="end" font-size="10" fill="#DC2626">定义身份和边界</text>
+  <text x="860" y="245" text-anchor="end" font-size="10" fill="#D97706">教模型怎么回答</text>
+  <text x="860" y="345" text-anchor="end" font-size="10" fill="#7C3AED">让模型先想再说</text>
+  <text x="860" y="418" text-anchor="end" font-size="10" fill="#2563EB">实际用户输入</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="'Segoe UI', 'PingFang SC', 'Courier New', monospace">
+  <defs>
+    <filter id="s2"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="900" height="440" rx="12" fill="#F8FAFC"/>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B" font-family="'Segoe UI', 'PingFang SC', sans-serif">标准回答 vs Chain-of-Thought：同样的问题，不同的思考方式</text>
+
+  <!-- Left: Standard -->
+  <rect x="30" y="55" width="410" height="345" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s2)"/>
+  <rect x="30" y="55" width="410" height="40" rx="10" fill="#FEE2E2"/>
+  <rect x="30" y="85" width="410" height="10" fill="#FEE2E2"/>
+  <text x="235" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#DC2626" font-family="'Segoe UI', 'PingFang SC', sans-serif">❌ 标准回答（直接跳到答案）</text>
+
+  <!-- Question -->
+  <rect x="50" y="110" width="370" height="50" rx="6" fill="#F1F5F9"/>
+  <text x="60" y="131" font-size="13" fill="#334155" font-family="'Segoe UI', 'PingFang SC', sans-serif">Q: 一个班有 35 个学生，男生比女生多 5 人，</text>
+  <text x="60" y="150" font-size="13" fill="#334155" font-family="'Segoe UI', 'PingFang SC', sans-serif">   男生有多少人？</text>
+
+  <!-- Answer -->
+  <rect x="50" y="175" width="370" height="45" rx="6" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+  <text x="60" y="197" font-size="14" font-weight="bold" fill="#1E293B" font-family="'Segoe UI', 'PingFang SC', sans-serif">A: 20 人</text>
+  <text x="160" y="197" font-size="12" fill="#94A3B8" font-family="'Segoe UI', 'PingFang SC', sans-serif">（可能算对，也可能算错）</text>
+
+  <!-- Problem -->
+  <rect x="50" y="240" width="370" height="60" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
+  <text x="60" y="262" font-size="12" fill="#9A3412" font-family="'Segoe UI', 'PingFang SC', sans-serif">⚠️ 问题：</text>
+  <text x="60" y="282" font-size="12" fill="#9A3412" font-family="'Segoe UI', 'PingFang SC', sans-serif">模型一步到位，中间过程是黑盒，错了你不知道哪错</text>
+
+  <!-- Accuracy -->
+  <rect x="50" y="320" width="370" height="36" rx="6" fill="#F8FAFC"/>
+  <text x="235" y="343" text-anchor="middle" font-size="13" fill="#64748B" font-family="'Segoe UI', 'PingFang SC', sans-serif">GSM8K 数学准确率：<tspan font-weight="bold" fill="#DC2626">17.7%</tspan></text>
+
+  <!-- Result label -->
+  <rect x="50" y="365" width="370" height="28" rx="4" fill="#FEF2F2"/>
+  <text x="235" y="384" text-anchor="middle" font-size="12" fill="#DC2626" font-family="'Segoe UI', 'PingFang SC', sans-serif">简单任务够用，复杂推理容易出错</text>
+
+  <!-- Right: CoT -->
+  <rect x="460" y="55" width="410" height="345" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s2)"/>
+  <rect x="460" y="55" width="410" height="40" rx="10" fill="#DCFCE7"/>
+  <rect x="460" y="85" width="410" height="10" fill="#DCFCE7"/>
+  <text x="665" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#16A34A" font-family="'Segoe UI', 'PingFang SC', sans-serif">✅ CoT（先推理再回答）</text>
+
+  <!-- Same Question -->
+  <rect x="480" y="110" width="370" height="50" rx="6" fill="#F1F5F9"/>
+  <text x="490" y="131" font-size="13" fill="#334155" font-family="'Segoe UI', 'PingFang SC', sans-serif">Q: 一个班有 35 个学生，男生比女生多 5 人，</text>
+  <text x="490" y="150" font-size="13" fill="#334155" font-family="'Segoe UI', 'PingFang SC', sans-serif">   男生有多少人？</text>
+
+  <!-- Reasoning steps -->
+  <rect x="480" y="175" width="370" height="115" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="490" y="197" font-size="12" fill="#166534">Step 1: 设女生 = x，则男生 = x + 5</text>
+  <text x="490" y="217" font-size="12" fill="#166534">Step 2: 总人数 = x + (x + 5) = 35</text>
+  <text x="490" y="237" font-size="12" fill="#166534">Step 3: 2x + 5 = 35 → 2x = 30</text>
+  <text x="490" y="257" font-size="12" fill="#166534">Step 4: x = 15（女生），男生 = 15 + 5 = 20</text>
+  <text x="490" y="280" font-size="14" font-weight="bold" fill="#1E293B" font-family="'Segoe UI', 'PingFang SC', sans-serif">A: 20 人 ✓</text>
+
+  <!-- Advantage -->
+  <rect x="480" y="305" width="370" height="40" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="490" y="325" font-size="12" fill="#166534" font-family="'Segoe UI', 'PingFang SC', sans-serif">✓ 推理过程可见，错了可以定位哪一步出问题</text>
+  <text x="490" y="340" font-size="12" fill="#166534" font-family="'Segoe UI', 'PingFang SC', sans-serif">✓ 模型"先想再说"，准确率大幅提升</text>
+
+  <!-- Accuracy -->
+  <rect x="480" y="355" width="370" height="36" rx="6" fill="#F8FAFC"/>
+  <text x="665" y="378" text-anchor="middle" font-size="13" fill="#64748B" font-family="'Segoe UI', 'PingFang SC', sans-serif">GSM8K 数学准确率：<tspan font-weight="bold" fill="#16A34A">78.7%</tspan>（提升 4.4 倍）</text>
+
+  <!-- Bottom comparison -->
+  <rect x="30" y="412" width="840" height="22" rx="4" fill="#F1F5F9"/>
+  <text x="450" y="428" text-anchor="middle" font-size="12" fill="#475569" font-family="'Segoe UI', 'PingFang SC', sans-serif">数据来源：Wei et al. (2022) "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"</text>
+</svg>

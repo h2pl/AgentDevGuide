@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="900" height="380" rx="12" fill="#F8FAFC"/>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">四种 Prompt 设计模式：控制精度的递进</text>
+
+  <!-- Card 1: Zero-shot -->
+  <rect x="30" y="60" width="195" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="30" y="60" width="195" height="40" rx="10" fill="#DBEAFE"/>
+  <rect x="30" y="90" width="195" height="10" fill="#DBEAFE"/>
+  <text x="127" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#1D4ED8">Zero-shot</text>
+  <text x="127" y="120" text-anchor="middle" font-size="12" fill="#475569">直接提问</text>
+  <text x="127" y="142" text-anchor="middle" font-size="11" fill="#64748B">不给示例、不给提示</text>
+  <line x1="50" y1="158" x2="205" y2="158" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="127" y="178" text-anchor="middle" font-size="11" fill="#334155">"把这段英文翻译成中文"</text>
+  <line x1="50" y1="195" x2="205" y2="195" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="55" y="210" width="145" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="127" y="233" text-anchor="middle" font-size="11" font-weight="bold" fill="#16A34A">控制力 ★☆☆☆☆</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M230 160 L248 160" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7" fill="#94A3B8"/></marker></defs>
+
+  <!-- Card 2: Few-shot -->
+  <rect x="250" y="60" width="195" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="250" y="60" width="195" height="40" rx="10" fill="#FEF3C7"/>
+  <rect x="250" y="90" width="195" height="10" fill="#FEF3C7"/>
+  <text x="347" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#B45309">Few-shot</text>
+  <text x="347" y="120" text-anchor="middle" font-size="12" fill="#475569">给示例引导</text>
+  <text x="347" y="142" text-anchor="middle" font-size="11" fill="#64748B">2-5 个示例教格式</text>
+  <line x1="270" y1="158" x2="425" y2="158" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="347" y="178" text-anchor="middle" font-size="11" fill="#334155">"好评→正面 差评→负面"</text>
+  <line x1="270" y1="195" x2="425" y2="195" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="275" y="210" width="145" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="347" y="233" text-anchor="middle" font-size="11" font-weight="bold" fill="#16A34A">控制力 ★★☆☆☆</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M450 160 L468 160" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Card 3: CoT -->
+  <rect x="470" y="60" width="195" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="470" y="60" width="195" height="40" rx="10" fill="#F3E8FF"/>
+  <rect x="470" y="90" width="195" height="10" fill="#F3E8FF"/>
+  <text x="567" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#7C3AED">CoT 思维链</text>
+  <text x="567" y="120" text-anchor="middle" font-size="12" fill="#475569">先推理再回答</text>
+  <text x="567" y="142" text-anchor="middle" font-size="11" fill="#64748B">展示中间推理步骤</text>
+  <line x1="490" y1="158" x2="645" y2="158" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="567" y="178" text-anchor="middle" font-size="11" fill="#334155">"让我一步步算..."</text>
+  <line x1="490" y1="195" x2="645" y2="195" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="495" y="210" width="145" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="567" y="233" text-anchor="middle" font-size="11" font-weight="bold" fill="#16A34A">控制力 ★★★★☆</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M670 160 L688 160" stroke="#94A3B8" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Card 4: Role Setting -->
+  <rect x="690" y="60" width="195" height="200" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="690" y="60" width="195" height="40" rx="10" fill="#FEE2E2"/>
+  <rect x="690" y="90" width="195" height="10" fill="#FEE2E2"/>
+  <text x="787" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#DC2626">角色设定</text>
+  <text x="787" y="120" text-anchor="middle" font-size="12" fill="#475569">定义完整角色</text>
+  <text x="787" y="142" text-anchor="middle" font-size="11" fill="#64748B">身份+上下文+约束+格式</text>
+  <line x1="710" y1="158" x2="865" y2="158" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="787" y="178" text-anchor="middle" font-size="11" fill="#334155">"你是资深律师，只回答..."</text>
+  <line x1="710" y1="195" x2="865" y2="195" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="715" y="210" width="145" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="787" y="233" text-anchor="middle" font-size="11" font-weight="bold" fill="#16A34A">控制力 ★★★★★</text>
+
+  <!-- Bottom: progression axis -->
+  <line x1="30" y1="300" x2="870" y2="300" stroke="#CBD5E1" stroke-width="2"/>
+  <defs><marker id="arrB" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#64748B"/></marker></defs>
+  <path d="M870 300 L885 300" stroke="#64748B" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="40" y="325" font-size="12" fill="#64748B">低控制 · 自由发挥</text>
+  <text x="780" y="325" font-size="12" fill="#64748B">高控制 · 精确输出</text>
+
+  <!-- Use cases -->
+  <text x="127" y="280" text-anchor="middle" font-size="10" fill="#94A3B8">翻译、闲聊</text>
+  <text x="347" y="280" text-anchor="middle" font-size="10" fill="#94A3B8">分类、格式化</text>
+  <text x="567" y="280" text-anchor="middle" font-size="10" fill="#94A3B8">数学、推理、规划</text>
+  <text x="787" y="280" text-anchor="middle" font-size="10" fill="#94A3B8">Agent 系统级控制</text>
+
+  <rect x="30" y="345" width="840" height="28" rx="4" fill="#F1F5F9"/>
+  <text x="450" y="364" text-anchor="middle" font-size="12" fill="#475569">💡 选型原则：Zero-shot 不够好 → 加 Few-shot → 推理任务加 CoT → Agent 场景加角色设定</text>
+</svg>
