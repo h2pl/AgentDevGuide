@@ -1,36 +1,15 @@
-# 09 — 扩展协议与标准
+# 10 — 扩展协议
+
+协议让 Agent 突破单一模型和单一工具的边界，变成可插拔、可互操作的开放系统。
 
 ## 目录
 
-- [概述](#概述)
-- [MCP 协议](#mcp-协议)
-- [Skills](#skills)
-- [AGENTS.md](#agentsmd)
-- [协议选择决策](#协议选择决策)
-- [参考链接](#参考链接)
+| # | 文章 | 内容 |
+|---|------|------|
+| 01 | [协议生态：为什么需要扩展协议](./01-protocol-landscape.md) | Agent 碎片化问题、MCP / Skills / A2A 三方格局、协议分层模型 |
+| 02 | [MCP 协议详解](./02-mcp-in-depth.md) | 客户端-服务端架构、工具/资源/Prompt 三原语、从零实现 MCP Server |
+| 03 | [Skills 与 AGENTS.md](./03-skills-and-agents.md) | Skills 作为静态知识包的结构化定义、AGENTS.md 能力声明、MCP vs Skills 的定位差异 |
+| 04 | [A2A 与其他协议](./04-a2a-and-beyond.md) | Google A2A 跨 Agent 通信规范、厂商协议对比、协议生态的未来走向 |
+| 05 | [协议组合与选型](./05-protocol-composition.md) | 生产环境中的协议组合模式、选型决策树、从 MVP 到生产化的演进路径 |
 
-## 概述
-
-<!-- TODO: Agent 生态的标准化扩展方式——MCP 定义"怎么执行"，Skills 定义"该做什么"，AGENTS.md 声明"我能做什么" -->
-
-## MCP 协议
-
-<!-- TODO: Model Context Protocol——标准化工具连接协议，实现一个 MCP Server -->
-
-## Skills
-
-<!-- TODO: 可复用的静态知识包，结构化的 system prompt，定义 Agent 碰到某类任务该怎么做 -->
-
-## AGENTS.md
-
-<!-- TODO: Agent 能力声明文件，格式与用途 -->
-
-## 协议选择决策
-
-<!-- TODO: 什么时候用 MCP、什么时候用 Skill、什么时候用 Sub-agent -->
-
-## 参考链接
-
-- [MCP Specification](https://modelcontextprotocol.io/)
-- [Claude Code — Skills](https://docs.anthropic.com/en/docs/claude-code/skills)
-- [AI Agent Architecture — MCP/Skills/Agent 三层模型](https://shuji-bonji.github.io/ai-agent-architecture/)
+> 学完本章后，请继续阅读 [11 — 多 Agent](../11-multi-agent/README.md)，进入多 Agent 协作的世界。

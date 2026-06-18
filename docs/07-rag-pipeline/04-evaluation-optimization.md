@@ -205,7 +205,7 @@ optimized_prompt = f"""基于以下文档回答问题。
 - **评测框架**：RAGAS、DeepEval、LangSmith 简化评测流程
 - **优化策略**：先优化检索，再优化生成，最后优化体验
 
-> 本章完结。下一章将进入框架篇——用 LangGraph 等框架管理复杂的 Agent 流程，让 Agent 开发更高效。
+> 评测帮你知道了 RAG 系统的"体检报告"。下一步是动手实战——从零搭建一个完整的 RAG 系统。请继续阅读 [构建你的第一个 RAG 系统](./05-build-rag-system.md)。
 
 ## 参考链接
 
