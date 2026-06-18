@@ -1,30 +1,14 @@
 # 00 — 生态认知
 
+Agent 生态全景认知。本章帮你建立对 Agent 领域的整体认知框架——市场上有什么、怎么分类、各自的优劣势在哪。
+
 ## 目录
 
-- [概述](#概述)
-- [五种应用形态辨析](#五种应用形态辨析)
-- [Agent 系统分层架构](#agent-系统分层架构)
-- [技术演进路线](#技术演进路线)
-- [参考链接](#参考链接)
+| # | 文章 | 内容 |
+|---|------|------|
+| 01 | [2026 主流 Agent 全景](./01-mainstream-agents.md) | 七大品类 × L1-L5 能力分级双维框架：编程、研究、浏览器/桌面、个人助理、通用自主、工作流自动化、企业平台、开发框架、选型指南 |
+| 02 | [Claude Code：编程 Agent 的标杆](./02-claude-code.md) | 终端原生编程 Agent，深度代码理解，子 Agent 委派，SWE-bench ~72% |
+| 03 | [OpenClaw：本地优先的个人 AI 助理](./03-openclaw.md) | 本地运行的个人助理，20+ 消息通道覆盖，持久记忆，主动检查 |
+| 04 | [Hermes Agent：自主成长的开源 Agent](./04-hermes-agent.md) | 开源个人 Agent，200+ 模型自由切换，自动技能创建，编码 Agent 编排 |
 
-## 概述
-
-<!-- TODO: 本章总体概述 -->
-
-## 五种应用形态辨析
-
-<!-- TODO: Chatbot / Workflow / RAG / Agent / Multi-Agent 的定义、区别与适用场景 -->
-
-## Agent 系统分层架构
-
-<!-- TODO: 模型 → 工具 → 循环 → 框架 → 记忆 → 治理 → 交付 各层职责 -->
-
-## 技术演进路线
-
-<!-- TODO: 2023 Prompt Engineering → 2024 Function Calling & RAG → 2025 Agent Framework → 2026 Harness & Standards -->
-
-## 参考链接
-
-- [Anthropic — Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
-- [O'Reilly — The AI Agents Stack (2026)](https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/)
+> 学完本章后，你将对 Agent 市场建立整体认知。接下来进入 [01 — LLM 基础](../01-llm-basics/README.md)，从模型底层开始系统学习 Agent 开发。
