@@ -195,6 +195,10 @@ Agent 运行过程中会产生大量状态：
 
 ## 选型决策
 
+<div align="center">
+<img src="../../assets/09-framework/framework-selection-flow.svg" alt="Agent 框架选型决策流程" width="90%"/>
+</div>
+
 ### 第一步：明确你的场景
 
 | 你的需求 | 推荐框架 |

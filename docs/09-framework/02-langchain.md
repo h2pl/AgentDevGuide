@@ -180,6 +180,10 @@ result = await llm.ainvoke("你好")
 
 LCEL（LangChain Expression Language）是 LangChain 的核心创新——用 `|` 管道运算符将组件串联起来，就像 Unix 管道一样。
 
+<div align="center">
+<img src="../../assets/09-framework/lcel-pipeline.svg" alt="LangChain LCEL 管道数据流" width="90%"/>
+</div>
+
 ### 基本用法
 
 ```python

@@ -94,6 +94,10 @@ print(result.final_output)
 
 Handoff 是 OpenAI Agents SDK 的核心特性——一个 Agent 可以将对话移交给另一个 Agent。
 
+<div align="center">
+<img src="../../assets/09-framework/handoff-and-a2a.svg" alt="Handoff 模式与 A2A 协议" width="90%"/>
+</div>
+
 ```python
 from agents import Agent, Runner
 

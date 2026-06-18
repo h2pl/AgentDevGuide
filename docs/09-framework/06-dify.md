@@ -79,6 +79,10 @@ Dify 支持四种应用类型：
 
 Dify 的核心能力是**可视化工作流**——用拖拽的方式构建多步骤的 AI 流程。
 
+<div align="center">
+<img src="../../assets/09-framework/dify-workflow.svg" alt="Dify 工作流可视化编排" width="90%"/>
+</div>
+
 ### 节点类型
 
 | 节点 | 功能 |

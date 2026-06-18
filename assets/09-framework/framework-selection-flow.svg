@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" rx="12"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Agent 框架选型决策流程</text>
+
+  <!-- Start -->
+  <rect x="320" y="55" width="160" height="36" rx="18" fill="#6366f1" filter="url(#shadow)"/>
+  <text x="400" y="78" text-anchor="middle" font-size="13" fill="white" font-weight="600">开始选型</text>
+  <line x1="400" y1="91" x2="400" y2="115" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Q1: 有开发能力？ -->
+  <polygon points="400,115 520,155 400,195 280,155" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="151" text-anchor="middle" font-size="12" fill="#92400e" font-weight="600">团队有开发能力？</text>
+  <text x="400" y="166" text-anchor="middle" font-size="11" fill="#92400e">（Python/代码）</text>
+
+  <!-- No → Dify/Coze -->
+  <line x1="280" y1="155" x2="160" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="220" y="147" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="600">否</text>
+  <rect x="60" y="135" width="100" height="40" rx="8" fill="#dc2626" filter="url(#shadow)"/>
+  <text x="110" y="153" text-anchor="middle" font-size="12" fill="white" font-weight="600">Dify / Coze</text>
+  <text x="110" y="168" text-anchor="middle" font-size="10" fill="#fecaca">低代码平台</text>
+
+  <!-- Yes → Q2 -->
+  <line x1="400" y1="195" x2="400" y2="220" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="410" y="210" font-size="11" fill="#16a34a" font-weight="600">是</text>
+
+  <!-- Q2: 流程复杂？ -->
+  <polygon points="400,220 530,260 400,300 270,260" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="256" text-anchor="middle" font-size="12" fill="#92400e" font-weight="600">Agent 流程复杂？</text>
+  <text x="400" y="271" text-anchor="middle" font-size="11" fill="#92400e">（分支/循环/HITL）</text>
+
+  <!-- No → CrewAI -->
+  <line x1="270" y1="260" x2="160" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="215" y="252" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="600">否</text>
+  <rect x="60" y="240" width="100" height="40" rx="8" fill="#2563eb" filter="url(#shadow)"/>
+  <text x="110" y="258" text-anchor="middle" font-size="12" fill="white" font-weight="600">CrewAI</text>
+  <text x="110" y="273" text-anchor="middle" font-size="10" fill="#bfdbfe">快速原型</text>
+
+  <!-- Yes → Q3 -->
+  <line x1="400" y1="300" x2="400" y2="325" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="410" y="315" font-size="11" fill="#16a34a" font-weight="600">是</text>
+
+  <!-- Q3: 只用一家模型？ -->
+  <polygon points="400,325 530,365 400,405 270,365" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="361" text-anchor="middle" font-size="12" fill="#92400e" font-weight="600">只用一家模型？</text>
+  <text x="400" y="376" text-anchor="middle" font-size="11" fill="#92400e">（OpenAI/Google）</text>
+
+  <!-- Yes (OpenAI) → OpenAI SDK -->
+  <line x1="530" y1="365" x2="640" y2="365" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="585" y="357" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="600">是</text>
+  <rect x="640" y="345" width="130" height="40" rx="8" fill="#059669" filter="url(#shadow)"/>
+  <text x="705" y="363" text-anchor="middle" font-size="11" fill="white" font-weight="600">OpenAI SDK / ADK</text>
+  <text x="705" y="378" text-anchor="middle" font-size="10" fill="#a7f3d0">厂商官方框架</text>
+
+  <!-- No → Q4 -->
+  <line x1="400" y1="405" x2="400" y2="430" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="410" y="420" font-size="11" fill="#dc2626" font-weight="600">否</text>
+
+  <!-- Q4: 需要精细控制？ -->
+  <polygon points="400,430 530,470 400,510 270,470" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="466" text-anchor="middle" font-size="12" fill="#92400e" font-weight="600">需要精细流程控制？</text>
+  <text x="400" y="481" text-anchor="middle" font-size="11" fill="#92400e">（状态机/审计/恢复）</text>
+
+  <!-- Yes → LangGraph -->
+  <line x1="530" y1="470" x2="640" y2="470" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="585" y="462" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="600">是</text>
+  <rect x="640" y="450" width="130" height="40" rx="8" fill="#7c3aed" filter="url(#shadow)"/>
+  <text x="705" y="468" text-anchor="middle" font-size="12" fill="white" font-weight="600">LangGraph</text>
+  <text x="705" y="483" text-anchor="middle" font-size="10" fill="#ddd6fe">生产级编排</text>
+
+  <!-- No → LangChain -->
+  <line x1="400" y1="510" x2="400" y2="535" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="410" y="525" font-size="11" fill="#dc2626" font-weight="600">否</text>
+  <rect x="335" y="535" width="130" height="40" rx="8" fill="#0891b2" filter="url(#shadow)"/>
+  <text x="400" y="553" text-anchor="middle" font-size="12" fill="white" font-weight="600">LangChain</text>
+  <text x="400" y="568" text-anchor="middle" font-size="10" fill="#a5f3fc">通用链式编排</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

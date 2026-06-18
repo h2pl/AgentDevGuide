@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" font-family="'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="g-input" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="g-prompt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="g-llm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="g-parser" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="g-output" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="880" height="400" fill="url(#bg2)" rx="12"/>
+
+  <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">LangChain LCEL 管道数据流</text>
+  <text x="440" y="52" text-anchor="middle" font-size="12" fill="#64748b">输入数据 → Prompt 模板 → LLM → 输出解析器 → 结构化输出</text>
+
+  <!-- Input Data -->
+  <rect x="30" y="100" width="120" height="80" rx="10" fill="url(#g-input)" filter="url(#sh)"/>
+  <text x="90" y="133" text-anchor="middle" font-size="13" fill="white" font-weight="600">输入数据</text>
+  <text x="90" y="153" text-anchor="middle" font-size="10" fill="#cbd5e1">{"topic": "RAG"}</text>
+
+  <!-- Arrow 1 -->
+  <line x1="150" y1="140" x2="185" y2="140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="168" y="130" text-anchor="middle" font-size="10" fill="#64748b">|</text>
+
+  <!-- Prompt Template -->
+  <rect x="190" y="90" width="160" height="100" rx="10" fill="url(#g-prompt)" filter="url(#sh)"/>
+  <text x="270" y="120" text-anchor="middle" font-size="13" fill="white" font-weight="600">Prompt 模板</text>
+  <text x="270" y="140" text-anchor="middle" font-size="10" fill="#bfdbfe">ChatPromptTemplate</text>
+  <text x="270" y="158" text-anchor="middle" font-size="10" fill="#bfdbfe">"请解释：{topic}"</text>
+
+  <!-- Arrow 2 -->
+  <line x1="350" y1="140" x2="385" y2="140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="368" y="130" text-anchor="middle" font-size="10" fill="#64748b">|</text>
+
+  <!-- LLM -->
+  <rect x="390" y="90" width="160" height="100" rx="10" fill="url(#g-llm)" filter="url(#sh)"/>
+  <text x="470" y="120" text-anchor="middle" font-size="13" fill="white" font-weight="600">LLM 模型</text>
+  <text x="470" y="140" text-anchor="middle" font-size="10" fill="#ddd6fe">ChatOpenAI / 其他</text>
+  <text x="470" y="158" text-anchor="middle" font-size="10" fill="#ddd6fe">生成原始文本</text>
+
+  <!-- Arrow 3 -->
+  <line x1="550" y1="140" x2="585" y2="140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="568" y="130" text-anchor="middle" font-size="10" fill="#64748b">|</text>
+
+  <!-- Output Parser -->
+  <rect x="590" y="90" width="160" height="100" rx="10" fill="url(#g-parser)" filter="url(#sh)"/>
+  <text x="670" y="120" text-anchor="middle" font-size="13" fill="white" font-weight="600">输出解析器</text>
+  <text x="670" y="140" text-anchor="middle" font-size="10" fill="#a7f3d0">StrOutputParser</text>
+  <text x="670" y="158" text-anchor="middle" font-size="10" fill="#a7f3d0">JsonOutputParser</text>
+
+  <!-- Arrow 4 -->
+  <line x1="750" y1="140" x2="785" y2="140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="768" y="130" text-anchor="middle" font-size="10" fill="#64748b">|</text>
+
+  <!-- Output -->
+  <rect x="790" y="100" width="70" height="80" rx="10" fill="url(#g-output)" filter="url(#sh)"/>
+  <text x="825" y="133" text-anchor="middle" font-size="13" fill="white" font-weight="600">输出</text>
+  <text x="825" y="153" text-anchor="middle" font-size="10" fill="#fecaca">结构化数据</text>
+
+  <!-- Code block -->
+  <rect x="80" y="220" width="720" height="120" rx="8" fill="#1e293b" opacity="0.9"/>
+  <text x="100" y="245" font-size="12" fill="#94a3b8"># LCEL 代码：一行定义完整链路</text>
+  <text x="100" y="268" font-size="13" fill="#7dd3fc">chain</text><text x="142" y="268" font-size="13" fill="#e2e8f0"> = prompt </text><text x="218" y="268" font-size="16" fill="#facc15">|</text><text x="230" y="268" font-size="13" fill="#e2e8f0"> llm </text><text x="280" y="268" font-size="16" fill="#facc15">|</text><text x="292" y="268" font-size="13" fill="#e2e8f0"> parser</text>
+  <text x="100" y="293" font-size="13" fill="#7dd3fc">result</text><text x="152" y="293" font-size="13" fill="#e2e8f0"> = chain.</text><text x="222" y="293" font-size="13" fill="#facc15">invoke</text><text x="278" y="293" font-size="13" fill="#e2e8f0">({</text><text x="296" y="293" font-size="13" fill="#86efac">"topic"</text><text x="356" y="293" font-size="13" fill="#e2e8f0">: </text><text x="366" y="293" font-size="13" fill="#86efac">"RAG"</text><text x="412" y="293" font-size="13" fill="#e2e8f0">})</text>
+  <text x="100" y="318" font-size="12" fill="#94a3b8"># 自动支持：stream() / batch() / ainvoke()</text>
+
+  <!-- Legend -->
+  <rect x="200" y="355" width="480" height="30" rx="6" fill="white" opacity="0.7"/>
+  <text x="220" y="375" font-size="11" fill="#475569">管道运算符 </text><text x="295" y="375" font-size="14" fill="#facc15" font-weight="bold">|</text><text x="305" y="375" font-size="11" fill="#475569"> 将组件串联，左边输出作为右边输入，类似 Unix 管道</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
