@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Skills 的结构化格式与触发机制</text>
+
+  <!-- Left: Skill file structure -->
+  <rect x="40" y="65" width="400" height="200" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="240" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">Skill 文件结构</text>
+  <line x1="60" y1="102" x2="420" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="55" y="110" width="370" height="24" rx="3" fill="#FEF3C7"/>
+  <text x="65" y="127" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E">name: deploy</text>
+
+  <rect x="55" y="138" width="370" height="24" rx="3" fill="#FEF3C7"/>
+  <text x="65" y="155" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E">description: Deploy the application to production</text>
+
+  <rect x="55" y="166" width="370" height="24" rx="3" fill="#FEF3C7"/>
+  <text x="65" y="183" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E">allowed-tools: Bash(git *) Bash(docker *)</text>
+
+  <rect x="55" y="194" width="370" height="24" rx="3" fill="#FEF3C7"/>
+  <text x="65" y="211" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E">context: fork</text>
+
+  <rect x="55" y="222" width="370" height="30" rx="3" fill="#F1F5F9"/>
+  <text x="65" y="241" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">---（frontmatter 结束，以下是 Markdown 正文）</text>
+
+  <!-- Arrow to trigger -->
+  <line x1="440" y1="120" x2="500" y2="120" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="180" x2="500" y2="180" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Right: Trigger flow -->
+  <rect x="505" y="65" width="415" height="280" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="712" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">Skill 触发与执行流程</text>
+  <line x1="525" y1="102" x2="900" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="525" y="115" width="375" height="30" rx="5" fill="#DBEAFE"/>
+  <text x="535" y="134" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF">1. 用户发起任务（如"帮我部署"）</text>
+
+  <line x1="712" y1="145" x2="712" y2="155" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="525" y="160" width="375" height="30" rx="5" fill="#FEF3C7"/>
+  <text x="535" y="179" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">2. Agent 匹配 description → 触发 Skill</text>
+
+  <line x1="712" y1="190" x2="712" y2="200" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="525" y="205" width="180" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="535" y="224" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46">3a. 普通模式（默认）</text>
+
+  <rect x="720" y="205" width="180" height="30" rx="5" fill="#E0E7FF"/>
+  <text x="730" y="224" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#4338CA">3b. Fork 模式</text>
+
+  <line x1="615" y1="235" x2="615" y2="245" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="810" y1="235" x2="810" y2="245" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="525" y="250" width="180" height="40" rx="5" fill="#D1FAE5"/>
+  <text x="535" y="267" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46">主会话内执行</text>
+  <text x="535" y="283" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#047857">共享上下文</text>
+
+  <rect x="720" y="250" width="180" height="40" rx="5" fill="#E0E7FF"/>
+  <text x="730" y="267" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4338CA">子 Agent 隔离执行</text>
+  <text x="730" y="283" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#3730A3">独立上下文</text>
+
+  <!-- Bottom note -->
+  <rect x="40" y="290" width="880" height="165" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="318" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">Skills 关键功能</text>
+  <line x1="60" y1="328" x2="900" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+
+  <text x="75" y="355" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#2563EB">1. 按需加载</text>
+  <text x="75" y="375" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">只在任务匹配时加载，不占用日常对话上下文窗口</text>
+
+  <text x="75" y="405" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#059669">2. 权限控制</text>
+  <text x="75" y="425" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">allowed-tools / disallowed-tools 精细控制 Skill 可用的工具范围</text>
+
+  <text x="495" y="355" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#D97706">3. 子 Agent 隔离</text>
+  <text x="495" y="375" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">context: fork 在独立环境中执行，主会话完全不受影响</text>
+
+  <text x="495" y="405" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#7C3AED">4. 模型覆盖</text>
+  <text x="495" y="425" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">model / effort 字段指定特定任务的模型和推理强度</text>
+</svg>

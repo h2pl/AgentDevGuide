@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Skills / MCP / AGENTS.md 三概念对比</text>
+
+  <!-- Three columns header -->
+  <rect x="40" y="60" width="160" height="40" rx="6" fill="#1E293B"/>
+  <text x="55" y="85" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF">维度</text>
+
+  <rect x="210" y="60" width="230" height="40" rx="6" fill="#D97706"/>
+  <text x="325" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">AGENTS.md</text>
+
+  <rect x="450" y="60" width="230" height="40" rx="6" fill="#2563EB"/>
+  <text x="565" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">Skills</text>
+
+  <rect x="690" y="60" width="230" height="40" rx="6" fill="#059669"/>
+  <text x="805" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">MCP</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="108" width="160" height="40" fill="#F1F5F9"/>
+  <text x="55" y="132" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">定位</text>
+
+  <rect x="210" y="108" width="230" height="40" fill="#FFF"/>
+  <text x="230" y="132" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">"在这个项目里怎么做"</text>
+
+  <rect x="450" y="108" width="230" height="40" fill="#FFF"/>
+  <text x="470" y="132" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF">"这个任务怎么做"</text>
+
+  <rect x="690" y="108" width="230" height="40" fill="#FFF"/>
+  <text x="710" y="132" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46">"怎么调用外部工具"</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="155" width="160" height="40" fill="#F1F5F9"/>
+  <text x="55" y="179" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">粒度</text>
+
+  <rect x="210" y="155" width="230" height="40" fill="#F8FAFC"/>
+  <text x="230" y="179" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">项目级</text>
+
+  <rect x="450" y="155" width="230" height="40" fill="#F8FAFC"/>
+  <text x="470" y="179" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">任务级</text>
+
+  <rect x="690" y="155" width="230" height="40" fill="#F8FAFC"/>
+  <text x="710" y="179" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">工具级</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="202" width="160" height="40" fill="#F1F5F9"/>
+  <text x="55" y="226" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">触发方式</text>
+
+  <rect x="210" y="202" width="230" height="40" fill="#FFF"/>
+  <text x="230" y="226" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">自动注入（打开项目时）</text>
+
+  <rect x="450" y="202" width="230" height="40" fill="#FFF"/>
+  <text x="470" y="226" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">按需加载（任务匹配时）</text>
+
+  <rect x="690" y="202" width="230" height="40" fill="#FFF"/>
+  <text x="710" y="226" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">动态调用（模型决策时）</text>
+
+  <!-- Row 4 -->
+  <rect x="40" y="249" width="160" height="40" fill="#F1F5F9"/>
+  <text x="55" y="273" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">执行方式</text>
+
+  <rect x="210" y="249" width="230" height="40" fill="#F8FAFC"/>
+  <text x="230" y="273" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">被动（Agent 自行解析）</text>
+
+  <rect x="450" y="249" width="230" height="40" fill="#F8FAFC"/>
+  <text x="470" y="273" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">主动（Agent 按步骤执行）</text>
+
+  <rect x="690" y="249" width="230" height="40" fill="#F8FAFC"/>
+  <text x="710" y="273" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">主动（Client→Server RPC）</text>
+
+  <!-- Row 5 -->
+  <rect x="40" y="296" width="160" height="40" fill="#F1F5F9"/>
+  <text x="55" y="320" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">传输</text>
+
+  <rect x="210" y="296" width="230" height="40" fill="#FFF"/>
+  <text x="230" y="320" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">无（文件读取）</text>
+
+  <rect x="450" y="296" width="230" height="40" fill="#FFF"/>
+  <text x="470" y="320" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">无（上下文注入）</text>
+
+  <rect x="690" y="296" width="230" height="40" fill="#FFF"/>
+  <text x="710" y="320" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">STDIO / HTTP（JSON-RPC）</text>
+
+  <!-- Row 6 -->
+  <rect x="40" y="343" width="160" height="55" fill="#F1F5F9"/>
+  <text x="55" y="368" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">需要协议层</text>
+
+  <rect x="210" y="343" width="230" height="55" fill="#F8FAFC"/>
+  <text x="230" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" fill="#EF4444" font-weight="bold">否</text>
+
+  <rect x="450" y="343" width="230" height="55" fill="#F8FAFC"/>
+  <text x="470" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" fill="#EF4444" font-weight="bold">否</text>
+
+  <rect x="690" y="343" width="230" height="55" fill="#F8FAFC"/>
+  <text x="710" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" fill="#059669" font-weight="bold">是（JSON-RPC）</text>
+</svg>

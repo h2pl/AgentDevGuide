@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">无协议的 Agent 孤岛困境</text>
+
+  <!-- Agent 1 -->
+  <rect x="50" y="70" width="220" height="130" rx="8" fill="#2563EB" opacity="0.9"/>
+  <text x="160" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Agent 在 Claude</text>
+  <text x="160" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#DBEAFE" text-anchor="middle">自定义工具集成</text>
+  <text x="160" y="162" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#DBEAFE" text-anchor="middle">Claude Tool Use 格式</text>
+  <text x="160" y="184" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#DBEAFE" text-anchor="middle">绑定 Anthropic 生态</text>
+
+  <!-- Agent 2 -->
+  <rect x="370" y="70" width="220" height="130" rx="8" fill="#D97706" opacity="0.9"/>
+  <text x="480" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Agent 在 GPT</text>
+  <text x="480" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#FEF3C7" text-anchor="middle">自定义工具集成</text>
+  <text x="480" y="162" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#FEF3C7" text-anchor="middle">OpenAI Function Calling 格式</text>
+  <text x="480" y="184" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#FEF3C7" text-anchor="middle">绑定 OpenAI 生态</text>
+
+  <!-- Agent 3 -->
+  <rect x="690" y="70" width="220" height="130" rx="8" fill="#059669" opacity="0.9"/>
+  <text x="800" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Agent 在 Gemini</text>
+  <text x="800" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">自定义工具集成</text>
+  <text x="800" y="162" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">Gemini Function Calling 格式</text>
+  <text x="800" y="184" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#D1FAE5" text-anchor="middle">绑定 Google 生态</text>
+
+  <!-- X marks -->
+  <text x="285" y="135" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold" fill="#EF4444" text-anchor="middle">✕</text>
+  <text x="605" y="135" font-family="Segoe UI, sans-serif" font-size="28" font-weight="bold" fill="#EF4444" text-anchor="middle">✕</text>
+
+  <!-- NxM text -->
+  <text x="480" y="250" font-family="PingFang SC, Segoe UI, sans-serif" font-size="22" font-weight="bold" fill="#EF4444" text-anchor="middle">N × M 集成噩梦</text>
+  <text x="480" y="280" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">N 个客户端 × M 个工具 = N×M 套适配代码</text>
+
+  <!-- Bottom problem list -->
+  <rect x="80" y="310" width="800" height="85" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">每个 Agent 都是孤岛</text>
+  <text x="160" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">✕ 工具无法跨客户端复用</text>
+  <text x="400" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">✕ 通信机制绑定厂商</text>
+  <text x="640" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">✕ 前端输出深度耦合</text>
+</svg>

@@ -205,7 +205,7 @@ def query_database(sql: str) -> str:
 - **生产 Server 不等于 Demo**：需要认证、输入验证、错误处理、网关层。52% 的社区 Server 是死亡状态。
 - **2026 年 MCP 是事实标准**：Claude、ChatGPT、Cursor、Gemini、VS Code 都原生支持，注册表有效 Server 超过 8,000 个。
 
-> 掌握了工具调用，你的 Agent 已经能查数据、调 API、操作外部系统。但 Agent 怎么知道"什么时候该做什么事"？怎么自主规划多步任务？请继续阅读 [05 — Agent 循环](../05-agent-loop/README.md)，了解 Agent 的核心架构。
+> 了解了 MCP 的概念和生态，下一步动手：怎么从零搭建一个可以运行在 Claude Desktop、Cursor 和远程服务上的 MCP Server？请继续阅读 [MCP 实战全流程](./05-mcp-in-practice.md)。
 
 ## 参考链接
 

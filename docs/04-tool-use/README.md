@@ -10,6 +10,7 @@
 | 02 | [工具 Schema 设计](./02-tool-schema-design.md) | JSON Schema 设计原则，四条黄金法则，五大反模式 |
 | 03 | [多工具编排](./03-multi-tool-orchestration.md) | 并行调用、链式依赖、结果聚合、上下文管理、工具筛选 |
 | 04 | [MCP 与工具生态](./04-mcp-and-tool-ecosystem.md) | Model Context Protocol，标准化工具层，2026 生态现状 |
+| 05 | [MCP 实战全流程](./05-mcp-in-practice.md) | 从零搭建 MCP Server，MCP Inspector 调试，客户端配置，远程部署，认证与错误处理 |
 
 > 学完本章后，请继续阅读 [05 — Agent 循环](../05-agent-loop/README.md)，了解 Agent 如何自主规划多步任务。
 

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="440" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">MCP Gateway 企业部署架构</text>
+
+  <!-- Left: Client side -->
+  <rect x="40" y="70" width="240" height="130" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="160" y="100" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">Client 端</text>
+  <text x="160" y="125" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">Claude Desktop</text>
+  <text x="160" y="145" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">ChatGPT</text>
+  <text x="160" y="165" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">Cursor / VS Code</text>
+  <text x="160" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">自定义 Host</text>
+
+  <!-- Arrows to Gateway -->
+  <line x1="280" y1="100" x2="340" y2="100" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="280" y1="140" x2="340" y2="140" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="280" y1="180" x2="340" y2="180" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Center: Gateway -->
+  <rect x="345" y="60" width="270" height="220" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="480" y="90" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#92400E" text-anchor="middle">Gateway（网关层）</text>
+
+  <line x1="370" y1="100" x2="590" y2="100" stroke="#D97706" stroke-width="0.5" opacity="0.3"/>
+
+  <rect x="360" y="112" width="240" height="28" rx="5" fill="#FFF" stroke="#D97706" stroke-width="0.5"/>
+  <text x="370" y="131" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">认证与授权（OAuth 2.1）</text>
+
+  <rect x="360" y="146" width="240" height="28" rx="5" fill="#FFF" stroke="#D97706" stroke-width="0.5"/>
+  <text x="370" y="165" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">审计日志（请求/响应/耗时）</text>
+
+  <rect x="360" y="180" width="240" height="28" rx="5" fill="#FFF" stroke="#D97706" stroke-width="0.5"/>
+  <text x="370" y="199" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">流量控制（并发/频率限制）</text>
+
+  <rect x="360" y="214" width="240" height="28" rx="5" fill="#FFF" stroke="#D97706" stroke-width="0.5"/>
+  <text x="370" y="233" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E">安全扫描（提示注入检测）</text>
+
+  <rect x="360" y="248" width="240" height="22" rx="5" fill="#FFEDD5"/>
+  <text x="480" y="263" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#92400E" text-anchor="middle">开源实现：mcp-gateway / mcp-proxy</text>
+
+  <!-- Arrows to Servers -->
+  <line x1="615" y1="100" x2="690" y2="100" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="615" y1="160" x2="690" y2="160" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="615" y1="230" x2="690" y2="230" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Right: Servers -->
+  <rect x="695" y="70" width="220" height="60" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="805" y="95" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">MCP Server</text>
+  <text x="805" y="115" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">GitHub / Slack</text>
+
+  <rect x="695" y="140" width="220" height="60" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="805" y="165" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">MCP Server</text>
+  <text x="805" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">Postgres / MongoDB</text>
+
+  <rect x="695" y="210" width="220" height="60" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="805" y="235" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">MCP Server</text>
+  <text x="805" y="255" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">Stripe / Notion</text>
+
+  <!-- Bottom note -->
+  <rect x="120" y="310" width="720" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">小型团队直连（Client → Server），大型团队引入 Gateway</text>
+  <text x="480" y="353" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Gateway 自 2025-11 规范起正式纳入，非强制但推荐企业使用</text>
+
+  <!-- Direct vs Gateway comparison -->
+  <rect x="120" y="380" width="330" height="45" rx="6" fill="#F1F5F9"/>
+  <text x="130" y="400" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">⚠ 直连模式：Client 逐个配置 Server</text>
+  <text x="130" y="417" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">无集中管控 · 无审计 · 难以扩展</text>
+
+  <rect x="510" y="380" width="330" height="45" rx="6" fill="#D1FAE5"/>
+  <text x="520" y="400" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46">✅ Gateway 模式：统一管控点</text>
+  <text x="520" y="417" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46">集中认证 · 完整审计 · 水平扩展</text>
+</svg>

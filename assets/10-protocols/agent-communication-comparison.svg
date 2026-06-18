@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="440" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Agent 通信协议对比</text>
+
+  <!-- Header row -->
+  <rect x="40" y="60" width="160" height="40" rx="6" fill="#1E293B"/>
+  <text x="55" y="85" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF">维度</text>
+
+  <rect x="210" y="60" width="230" height="40" rx="6" fill="#2563EB"/>
+  <text x="325" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">A2A（企业协作）</text>
+
+  <rect x="450" y="60" width="230" height="40" rx="6" fill="#059669"/>
+  <text x="565" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">ACP（并入 A2A）</text>
+
+  <rect x="690" y="60" width="230" height="40" rx="6" fill="#D97706"/>
+  <text x="805" y="85" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">ANP（去中心化）</text>
+
+  <!-- Row 1: Governance -->
+  <rect x="40" y="110" width="160" height="55" rx="0" fill="#F1F5F9"/>
+  <text x="55" y="135" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">治理</text>
+  <text x="55" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">发起方</text>
+
+  <rect x="210" y="110" width="230" height="55" fill="#FFF"/>
+  <text x="230" y="135" font-family="Segoe UI, sans-serif" font-size="12" fill="#1E40AF" font-weight="bold">Linux Foundation</text>
+  <text x="230" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B">Google 发起，v1.0 稳定</text>
+
+  <rect x="450" y="110" width="230" height="55" fill="#FFF"/>
+  <text x="470" y="135" font-family="Segoe UI, sans-serif" font-size="12" fill="#065F46" font-weight="bold">Linux Foundation</text>
+  <text x="470" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B">IBM 发起，2025-08 合并</text>
+
+  <rect x="690" y="110" width="230" height="55" fill="#FFF"/>
+  <text x="710" y="135" font-family="Segoe UI, sans-serif" font-size="12" fill="#92400E" font-weight="bold">社区治理</text>
+  <text x="710" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B">工作组自主治理</text>
+
+  <!-- Row 2: Discovery -->
+  <rect x="40" y="175" width="160" height="55" fill="#F1F5F9"/>
+  <text x="55" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">发现机制</text>
+
+  <rect x="210" y="175" width="230" height="55" fill="#F8FAFC"/>
+  <text x="230" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">Agent Card</text>
+  <text x="230" y="218" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">/.well-known/agent-card.json</text>
+
+  <rect x="450" y="175" width="230" height="55" fill="#F8FAFC"/>
+  <text x="470" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">REST 端点注册</text>
+  <text x="470" y="218" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">已并入 Agent Card</text>
+
+  <rect x="690" y="175" width="230" height="55" fill="#F8FAFC"/>
+  <text x="710" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">W3C DIDs + JSON-LD</text>
+  <text x="710" y="218" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">did:wba 方法，无中心注册表</text>
+
+  <!-- Row 3: Message -->
+  <rect x="40" y="240" width="160" height="55" fill="#F1F5F9"/>
+  <text x="55" y="265" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">消息格式</text>
+
+  <rect x="210" y="240" width="230" height="55" fill="#FFF"/>
+  <text x="230" y="265" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">JSON-RPC 2.0</text>
+  <text x="230" y="283" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">HTTP + SSE</text>
+
+  <rect x="450" y="240" width="230" height="55" fill="#FFF"/>
+  <text x="470" y="265" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Multipart MIME</text>
+  <text x="470" y="283" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">RESTful HTTP</text>
+
+  <rect x="690" y="240" width="230" height="55" fill="#FFF"/>
+  <text x="710" y="265" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">JSON-LD</text>
+  <text x="710" y="283" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">HTTPS + P2P</text>
+
+  <!-- Row 4: Use case -->
+  <rect x="40" y="305" width="160" height="55" fill="#F1F5F9"/>
+  <text x="55" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">适合场景</text>
+
+  <rect x="210" y="305" width="230" height="55" fill="#F8FAFC"/>
+  <text x="230" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">跨厂商企业 Agent 协作</text>
+  <text x="230" y="348" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">50+ 厂商支持，最成熟</text>
+
+  <rect x="450" y="305" width="230" height="55" fill="#F8FAFC"/>
+  <text x="470" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">有状态多 Agent 通信</text>
+  <text x="470" y="348" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">理念已融入 A2A v1.0</text>
+
+  <rect x="690" y="305" width="230" height="55" fill="#F8FAFC"/>
+  <text x="710" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">去中心化 Agent 市场</text>
+  <text x="710" y="348" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">跨组织开放网络</text>
+
+  <!-- Row 5: Recommendation -->
+  <rect x="40" y="370" width="160" height="55" fill="#F1F5F9"/>
+  <text x="55" y="395" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">推荐</text>
+
+  <rect x="210" y="370" width="230" height="55" rx="0" fill="#D1FAE5"/>
+  <text x="230" y="395" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#065F46">✅ 首选方案</text>
+  <text x="230" y="413" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#065F46">大多数 Agent 的通信层选择</text>
+
+  <rect x="450" y="370" width="230" height="55" fill="#FEF3C7"/>
+  <text x="470" y="395" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E">📌 历史知识</text>
+  <text x="470" y="413" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#92400E">无需单独学习，用 A2A 即可</text>
+
+  <rect x="690" y="370" width="230" height="55" fill="#FFEDD5"/>
+  <text x="710" y="395" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E">🔭 关注</text>
+  <text x="710" y="413" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#92400E">未来需要时再引入</text>
+</svg>

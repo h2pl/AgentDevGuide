@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="400" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">A2A 三种交互模式</text>
+
+  <!-- Mode 1: Sync -->
+  <rect x="40" y="70" width="280" height="200" rx="8" fill="#FFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="70" width="280" height="35" rx="8" fill="#2563EB"/>
+  <text x="180" y="93" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">同步（Sync）</text>
+
+  <!-- Client box -->
+  <rect x="65" y="120" width="100" height="30" rx="5" fill="#DBEAFE"/>
+  <text x="115" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">客户端</text>
+
+  <!-- Arrow right -->
+  <line x1="165" y1="130" x2="195" y2="130" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Arrow left -->
+  <line x1="195" y1="155" x2="165" y2="155" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Server box -->
+  <rect x="200" y="120" width="100" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="250" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46" text-anchor="middle">Agent</text>
+
+  <text x="65" y="128" font-family="Segoe UI, sans-serif" font-size="10" fill="#2563EB">请求</text>
+  <text x="65" y="153" font-family="Segoe UI, sans-serif" font-size="10" fill="#2563EB">响应</text>
+
+  <text x="180" y="205" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">请求发出，连接保持</text>
+  <text x="180" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">直到收到完整结果</text>
+  <text x="180" y="250" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">适合：低延迟，30s 内返回</text>
+  <text x="180" y="265" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">查天气 · 翻译 · 简单计算</text>
+
+  <!-- Mode 2: Streaming -->
+  <rect x="340" y="70" width="280" height="200" rx="8" fill="#FFF" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="340" y="70" width="280" height="35" rx="8" fill="#D97706"/>
+  <text x="480" y="93" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">流式（Streaming）</text>
+
+  <rect x="365" y="120" width="100" height="30" rx="5" fill="#FEF3C7"/>
+  <text x="415" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E" text-anchor="middle">客户端</text>
+
+  <!-- SSE arrows -->
+  <line x1="465" y1="125" x2="495" y2="125" stroke="#D97706" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="495" y1="140" x2="495" y2="165" stroke="#D97706" stroke-width="1.5"/>
+  <line x1="465" y1="155" x2="495" y2="155" stroke="#D97706" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="465" y1="175" x2="495" y2="175" stroke="#D97706" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <rect x="500" y="120" width="100" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="550" y="140" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46" text-anchor="middle">Agent</text>
+
+  <!-- Dots -->
+  <text x="478" y="152" font-family="Segoe UI, sans-serif" font-size="9" fill="#D97706">SSE</text>
+  <text x="478" y="170" font-family="Segoe UI, sans-serif" font-size="9" fill="#D97706">SSE</text>
+
+  <text x="480" y="205" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">SSE 实时推送进度</text>
+  <text x="480" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">中间结果逐条可见</text>
+  <text x="480" y="250" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">适合：长任务，实时反馈</text>
+  <text x="480" y="265" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">生成报告 · 批量处理</text>
+
+  <!-- Mode 3: Async -->
+  <rect x="640" y="70" width="280" height="200" rx="8" fill="#FFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="640" y="70" width="280" height="35" rx="8" fill="#059669"/>
+  <text x="780" y="93" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">异步（Async）</text>
+
+  <rect x="665" y="110" width="80" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="705" y="130" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46" text-anchor="middle">客户端</text>
+
+  <!-- Arrow right -->
+  <line x1="745" y1="115" x2="795" y2="115" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Task ID -->
+  <line x1="795" y1="140" x2="745" y2="140" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="800" y="110" width="100" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="850" y="130" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#065F46" text-anchor="middle">Agent</text>
+
+  <text x="665" y="118" font-family="Segoe UI, sans-serif" font-size="10" fill="#059669">请求</text>
+  <text x="665" y="138" font-family="Segoe UI, sans-serif" font-size="10" fill="#059669">task_id</text>
+
+  <!-- Callback -->
+  <text x="780" y="170" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#059669">客户端去忙其他事</text>
+
+  <line x1="850" y1="185" x2="705" y2="185" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <text x="745" y="183" font-family="Segoe UI, sans-serif" font-size="10" fill="#059669">回调</text>
+
+  <text x="780" y="205" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">立即返回 task_id</text>
+  <text x="780" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">完成后回调通知</text>
+  <text x="780" y="250" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">适合：耗时任务，无需等待</text>
+  <text x="780" y="265" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">定时报表 · 批量处理</text>
+
+  <!-- Bottom note -->
+  <rect x="120" y="300" width="720" height="80" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="325" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">选型原则</text>
+  <text x="180" y="352" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">结果能在几秒内返回？→ 同步</text>
+  <text x="480" y="352" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">用户想看进度？→ 流式</text>
+  <text x="180" y="372" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">任务超过 1 分钟？→ 异步</text>
+  <text x="480" y="372" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">不确定？→ 默认同步，超时降级为异步</text>
+</svg>

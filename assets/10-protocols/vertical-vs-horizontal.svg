@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow-v" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-h" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">垂直集成（MCP）vs 水平协作（A2A）</text>
+
+  <!-- Left side: Vertical -->
+  <rect x="40" y="65" width="420" height="175" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+
+  <!-- Agent -->
+  <rect x="140" y="85" width="180" height="40" rx="8" fill="#2563EB"/>
+  <text x="230" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">Agent</text>
+
+  <!-- Arrow down -->
+  <line x1="230" y1="125" x2="230" y2="160" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-v)"/>
+
+  <!-- Tools -->
+  <rect x="60" y="165" width="100" height="30" rx="5" fill="#93C5FD"/>
+  <text x="110" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">数据库</text>
+
+  <rect x="175" y="165" width="100" height="30" rx="5" fill="#93C5FD"/>
+  <text x="225" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">API</text>
+
+  <rect x="290" y="165" width="100" height="30" rx="5" fill="#93C5FD"/>
+  <text x="340" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">文件系统</text>
+
+  <text x="230" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">垂直集成：MCP ↓</text>
+  <text x="230" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Agent 向下调用工具，Client-Server 架构</text>
+
+  <!-- Right side: Horizontal -->
+  <rect x="500" y="65" width="420" height="175" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+
+  <!-- Agents -->
+  <rect x="530" y="85" width="100" height="40" rx="8" fill="#059669"/>
+  <text x="580" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">Agent A</text>
+
+  <rect x="750" y="85" width="100" height="40" rx="8" fill="#059669"/>
+  <text x="800" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">Agent B</text>
+
+  <!-- Arrow between -->
+  <line x1="630" y1="105" x2="745" y2="105" stroke="#059669" stroke-width="2" marker-end="url(#arrow-h)"/>
+
+  <!-- Sub agents -->
+  <rect x="530" y="155" width="100" height="30" rx="5" fill="#6EE7B7"/>
+  <text x="580" y="175" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">子 Agent</text>
+
+  <rect x="750" y="155" width="100" height="30" rx="5" fill="#6EE7B7"/>
+  <text x="800" y="175" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">子 Agent</text>
+
+  <text x="710" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">水平协作：A2A ↔</text>
+  <text x="710" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Agent 间任务委托，Peer-to-Peer 架构</text>
+
+  <!-- Bottom comparison table -->
+  <rect x="40" y="265" width="880" height="175" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="293" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">维度对比</text>
+
+  <line x1="60" y1="303" x2="900" y2="303" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="60" y="312" width="200" height="28" rx="0" fill="#F1F5F9"/>
+  <text x="80" y="331" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#475569">维度</text>
+  <rect x="260" y="312" width="310" height="28" rx="0" fill="#EFF6FF"/>
+  <text x="280" y="331" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">垂直集成（MCP）</text>
+  <rect x="570" y="312" width="330" height="28" rx="0" fill="#ECFDF5"/>
+  <text x="590" y="331" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#065F46">水平协作（A2A）</text>
+
+  <rect x="60" y="340" width="200" height="28" fill="#FAFAFA"/>
+  <text x="80" y="359" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">交互方向</text>
+  <rect x="260" y="340" width="310" height="28" fill="#FFF"/>
+  <text x="280" y="359" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent → 工具（向下）</text>
+  <rect x="570" y="340" width="330" height="28" fill="#FFF"/>
+  <text x="590" y="359" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent ↔ Agent（横向）</text>
+
+  <rect x="60" y="368" width="200" height="28" fill="#FAFAFA"/>
+  <text x="80" y="387" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">架构模式</text>
+  <rect x="260" y="368" width="310" height="28" fill="#FFF"/>
+  <text x="280" y="387" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Client-Server</text>
+  <rect x="570" y="368" width="330" height="28" fill="#FFF"/>
+  <text x="590" y="387" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Peer-to-Peer</text>
+
+  <rect x="60" y="396" width="200" height="28" fill="#FAFAFA"/>
+  <text x="80" y="415" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">发现机制</text>
+  <rect x="260" y="396" width="310" height="28" fill="#FFF"/>
+  <text x="280" y="415" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">配置固定（静态）</text>
+  <rect x="570" y="396" width="330" height="28" fill="#FFF"/>
+  <text x="590" y="415" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent Card（动态发现）</text>
+</svg>

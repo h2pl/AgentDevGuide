@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">2026 年 Agent 协议全景格局</text>
+
+  <!-- Center: Agent -->
+  <rect x="380" y="200" width="200" height="60" rx="12" fill="#2563EB"/>
+  <text x="480" y="235" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Agent</text>
+
+  <!-- Top: Vertical MCP -->
+  <rect x="205" y="60" width="550" height="70" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="240" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E40AF">垂直层 · MCP（工具集成）</text>
+  <text x="240" y="115" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">工具调用 · 资源读取 · Prompt 模板 · Gateway 企业部署</text>
+  <rect x="630" y="70" width="110" height="28" rx="14" fill="#2563EB"/>
+  <text x="685" y="89" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">事实标准</text>
+
+  <!-- Left: Horizontal A2A -->
+  <rect x="40" y="160" width="260" height="90" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="60" y="190" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#065F46">水平层 · A2A（企业协作）</text>
+  <text x="60" y="212" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent Card 能力声明</text>
+  <text x="60" y="230" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">任务生命周期 · 三交互模式</text>
+  <rect x="190" y="164" width="95" height="24" rx="12" fill="#059669"/>
+  <text x="237" y="180" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">企业标准</text>
+
+  <!-- Bottom-left: ANP -->
+  <rect x="40" y="285" width="260" height="80" rx="8" fill="#FFEDD5" stroke="#D97706" stroke-width="1.5"/>
+  <text x="60" y="310" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#92400E">水平层 · ANP（去中心化）</text>
+  <text x="60" y="335" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">W3C DIDs 身份 · JSON-LD 发现 · P2P 通信</text>
+  <rect x="190" y="340" width="95" height="20" rx="10" fill="#D97706"/>
+  <text x="237" y="354" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">社区阶段</text>
+
+  <!-- Right: AG-UI -->
+  <rect x="660" y="160" width="260" height="90" rx="8" fill="#E0E7FF" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="680" y="190" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#4338CA">交互层 · AG-UI / A2UI</text>
+  <text x="680" y="212" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent → 前端流式事件输出</text>
+  <text x="680" y="230" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Component 级渲染标准化</text>
+  <rect x="810" y="164" width="95" height="24" rx="12" fill="#6366F1"/>
+  <text x="857" y="180" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">早期阶段</text>
+
+  <!-- Bottom-right: OAP -->
+  <rect x="660" y="285" width="260" height="80" rx="8" fill="#FCE7F3" stroke="#EC4899" stroke-width="1.5"/>
+  <text x="680" y="310" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#BE185D">商业层 · OAP（全栈方案）</text>
+  <text x="680" y="335" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">身份 · 计费 · 审计 · L0-L5 合规</text>
+  <rect x="810" y="340" width="95" height="20" rx="10" fill="#EC4899"/>
+  <text x="857" y="354" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">概念验证</text>
+
+  <!-- Arrows connecting -->
+  <line x1="380" y1="230" x2="300" y2="205" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="580" y1="230" x2="660" y2="205" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="250" x2="170" y2="285" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="660" y1="250" x2="790" y2="285" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Bottom note -->
+  <rect x="120" y="400" width="720" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="422" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">行业共识：协议互补而非竞争，各层独立选型</text>
+  <text x="480" y="443" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">80% 场景：MCP（必选）+ A2A（可选），按需扩展</text>
+</svg>

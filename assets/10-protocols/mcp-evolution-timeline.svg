@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="38" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">MCP 版本演进时间线（2024.11 → 2026.06）</text>
+
+  <!-- Timeline bar -->
+  <line x1="80" y1="100" x2="880" y2="100" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Version 1 -->
+  <circle cx="140" cy="100" r="14" fill="#2563EB"/>
+  <text x="140" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">1</text>
+  <rect x="50" y="125" width="180" height="80" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="140" y="148" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">2024-11</text>
+  <text x="140" y="167" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">初始规范发布</text>
+  <text x="140" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">仅 STDIO 传输</text>
+  <text x="140" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Anthropic 闭源</text>
+
+  <!-- Version 2 -->
+  <circle cx="330" cy="100" r="14" fill="#2563EB"/>
+  <text x="330" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">2</text>
+  <rect x="240" y="125" width="180" height="80" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="330" y="148" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">2025-03</text>
+  <text x="330" y="167" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Streamable HTTP</text>
+  <text x="330" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Roots 原语</text>
+  <text x="330" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">本地→远程扩展</text>
+
+  <!-- Version 3 -->
+  <circle cx="520" cy="100" r="14" fill="#D97706"/>
+  <text x="520" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">3</text>
+  <rect x="430" y="125" width="180" height="80" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+  <text x="520" y="148" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E" text-anchor="middle">2025-06</text>
+  <text x="520" y="167" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">OAuth 2.1 支持</text>
+  <text x="520" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Sampling 原语</text>
+  <text x="520" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">企业安全前提</text>
+
+  <!-- Version 4 -->
+  <circle cx="710" cy="100" r="14" fill="#059669"/>
+  <text x="710" y="105" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">4</text>
+  <rect x="620" y="125" width="180" height="80" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="710" y="148" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#065F46" text-anchor="middle">2025-11</text>
+  <text x="710" y="167" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Gateway 规范</text>
+  <text x="710" y="185" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Feature Detection</text>
+  <text x="710" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Linux Foundation 捐赠</text>
+
+  <!-- Bottom ecosystem data -->
+  <rect x="80" y="240" width="800" height="210" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="268" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">2026 年中生态数据</text>
+
+  <rect x="110" y="290" width="170" height="65" rx="6" fill="#DBEAFE"/>
+  <text x="195" y="315" font-family="Segoe UI, sans-serif" font-size="22" font-weight="bold" fill="#1E40AF" text-anchor="middle">10,000+</text>
+  <text x="195" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">有效公共 Server</text>
+
+  <rect x="310" y="290" width="170" height="65" rx="6" fill="#D1FAE5"/>
+  <text x="395" y="315" font-family="Segoe UI, sans-serif" font-size="22" font-weight="bold" fill="#065F46" text-anchor="middle">1.64 亿</text>
+  <text x="395" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">月 SDK 下载量</text>
+
+  <rect x="510" y="290" width="170" height="65" rx="6" fill="#FFEDD5"/>
+  <text x="595" y="315" font-family="Segoe UI, sans-serif" font-size="22" font-weight="bold" fill="#92400E" text-anchor="middle">52%</text>
+  <text x="595" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">注册 Server 死亡</text>
+
+  <rect x="710" y="290" width="150" height="65" rx="6" fill="#E0E7FF"/>
+  <text x="785" y="315" font-family="Segoe UI, sans-serif" font-size="22" font-weight="bold" fill="#4338CA" text-anchor="middle">8+</text>
+  <text x="785" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">原生支持客户端</text>
+
+  <text x="480" y="390" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">原生支持：Claude · ChatGPT · Cursor · Gemini · VS Code · Zed · Windsurf</text>
+  <text x="480" y="410" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">治理：Linux Foundation Agentic AI Foundation</text>
+  <text x="480" y="435" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">数据来源：arXiv 2509.25292（覆盖 6 个 MCP 注册表的系统测量）</text>
+</svg>
