@@ -246,7 +246,7 @@ E3 = Tool[args3]
 - 其他变体：ToT（思维树）、BoT（思维模板）、Voyager（持续学习）等
 - **选型原则**：从最简单的 ReAct 起步，按需加复杂度
 
-> 至此你已经掌握了 Agent 循环的所有主流范式。下一章 [06 — 记忆管理](../06-memory-management/README.md) 会让 Agent 拥有记忆，越用越聪明。
+> 至此你已经掌握了 Agent 循环的所有主流范式。下一章 [06 — 知识检索（RAG）](../06-rag-pipeline/README.md) 会给 Agent 接入外部知识。
 
 ## 参考链接
 

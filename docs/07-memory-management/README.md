@@ -1,4 +1,4 @@
-# 06 — 记忆管理
+# 07 — 记忆管理
 
 让 Agent 拥有记忆：从对话历史到跨会话持久化，构建真正"记住你"的 Agent。
 
@@ -9,5 +9,7 @@
 | 01 | [记忆三层模型](./01-memory-layers.md) | 短期记忆、工作记忆、长期记忆的定义、作用与实现 |
 | 02 | [记忆存储与检索](./02-memory-storage-retrieval.md) | 向量数据库、SQL、文件存储的选型；检索策略与相似度匹配 |
 | 03 | [跨会话记忆实践](./03-cross-session-memory.md) | 从零构建带记忆的 Agent：记忆写入、检索、更新、遗忘的完整流程 |
+| 04 | [记忆框架与选型](./04-memory-frameworks.md) | 三种长期记忆类型、记忆巩固、四大框架（Mem0/Letta/Zep/Cognee）设计理念与对比选型 |
+| 05 | [记忆框架实战](./05-frameworks-hands-on.md) | 四框架完整 Quick Start 代码、生产配置、记忆治理、组合使用 |
 
-> 学完本章后，请继续阅读 [07 — 知识检索（RAG）](../07-rag-pipeline/README.md)，让 Agent 基于外部知识库回答问题。
+> 学完本章后，请继续阅读 [08 — 上下文工程](../08-context-engineering/README.md)，学习如何高效管理 Agent 的上下文窗口。
