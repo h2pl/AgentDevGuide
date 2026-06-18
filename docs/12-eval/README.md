@@ -6,8 +6,10 @@
 
 | # | 文章 | 核心内容 |
 |---|------|---------|
-| 01 | [Agent 评测方法](01-evaluation-methods.md) | 三层评测体系、评测集构建、自动化流程 |
+| 01 | [评测体系与指标](01-evaluation-system.md) | 三层评测体系、四种评测集、核心指标定义 |
 | 02 | [LLM-as-Judge：用 LLM 做自动评测](02-llm-as-judge.md) | 评分模式、Judge Prompt 工程、校准与偏差 |
+| 03 | [评测驱动开发](03-eval-driven-development.md) | EDD 工作流、CI/CD 门禁、回归测试策略 |
+| 04 | [生产环境评测](04-production-evaluation.md) | 在线评测、用户反馈、回放测试、漂移检测 |
 
 ## 参考链接
 
