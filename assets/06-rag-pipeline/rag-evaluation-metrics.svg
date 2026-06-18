@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="480" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">RAG 评测指标体系：检索评测 + 生成评测</text>
+
+  <!-- ===================== LEFT: Retrieval Metrics ===================== -->
+  <rect x="20" y="55" width="450" height="400" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="55" width="450" height="40" rx="10" fill="#DBEAFE"/>
+  <rect x="20" y="85" width="450" height="10" fill="#DBEAFE"/>
+  <text x="245" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4ED8">检索阶段评测 — "找对了没有"</text>
+
+  <!-- Recall@K -->
+  <rect x="40" y="115" width="410" height="62" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="55" y="137" font-size="14" font-weight="bold" fill="#1E293B">Recall@K</text>
+  <text x="155" y="137" font-size="12" fill="#64748B">top-K 中包含了多少相关文档</text>
+  <text x="55" y="160" font-size="11" fill="#1D4ED8">公式：|检索到的 ∩ 相关的| / |所有相关的|</text>
+  <text x="340" y="160" font-size="11" font-weight="bold" fill="#15803D">理想值 > 0.8</text>
+
+  <!-- Precision@K -->
+  <rect x="40" y="187" width="410" height="62" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="55" y="209" font-size="14" font-weight="bold" fill="#1E293B">Precision@K</text>
+  <text x="180" y="209" font-size="12" fill="#64748B">top-K 中有多少是相关的</text>
+  <text x="55" y="232" font-size="11" fill="#1D4ED8">公式：|检索到的 ∩ 相关的| / K</text>
+  <text x="340" y="232" font-size="11" font-weight="bold" fill="#15803D">理想值 > 0.6</text>
+
+  <!-- MRR -->
+  <rect x="40" y="259" width="410" height="62" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="55" y="281" font-size="14" font-weight="bold" fill="#1E293B">MRR</text>
+  <text x="105" y="281" font-size="12" fill="#64748B">第一个相关结果的排名倒数</text>
+  <text x="55" y="304" font-size="11" fill="#1D4ED8">公式：1 / rank_of_first_relevant</text>
+  <text x="340" y="304" font-size="11" font-weight="bold" fill="#15803D">理想值 > 0.7</text>
+
+  <!-- NDCG -->
+  <rect x="40" y="331" width="410" height="62" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="55" y="353" font-size="14" font-weight="bold" fill="#1E293B">NDCG</text>
+  <text x="115" y="353" font-size="12" fill="#64748B">考虑排名位置的加权评分</text>
+  <text x="55" y="376" font-size="11" fill="#1D4ED8">相关文档排名越靠前，得分越高</text>
+  <text x="340" y="376" font-size="11" font-weight="bold" fill="#15803D">综合评估首选</text>
+
+  <!-- Recommendation -->
+  <rect x="40" y="405" width="410" height="35" rx="5" fill="#DBEAFE"/>
+  <text x="245" y="428" text-anchor="middle" font-size="12" fill="#1D4ED8">推荐：先用 Recall@K 定位问题，再用 NDCG 综合评估</text>
+
+  <!-- ===================== RIGHT: Generation Metrics ===================== -->
+  <rect x="490" y="55" width="450" height="400" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="490" y="55" width="450" height="40" rx="10" fill="#DCFCE7"/>
+  <rect x="490" y="85" width="450" height="10" fill="#DCFCE7"/>
+  <text x="715" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803D">生成阶段评测 — "答案好不好"</text>
+
+  <!-- Faithfulness -->
+  <rect x="510" y="115" width="410" height="75" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="525" y="137" font-size="14" font-weight="bold" fill="#1E293B">Faithfulness 忠实度</text>
+  <text x="525" y="157" font-size="12" fill="#64748B">答案是否基于检索文档生成，没有编造信息</text>
+  <text x="525" y="177" font-size="11" fill="#15803D">评测方法：LLM-as-Judge，提取声明 → 逐一验证</text>
+  <text x="820" y="177" font-size="11" font-weight="bold" fill="#15803D">> 4/5</text>
+
+  <!-- Relevancy -->
+  <rect x="510" y="200" width="410" height="75" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="525" y="222" font-size="14" font-weight="bold" fill="#1E293B">Answer Relevancy 相关性</text>
+  <text x="525" y="242" font-size="12" fill="#64748B">答案是否回答了用户的问题</text>
+  <text x="525" y="262" font-size="11" fill="#15803D">评测方法：从答案反向生成问题 → 计算相似度</text>
+  <text x="820" y="262" font-size="11" font-weight="bold" fill="#15803D">> 4/5</text>
+
+  <!-- Correctness -->
+  <rect x="510" y="285" width="410" height="75" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="525" y="307" font-size="14" font-weight="bold" fill="#1E293B">Answer Correctness 正确性</text>
+  <text x="525" y="327" font-size="12" fill="#64748B">答案是否与 ground truth 一致</text>
+  <text x="525" y="347" font-size="11" fill="#15803D">评测方法：语义相似度 + 事实重合度</text>
+  <text x="820" y="347" font-size="11" font-weight="bold" fill="#15803D">> 4/5</text>
+
+  <!-- Frameworks -->
+  <rect x="510" y="375" width="410" height="65" rx="6" fill="#F8FAFC"/>
+  <text x="525" y="395" font-size="12" font-weight="bold" fill="#334155">推荐评测框架：</text>
+  <text x="525" y="415" font-size="12" fill="#64748B">• RAGAS — 专注 RAG 评测，指标丰富</text>
+  <text x="525" y="433" font-size="12" fill="#64748B">• DeepEval / LangSmith — 通用 LLM 评测</text>
+
+</svg>

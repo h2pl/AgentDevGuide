@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22C55E"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="500" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">实战 RAG 系统架构：LangChain + ChromaDB + OpenAI</text>
+
+  <!-- ===================== TOP: User ===================== -->
+  <rect x="380" y="55" width="200" height="50" rx="25" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <text x="480" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">用户提问</text>
+
+  <!-- Arrow down -->
+  <line x1="480" y1="105" x2="480" y2="130" stroke="#64748B" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ===================== MIDDLE: RAG Chain ===================== -->
+  <rect x="140" y="135" width="680" height="210" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="140" y="135" width="680" height="36" rx="12" fill="#F1F5F9"/>
+  <rect x="140" y="161" width="680" height="10" fill="#F1F5F9"/>
+  <text x="480" y="158" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">RAG Chain（LangChain LCEL）</text>
+
+  <!-- Step 1: Retriever -->
+  <rect x="165" y="185" width="190" height="140" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="260" y="208" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Retriever 检索器</text>
+  <rect x="180" y="218" width="160" height="30" rx="4" fill="#DBEAFE"/>
+  <text x="260" y="238" text-anchor="middle" font-size="11" fill="#1E293B">ChromaDB 向量检索</text>
+  <rect x="180" y="255" width="160" height="30" rx="4" fill="#DBEAFE"/>
+  <text x="260" y="275" text-anchor="middle" font-size="11" fill="#1E293B">Top-K = 4 片段</text>
+  <rect x="180" y="292" width="160" height="25" rx="4" fill="#F1F5F9"/>
+  <text x="260" y="309" text-anchor="middle" font-size="10" fill="#64748B">similarity / MMR</text>
+
+  <!-- Arrow right -->
+  <line x1="355" y1="255" x2="380" y2="255" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-b)"/>
+
+  <!-- Step 2: Prompt Template -->
+  <rect x="385" y="185" width="190" height="140" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="480" y="208" text-anchor="middle" font-size="13" font-weight="bold" fill="#D97706">Prompt 模板</text>
+  <text x="395" y="232" font-size="10" fill="#64748B">你是一个知识问答助手...</text>
+  <text x="395" y="250" font-size="10" fill="#64748B">要求：只基于文档回答</text>
+  <text x="395" y="268" font-size="10" fill="#64748B">标注引用来源 [1][2]...</text>
+  <rect x="395" y="285" width="170" height="30" rx="4" fill="#FEF3C7"/>
+  <text x="480" y="305" text-anchor="middle" font-size="10" fill="#92400E">{context} + {question}</text>
+
+  <!-- Arrow right -->
+  <line x1="575" y1="255" x2="600" y2="255" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 3: LLM -->
+  <rect x="605" y="185" width="190" height="140" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="700" y="208" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">LLM 生成</text>
+  <rect x="620" y="218" width="160" height="30" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="238" text-anchor="middle" font-size="11" fill="#1E293B">GPT-4o / Claude</text>
+  <rect x="620" y="255" width="160" height="30" rx="4" fill="#DCFCE7"/>
+  <text x="700" y="275" text-anchor="middle" font-size="11" fill="#1E293B">temperature = 0</text>
+  <rect x="620" y="292" width="160" height="25" rx="4" fill="#F1F5F9"/>
+  <text x="700" y="309" text-anchor="middle" font-size="10" fill="#64748B">StrOutputParser</text>
+
+  <!-- Arrow down from chain to output -->
+  <line x1="480" y1="345" x2="480" y2="375" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- ===================== BOTTOM LEFT: Offline Indexing ===================== -->
+  <rect x="20" y="380" width="310" height="100" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="380" width="310" height="32" rx="10" fill="#DBEAFE"/>
+  <rect x="20" y="402" width="310" height="10" fill="#DBEAFE"/>
+  <text x="175" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">离线索引（构建时）</text>
+
+  <text x="40" y="430" font-size="11" fill="#64748B">PDF → PyPDFLoader 解析</text>
+  <text x="40" y="448" font-size="11" fill="#64748B">→ RecursiveTextSplitter 切分（300/50）</text>
+  <text x="40" y="466" font-size="11" fill="#64748B">→ OpenAI Embedding → ChromaDB 存储</text>
+
+  <!-- Connection from indexing to ChromaDB -->
+  <path d="M 280 380 Q 280 360 260 340" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="4" fill="none" marker-end="url(#arr-b)"/>
+
+  <!-- ===================== BOTTOM RIGHT: Output ===================== -->
+  <rect x="355" y="380" width="260" height="100" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="355" y="380" width="260" height="32" rx="10" fill="#DCFCE7"/>
+  <rect x="355" y="402" width="260" height="10" fill="#DCFCE7"/>
+  <text x="485" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">带引用的答案</text>
+
+  <text x="375" y="430" font-size="11" fill="#64748B">基于文档回答，标注 [1][2] 引用</text>
+  <text x="375" y="448" font-size="11" fill="#64748B">找不到时明确告知"无相关信息"</text>
+  <text x="375" y="466" font-size="11" fill="#64748B">支持流式输出（stream）</text>
+
+  <!-- ===================== BOTTOM FAR RIGHT: Enhancement ===================== -->
+  <rect x="640" y="380" width="300" height="100" rx="10" fill="white" stroke="#E9D5FF" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="640" y="380" width="300" height="32" rx="10" fill="#F3E8FF"/>
+  <rect x="640" y="402" width="300" height="10" fill="#F3E8FF"/>
+  <text x="790" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#7C3AED">可选增强</text>
+
+  <text x="660" y="430" font-size="11" fill="#64748B">• 查询改写（LLM 优化 query）</text>
+  <text x="660" y="448" font-size="11" fill="#64748B">• MMR 多样性检索</text>
+  <text x="660" y="466" font-size="11" fill="#64748B">• 本地模型替代（Ollama / BGE）</text>
+
+</svg>

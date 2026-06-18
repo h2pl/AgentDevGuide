@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F59E0B"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22C55E"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" rx="12" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">RAG 完整流程：索引 → 检索 → 生成</text>
+
+  <!-- ===================== STAGE 1: INDEXING ===================== -->
+  <rect x="20" y="55" width="300" height="465" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="55" width="300" height="42" rx="10" fill="#DBEAFE"/>
+  <rect x="20" y="87" width="300" height="10" fill="#DBEAFE"/>
+  <text x="170" y="83" text-anchor="middle" font-size="15" font-weight="bold" fill="#1D4ED8">阶段 1：索引 Indexing</text>
+
+  <!-- Step 1: Documents -->
+  <rect x="45" y="115" width="250" height="58" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="170" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">① 文档解析</text>
+  <text x="170" y="160" text-anchor="middle" font-size="11" fill="#64748B">PDF / Word / HTML / Markdown → 纯文本</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="173" x2="170" y2="193" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- Step 2: Chunking -->
+  <rect x="45" y="198" width="250" height="58" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="170" y="223" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">② 文档切分</text>
+  <text x="170" y="243" text-anchor="middle" font-size="11" fill="#64748B">chunk_size=300, overlap=50</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="256" x2="170" y2="276" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- Step 3: Embedding -->
+  <rect x="45" y="281" width="250" height="58" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="170" y="306" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">③ 向量化 Embedding</text>
+  <text x="170" y="326" text-anchor="middle" font-size="11" fill="#64748B">文本 → 768~3072 维浮点向量</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="339" x2="170" y2="359" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- Step 4: Store -->
+  <rect x="45" y="364" width="250" height="58" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="170" y="389" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">④ 存入向量数据库</text>
+  <text x="170" y="409" text-anchor="middle" font-size="11" fill="#64748B">Chroma / Qdrant / Milvus / pgvector</text>
+
+  <!-- Offline label -->
+  <rect x="60" y="445" width="220" height="32" rx="5" fill="#DBEAFE"/>
+  <text x="170" y="467" text-anchor="middle" font-size="12" fill="#1D4ED8">离线执行，一次性构建</text>
+
+  <!-- ===================== STAGE 2: RETRIEVAL ===================== -->
+  <rect x="335" y="55" width="290" height="465" rx="10" fill="white" stroke="#FDE68A" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="335" y="55" width="290" height="42" rx="10" fill="#FEF3C7"/>
+  <rect x="335" y="87" width="290" height="10" fill="#FEF3C7"/>
+  <text x="480" y="83" text-anchor="middle" font-size="15" font-weight="bold" fill="#D97706">阶段 2：检索 Retrieval</text>
+
+  <!-- User Query -->
+  <rect x="360" y="115" width="240" height="58" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="480" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑤ 用户提问</text>
+  <text x="480" y="160" text-anchor="middle" font-size="11" fill="#64748B">"我们公司的报销流程是什么？"</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="173" x2="480" y2="193" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr-amber)"/>
+
+  <!-- Query Embedding -->
+  <rect x="360" y="198" width="240" height="58" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="480" y="223" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑥ 问题向量化</text>
+  <text x="480" y="243" text-anchor="middle" font-size="11" fill="#64748B">与索引时相同的 Embedding 模型</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="256" x2="480" y2="276" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr-amber)"/>
+
+  <!-- Similarity Search -->
+  <rect x="360" y="281" width="240" height="58" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="480" y="306" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑦ 相似度检索</text>
+  <text x="480" y="326" text-anchor="middle" font-size="11" fill="#64748B">余弦相似度 → 返回 Top-K 片段</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="339" x2="480" y2="359" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr-amber)"/>
+
+  <!-- Reranker -->
+  <rect x="360" y="364" width="240" height="58" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="480" y="389" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑧ 重排序 Reranker</text>
+  <text x="480" y="409" text-anchor="middle" font-size="11" fill="#64748B">Cross-Encoder 精排 → Top-N</text>
+
+  <!-- Online label -->
+  <rect x="375" y="445" width="210" height="32" rx="5" fill="#FEF3C7"/>
+  <text x="480" y="467" text-anchor="middle" font-size="12" fill="#D97706">在线执行，每次查询触发</text>
+
+  <!-- Connection from Index to Retrieval -->
+  <path d="M 295 393 Q 320 393 360 393" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
+  <text x="327" y="385" text-anchor="middle" font-size="9" fill="#94A3B8">读取</text>
+
+  <!-- ===================== STAGE 3: GENERATION ===================== -->
+  <rect x="640" y="55" width="300" height="465" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="640" y="55" width="300" height="42" rx="10" fill="#DCFCE7"/>
+  <rect x="640" y="87" width="300" height="10" fill="#DCFCE7"/>
+  <text x="790" y="83" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803D">阶段 3：生成 Generation</text>
+
+  <!-- Prompt Construction -->
+  <rect x="665" y="155" width="250" height="100" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="790" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑨ 构造 Prompt</text>
+  <text x="675" y="202" font-size="11" fill="#64748B">系统指令 + 检索结果[1][2][3]</text>
+  <text x="675" y="222" font-size="11" fill="#64748B">+ 用户问题</text>
+  <text x="675" y="242" font-size="11" fill="#64748B">→ 要求"只基于文档回答"</text>
+
+  <!-- Arrow -->
+  <line x1="790" y1="255" x2="790" y2="280" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- LLM -->
+  <rect x="665" y="285" width="250" height="70" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="790" y="312" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑩ LLM 生成答案</text>
+  <text x="790" y="335" text-anchor="middle" font-size="11" fill="#64748B">GPT-4o / Claude / Qwen ...</text>
+
+  <!-- Arrow -->
+  <line x1="790" y1="355" x2="790" y2="380" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- Output -->
+  <rect x="665" y="385" width="250" height="58" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="790" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">⑪ 带引用的答案</text>
+  <text x="790" y="430" text-anchor="middle" font-size="11" fill="#64748B">答案 + 来源追溯 [1][2][3]</text>
+
+  <!-- Online label -->
+  <rect x="675" y="455" width="230" height="32" rx="5" fill="#DCFCE7"/>
+  <text x="790" y="477" text-anchor="middle" font-size="12" fill="#15803D">在线执行，实时生成</text>
+
+  <!-- Cross-stage arrows -->
+  <path d="M 600 310 Q 620 310 665 200" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4" fill="none" marker-end="url(#arr)"/>
+  <text x="628" y="240" font-size="9" fill="#94A3B8">检索结果</text>
+
+</svg>

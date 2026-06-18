@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#F59E0B"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22C55E"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">混合检索流程：向量检索 + BM25 + RRF 融合 + Reranker</text>
+
+  <!-- User Query -->
+  <rect x="355" y="55" width="250" height="50" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#s)"/>
+  <text x="480" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">用户提问</text>
+  <text x="480" y="95" text-anchor="middle" font-size="11" fill="#64748B">"error code 500 怎么排查？"</text>
+
+  <!-- Split arrows -->
+  <line x1="400" y1="105" x2="235" y2="135" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-b)"/>
+  <line x1="560" y1="105" x2="725" y2="135" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr-o)"/>
+
+  <!-- ===================== LEFT: Vector Search ===================== -->
+  <rect x="60" y="140" width="350" height="120" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="60" y="140" width="350" height="36" rx="10" fill="#DBEAFE"/>
+  <rect x="60" y="166" width="350" height="10" fill="#DBEAFE"/>
+  <text x="235" y="163" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">向量检索（语义相似度）</text>
+
+  <rect x="80" y="190" width="140" height="55" rx="6" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="150" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">问题向量化</text>
+  <text x="150" y="228" text-anchor="middle" font-size="10" fill="#64748B">Embedding Model</text>
+  <text x="150" y="240" text-anchor="middle" font-size="10" fill="#64748B">→ 1536维向量</text>
+
+  <line x1="220" y1="217" x2="242" y2="217" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arr-b)"/>
+
+  <rect x="247" y="190" width="148" height="55" rx="6" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="321" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">余弦相似度</text>
+  <text x="321" y="228" text-anchor="middle" font-size="10" fill="#64748B">Top-20 候选文档</text>
+  <text x="321" y="240" text-anchor="middle" font-size="10" fill="#22C55E">✓ 理解同义词/语义</text>
+
+  <!-- ===================== RIGHT: BM25 ===================== -->
+  <rect x="550" y="140" width="350" height="120" rx="10" fill="white" stroke="#FDE68A" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="550" y="140" width="350" height="36" rx="10" fill="#FEF3C7"/>
+  <rect x="550" y="166" width="350" height="10" fill="#FEF3C7"/>
+  <text x="725" y="163" text-anchor="middle" font-size="14" font-weight="bold" fill="#D97706">BM25 检索（关键词匹配）</text>
+
+  <rect x="570" y="190" width="140" height="55" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="640" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">分词处理</text>
+  <text x="640" y="228" text-anchor="middle" font-size="10" fill="#64748B">jieba / tokenizer</text>
+  <text x="640" y="240" text-anchor="middle" font-size="10" fill="#64748B">→ 词项列表</text>
+
+  <line x1="710" y1="217" x2="732" y2="217" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arr-o)"/>
+
+  <rect x="737" y="190" width="148" height="55" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="811" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">TF-IDF 评分</text>
+  <text x="811" y="228" text-anchor="middle" font-size="10" fill="#64748B">Top-20 候选文档</text>
+  <text x="811" y="240" text-anchor="middle" font-size="10" fill="#22C55E">✓ 精确匹配专有名词</text>
+
+  <!-- Merge arrows -->
+  <line x1="235" y1="260" x2="400" y2="290" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-b)"/>
+  <line x1="725" y1="260" x2="560" y2="290" stroke="#F59E0B" stroke-width="2" marker-end="url(#arr-o)"/>
+
+  <!-- ===================== CENTER: RRF Fusion ===================== -->
+  <rect x="300" y="290" width="360" height="90" rx="10" fill="white" stroke="#E9D5FF" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="300" y="290" width="360" height="36" rx="10" fill="#F3E8FF"/>
+  <rect x="300" y="316" width="360" height="10" fill="#F3E8FF"/>
+  <text x="480" y="313" text-anchor="middle" font-size="14" font-weight="bold" fill="#7C3AED">RRF 融合（Reciprocal Rank Fusion）</text>
+
+  <text x="480" y="345" text-anchor="middle" font-size="12" fill="#64748B">score(d) = Σ 1 / (60 + rank_i)</text>
+  <text x="480" y="365" text-anchor="middle" font-size="11" fill="#7C3AED">两路排名融合 → 取 Top-15 候选</text>
+
+  <!-- Arrow down -->
+  <line x1="480" y1="380" x2="480" y2="405" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- ===================== BOTTOM: Reranker ===================== -->
+  <rect x="270" y="410" width="420" height="90" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="270" y="410" width="420" height="36" rx="10" fill="#DCFCE7"/>
+  <rect x="270" y="436" width="420" height="10" fill="#DCFCE7"/>
+  <text x="480" y="433" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803D">Reranker 精排（Cross-Encoder）</text>
+
+  <text x="480" y="462" text-anchor="middle" font-size="12" fill="#64748B">对 15 个候选逐一计算 query-doc 相关性分数</text>
+  <text x="480" y="482" text-anchor="middle" font-size="12" fill="#22C55E">取 Top-5 最相关文档 → 交给 LLM 生成答案</text>
+
+</svg>
