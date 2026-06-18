@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="380" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Agent 边界划分决策</text>
+
+  <!-- Left: Too few -->
+  <rect x="40" y="65" width="270" height="140" rx="8" fill="#FFF" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="60" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#EF4444">拆太少：单体臃肿</text>
+
+  <rect x="100" y="110" width="150" height="35" rx="6" fill="#FEE2E2"/>
+  <text x="175" y="132" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">一个大 Agent</text>
+
+  <text x="60" y="165" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">System Prompt &gt; 2000 字</text>
+  <text x="60" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">工具列表 &gt; 20 个</text>
+  <text x="60" y="198" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">上下文频繁被无关内容污染</text>
+
+  <!-- Center: Right -->
+  <rect x="345" y="65" width="270" height="140" rx="8" fill="#FFF" stroke="#059669" stroke-width="2"/>
+  <text x="365" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#059669">正好：职责清晰</text>
+
+  <rect x="380" y="108" width="70" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="415" y="128" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">Agent A</text>
+  <rect x="465" y="108" width="70" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="500" y="128" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">Agent B</text>
+  <rect x="550" y="108" width="50" height="30" rx="5" fill="#D1FAE5"/>
+  <text x="575" y="128" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">...C</text>
+
+  <text x="365" y="165" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#059669">按职责拆分，独立知识域</text>
+  <text x="365" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#059669">每个 Agent 4-6 个工具</text>
+  <text x="365" y="198" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#059669">通信成本 &lt; 合并收益</text>
+
+  <!-- Right: Too many -->
+  <rect x="650" y="65" width="270" height="140" rx="8" fill="#FFF" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="670" y="92" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#EF4444">拆太多：协调灾难</text>
+
+  <rect x="680" y="108" width="50" height="27" rx="4" fill="#FEE2E2"/>
+  <text x="705" y="126" font-family="Segoe UI, sans-serif" font-size="10" fill="#991B1B" text-anchor="middle">A</text>
+  <rect x="740" y="108" width="50" height="27" rx="4" fill="#FEE2E2"/>
+  <text x="765" y="126" font-family="Segoe UI, sans-serif" font-size="10" fill="#991B1B" text-anchor="middle">B</text>
+  <rect x="800" y="108" width="50" height="27" rx="4" fill="#FEE2E2"/>
+  <text x="825" y="126" font-family="Segoe UI, sans-serif" font-size="10" fill="#991B1B" text-anchor="middle">C</text>
+  <rect x="860" y="108" width="40" height="27" rx="4" fill="#FEE2E2"/>
+  <text x="880" y="126" font-family="Segoe UI, sans-serif" font-size="10" fill="#991B1B" text-anchor="middle">D</text>
+
+  <text x="670" y="165" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">Agent &gt; 10 个，通信爆炸</text>
+  <text x="670" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">> 30% 交互是转传数据</text>
+  <text x="670" y="198" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#EF4444">调试需要跨 5+ Agent 追踪</text>
+
+  <!-- Bottom guidelines -->
+  <rect x="40" y="230" width="880" height="130" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="258" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">边界划分三原则</text>
+
+  <rect x="60" y="275" width="260" height="65" rx="6" fill="#EFF6FF"/>
+  <text x="80" y="296" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF">1. 按职责拆</text>
+  <text x="80" y="316" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">不是按功能拆。Agent 是角色，不是工具</text>
+  <text x="80" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">工具放 MCP Server，不放 Agent</text>
+
+  <rect x="350" y="275" width="260" height="65" rx="6" fill="#ECFDF5"/>
+  <text x="370" y="296" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#065F46">2. 独立知识域</text>
+  <text x="370" y="316" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">Agent 之间的知识依赖越少</text>
+  <text x="370" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">系统越稳定</text>
+
+  <rect x="640" y="275" width="260" height="65" rx="6" fill="#FFFBEB"/>
+  <text x="660" y="296" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E">3. 通信成本评估</text>
+  <text x="660" y="316" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">&gt;30% 交互是简单转传</text>
+  <text x="660" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">→ 合并</text>
+</svg>

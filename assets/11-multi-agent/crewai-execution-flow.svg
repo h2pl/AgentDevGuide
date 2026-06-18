@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="300" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#1E293B" text-anchor="middle">CrewAI 执行流程：研究团队协作</text>
+
+  <!-- User input -->
+  <rect x="380" y="55" width="200" height="35" rx="17" fill="#1E293B"/>
+  <text x="480" y="78" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">用户：「研究 MCP」</text>
+
+  <line x1="480" y1="90" x2="480" y2="105" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 1 -->
+  <rect x="60" y="110" width="240" height="55" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="75" y="133" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF">1. 研究组长</text>
+  <text x="75" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">制定研究计划、明确方向</text>
+
+  <line x1="300" y1="137" x2="335" y2="137" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="345" y="110" width="270" height="55" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+  <text x="360" y="133" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E">2. 研究员</text>
+  <text x="360" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">收集资料、分析数据、提炼发现</text>
+
+  <line x1="615" y1="137" x2="650" y2="137" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="660" y="110" width="240" height="55" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="675" y="133" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#065F46">3. 报告写手</text>
+  <text x="675" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">输出结构化 Markdown 报告</text>
+
+  <line x1="900" y1="137" x2="920" y2="137" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="380" y="195" width="200" height="35" rx="17" fill="#059669"/>
+  <text x="480" y="218" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">研究报告</text>
+
+  <line x1="480" y1="172" x2="480" y2="192" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Chain note -->
+  <rect x="120" y="250" width="720" height="35" rx="6" fill="#F1F5F9"/>
+  <text x="480" y="272" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">CrewAI 自动处理：Agent 间消息传递 → 任务结果传递 → 上下文共享</text>
+</svg>

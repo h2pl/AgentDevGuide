@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 350" width="960" height="350">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="350" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#1E293B" text-anchor="middle">模式选型决策引导</text>
+
+  <rect x="40" y="60" width="880" height="270" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Decision flow -->
+  <rect x="80" y="85" width="200" height="40" rx="8" fill="#1E293B"/>
+  <text x="180" y="110" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">你的多 Agent 系统需求</text>
+
+  <line x1="180" y1="125" x2="180" y2="145" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Question 1 -->
+  <rect x="55" y="150" width="250" height="30" rx="15" fill="#2563EB"/>
+  <text x="180" y="170" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">需不需要质量控制？</text>
+
+  <line x1="55" y1="165" x2="55" y2="200" stroke="#64748B" stroke-width="1"/>
+  <text x="60" y="185" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">需要</text>
+
+  <rect x="80" y="205" width="200" height="40" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1"/>
+  <text x="180" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#92400E">Supervisor</text>
+  <text x="180" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">在 Worker 上加审核层</text>
+
+  <line x1="305" y1="165" x2="480" y2="165" stroke="#64748B" stroke-width="1"/>
+  <text x="390" y="160" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">不需要</text>
+
+  <!-- Question 2 -->
+  <rect x="365" y="140" width="250" height="30" rx="15" fill="#059669"/>
+  <text x="490" y="160" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">任务有明确阶段划分？</text>
+
+  <line x1="365" y1="155" x2="365" y2="200" stroke="#64748B" stroke-width="1"/>
+  <text x="370" y="185" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">有</text>
+
+  <rect x="280" y="205" width="200" height="40" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="380" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#5B21B6">Pipeline</text>
+  <text x="380" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">按阶段串联 Agent</text>
+
+  <line x1="615" y1="155" x2="720" y2="155" stroke="#64748B" stroke-width="1"/>
+  <text x="660" y="150" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">没有</text>
+
+  <!-- Question 3 -->
+  <rect x="605" y="130" width="250" height="30" rx="15" fill="#D97706"/>
+  <text x="730" y="150" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">需要对等动态协作？</text>
+
+  <line x1="605" y1="145" x2="605" y2="200" stroke="#64748B" stroke-width="1"/>
+  <text x="610" y="185" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">需要</text>
+
+  <rect x="510" y="205" width="200" height="40" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="610" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#065F46">Peer-to-Peer</text>
+  <text x="610" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">A2A 动态发现协作</text>
+
+  <line x1="855" y1="145" x2="855" y2="200" stroke="#64748B" stroke-width="1"/>
+  <text x="845" y="185" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">不需要</text>
+
+  <!-- Default answer -->
+  <rect x="740" y="205" width="200" height="40" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="840" y="225" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">Orchestrator/Worker</text>
+  <text x="840" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">最简单，覆盖 80% 场景</text>
+
+  <!-- Bottom tip -->
+  <rect x="80" y="275" width="800" height="40" rx="6" fill="#F1F5F9"/>
+  <text x="480" y="300" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">大系统通常混合使用：不同环节用不同模式</text>
+</svg>

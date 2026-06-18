@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+  </defs>
+  <rect width="960" height="440" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">从单体到多 Agent 的演进路径</text>
+
+  <!-- Phase 0 -->
+  <rect x="40" y="70" width="200" height="50" rx="8" fill="#94A3B8"/>
+  <text x="140" y="95" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">Phase 0：单体</text>
+  <text x="140" y="112" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#F1F5F9" text-anchor="middle">Agent + MCP</text>
+
+  <rect x="40" y="130" width="200" height="60" rx="6" fill="#F1F5F9"/>
+  <text x="140" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">一个 Agent 做所有事</text>
+  <text x="140" y="172" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">通过 MCP 连接工具</text>
+
+  <line x1="240" y1="95" x2="285" y2="95" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="262" y="85" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#2563EB">System Prompt &gt; 2000字</text>
+
+  <!-- Phase 1 -->
+  <rect x="295" y="70" width="200" height="50" rx="8" fill="#2563EB"/>
+  <text x="395" y="95" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">Phase 1：主从</text>
+  <text x="395" y="112" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#DBEAFE" text-anchor="middle">Orchestrator + Worker</text>
+
+  <rect x="295" y="130" width="200" height="60" rx="6" fill="#DBEAFE"/>
+  <text x="395" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">拆出专业 Agent</text>
+  <text x="395" y="172" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Orchestrator 分发与汇总</text>
+
+  <line x1="495" y1="95" x2="540" y2="95" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="517" y="85" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#2563EB">质量需要把控</text>
+
+  <!-- Phase 2 -->
+  <rect x="550" y="70" width="200" height="50" rx="8" fill="#D97706"/>
+  <text x="650" y="95" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">Phase 2：监督</text>
+  <text x="650" y="112" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#FEF3C7" text-anchor="middle">加入 Supervisor</text>
+
+  <rect x="550" y="130" width="200" height="60" rx="6" fill="#FEF3C7"/>
+  <text x="650" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E" text-anchor="middle">质量审核与管控</text>
+  <text x="650" y="172" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">不合格退回重做</text>
+
+  <line x1="750" y1="95" x2="795" y2="95" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="772" y="85" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#2563EB">某个 Worker 成瓶颈</text>
+
+  <!-- Phase 3 -->
+  <rect x="805" y="70" width="120" height="50" rx="8" fill="#7C3AED"/>
+  <text x="865" y="95" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#FFF" text-anchor="middle">Phase 3</text>
+  <text x="865" y="112" font-family="PingFang SC, Segoe UI, sans-serif" font-size="9" fill="#EDE9FE" text-anchor="middle">去中心化</text>
+
+  <rect x="805" y="130" width="120" height="60" rx="6" fill="#EDE9FE"/>
+  <text x="865" y="152" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#5B21B6" text-anchor="middle">Pipeline</text>
+  <text x="865" y="172" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#5B21B6" text-anchor="middle">Peer-to-Peer</text>
+
+  <!-- Bottom notes -->
+  <rect x="40" y="220" width="880" height="195" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="248" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">每个阶段的触发条件</text>
+
+  <rect x="60" y="265" width="260" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="80" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569">Phase 0 → 1</text>
+  <text x="80" y="305" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">System Prompt > 2000 字</text>
+  <text x="80" y="318" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">工具列表 > 20 个</text>
+
+  <rect x="350" y="265" width="260" height="55" rx="6" fill="#EFF6FF"/>
+  <text x="370" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF">Phase 1 → 2</text>
+  <text x="370" y="305" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">输出质量不稳定</text>
+  <text x="370" y="318" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">需要质量审核环节</text>
+
+  <rect x="640" y="265" width="260" height="55" rx="6" fill="#FFFBEB"/>
+  <text x="660" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E">Phase 2 → 3</text>
+  <text x="660" y="305" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">Agent > 10 个，协调复杂</text>
+  <text x="660" y="318" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B">需要跨系统协作</text>
+
+  <rect x="60" y="335" width="840" height="60" rx="6" fill="#FEF2F2"/>
+  <text x="480" y="357" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#EF4444" text-anchor="middle">⚠ 最常见的错误：从 Phase 0 直接跳到 Phase 3</text>
+  <text x="480" y="378" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">结果：Agent 边界模糊、通信混乱、调试噩梦</text>
+  <text x="480" y="393" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">不要跳阶段——不满足条件就安心待在当前阶段</text>
+</svg>
