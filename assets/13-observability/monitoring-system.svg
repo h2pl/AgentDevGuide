@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">生产监控体系：从仪表盘到 Runbook</text>
+
+  <!-- Three dashboard layers -->
+  <rect x="40" y="60" width="880" height="200" rx="10" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="480" y="82" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">三层仪表盘（下钻路径：总量 → 维度 → 单条 Trace）</text>
+
+  <!-- Layer 1 -->
+  <rect x="60" y="96" width="260" height="70" rx="8" fill="#FFF" stroke="#93C5FD" stroke-width="1.5"/>
+  <rect x="60" y="96" width="260" height="24" rx="8" fill="#2563EB"/>
+  <text x="190" y="113" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">L1 全局健康墙</text>
+  <text x="190" y="137" font-family="Segoe UI, sans-serif" font-size="10" fill="#1E40AF" text-anchor="middle">请求量 · P95 · TSR · 成本/天</text>
+  <text x="190" y="154" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">每个数字 + 趋势箭头</text>
+
+  <path d="M 320 131 L 355 131" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2 -->
+  <rect x="355" y="96" width="260" height="70" rx="8" fill="#FFF" stroke="#86EFAC" stroke-width="1.5"/>
+  <rect x="355" y="96" width="260" height="24" rx="8" fill="#059669"/>
+  <text x="485" y="113" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">L2 维度拆解</text>
+  <text x="485" y="137" font-family="Segoe UI, sans-serif" font-size="10" fill="#166534" text-anchor="middle">按功能 · 按模型 · 按时段</text>
+  <text x="485" y="154" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">把总量问题变成具体问题</text>
+
+  <path d="M 615 131 L 650 131" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3 -->
+  <rect x="650" y="96" width="250" height="70" rx="8" fill="#FFF" stroke="#FCD34D" stroke-width="1.5"/>
+  <rect x="650" y="96" width="250" height="24" rx="8" fill="#D97706"/>
+  <text x="775" y="113" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">L3 Trace 搜索</text>
+  <text x="775" y="137" font-family="Segoe UI, sans-serif" font-size="10" fill="#92400E" text-anchor="middle">按 Trace ID / 条件过滤</text>
+  <text x="775" y="154" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">最多点击 3 次看到失败 Trace</text>
+
+  <!-- Key metrics box -->
+  <rect x="60" y="180" width="840" height="65" rx="6" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="100" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#475569">推荐面板组合：</text>
+  <text x="100" y="220" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748B">请求量 · P50/P95/P99 延迟 · TSR · 错误率 · Token 消耗 · 成本 · 用户满意度 · 人工介入率 · 最慢操作 Top 10</text>
+
+  <!-- Alert and runbook flow -->
+  <rect x="40" y="275" width="880" height="165" rx="10" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="480" y="297" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">告警 → 响应 → Runbook 闭环</text>
+
+  <!-- Alert triggers -->
+  <rect x="60" y="312" width="155" height="50" rx="8" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="137" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#991B1B" text-anchor="middle">P0: TSR < 85%</text>
+  <text x="137" y="350" font-family="Segoe UI, sans-serif" font-size="9" fill="#7F1D1D" text-anchor="middle">电话 · 立即处理</text>
+
+  <rect x="225" y="312" width="155" height="50" rx="8" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="302" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#92400E" text-anchor="middle">P1: TSR 下降 > 5%</text>
+  <text x="302" y="350" font-family="Segoe UI, sans-serif" font-size="9" fill="#78350F" text-anchor="middle">IM · 15 分钟响应</text>
+
+  <rect x="390" y="312" width="155" height="50" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="467" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF" text-anchor="middle">P2: 成本预警</text>
+  <text x="467" y="350" font-family="Segoe UI, sans-serif" font-size="9" fill="#1E3A5F" text-anchor="middle">邮件 · 2 小时响应</text>
+
+  <rect x="555" y="312" width="155" height="50" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="632" y="332" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle">P3: 信息通知</text>
+  <text x="632" y="350" font-family="Segoe UI, sans-serif" font-size="9" fill="#334155" text-anchor="middle">邮件 · 24 小时</text>
+
+  <path d="M 137 362 L 137 385" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 302 362 L 302 385" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 467 362 L 467 385" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 632 362 L 632 385" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Runbook -->
+  <rect x="60" y="385" width="840" height="40" rx="8" fill="#1E293B"/>
+  <text x="480" y="410" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">每个告警配 Runbook：检查步骤 → 常见原因 vs 处理方式 → 升级流程</text>
+</svg>

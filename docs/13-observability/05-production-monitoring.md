@@ -17,6 +17,10 @@
 
 本文不讲四个黄金信号（那套通用方法论你可以在 Google SRE 书中读到）。本文讲**Agent 系统特有的监控挑战和解决方案**。
 
+<p align="center">
+  <img src="../../assets/13-observability/monitoring-system.svg" alt="生产监控体系" width="95%"/>
+</p>
+
 ## Agent 的 SLI 和 SLO
 
 SRE 的核心方法是定义 SLI（服务水平指标）→ 设定 SLO（服务水平目标）→ 基于 SLO 设计告警。

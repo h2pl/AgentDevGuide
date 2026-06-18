@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">LLM-as-Judge 三种评分模式</text>
+
+  <!-- Pointwise -->
+  <rect x="40" y="60" width="280" height="380" rx="8" fill="#FFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="60" width="280" height="36" rx="8" fill="#2563EB"/>
+  <text x="180" y="84" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">点式评分 (Pointwise)</text>
+
+  <rect x="60" y="112" width="100" height="40" rx="6" fill="#DBEAFE"/>
+  <text x="110" y="137" font-family="Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">用户输入</text>
+  <path d="M 160 132 L 220 132" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="220" y="112" width="80" height="40" rx="6" fill="#DBEAFE"/>
+  <text x="260" y="137" font-family="Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">Agent输出</text>
+  <path d="M 260 152 L 180 175" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="80" y="175" width="200" height="40" rx="20" fill="#2563EB"/>
+  <text x="180" y="200" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">LLM 评分 1-5</text>
+  <path d="M 180 215 L 180 240" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="80" y="240" width="200" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="180" y="262" font-family="Segoe UI, sans-serif" font-size="12" fill="#166534" text-anchor="middle">分数 + 评分理由</text>
+
+  <text x="180" y="310" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">速度最快 · 成本最低</text>
+  <text x="180" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">适合日常批量评测</text>
+  <text x="180" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">绝对评分，容易漂移</text>
+
+  <!-- Pairwise -->
+  <rect x="340" y="60" width="280" height="380" rx="8" fill="#FFF" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="340" y="60" width="280" height="36" rx="8" fill="#D97706"/>
+  <text x="480" y="84" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">成对比较 (Pairwise)</text>
+
+  <rect x="360" y="112" width="80" height="40" rx="6" fill="#FEF3C7"/>
+  <text x="400" y="137" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E" text-anchor="middle">用户输入</text>
+  <path d="M 440 132 L 480 112" stroke="#94A3B8" stroke-width="1.5"/>
+  <path d="M 440 132 L 480 152" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="480" y="100" width="120" height="36" rx="6" fill="#FEF3C7"/>
+  <text x="540" y="123" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E" text-anchor="middle">Agent A 输出</text>
+  <rect x="480" y="140" width="120" height="36" rx="6" fill="#FEF3C7"/>
+  <text x="540" y="163" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E" text-anchor="middle">Agent B 输出</text>
+  <path d="M 600 118 L 590 185" stroke="#94A3B8" stroke-width="1.5"/>
+  <path d="M 600 158 L 610 185" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="380" y="185" width="200" height="40" rx="20" fill="#D97706"/>
+  <text x="480" y="210" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">A 更好 / B 更好 / 平局</text>
+  <path d="M 480 225 L 480 250" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="380" y="250" width="200" height="36" rx="6" fill="#F0FDF4"/>
+  <text x="480" y="272" font-family="Segoe UI, sans-serif" font-size="12" fill="#166534" text-anchor="middle">比较结果 + 理由</text>
+
+  <text x="480" y="310" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">相对判断比绝对判断准</text>
+  <text x="480" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">适合 A/B 测试对比</text>
+  <text x="480" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">计算成本翻倍</text>
+
+  <!-- Multi-Dimension -->
+  <rect x="640" y="60" width="280" height="380" rx="8" fill="#FFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="640" y="60" width="280" height="36" rx="8" fill="#059669"/>
+  <text x="780" y="84" font-family="PingFang SC, Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">多维评分 (Multi-Dim)</text>
+
+  <rect x="660" y="112" width="80" height="40" rx="6" fill="#D1FAE5"/>
+  <text x="700" y="137" font-family="Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">用户输入</text>
+  <path d="M 740 132 L 780 132" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="780" y="112" width="120" height="40" rx="6" fill="#D1FAE5"/>
+  <text x="840" y="137" font-family="Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">Agent 输出</text>
+  <path d="M 840 152 L 780 170" stroke="#94A3B8" stroke-width="1.5"/>
+  <path d="M 840 152 L 840 170" stroke="#94A3B8" stroke-width="1.5"/>
+  <path d="M 840 152 L 900 170" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <rect x="660" y="170" width="240" height="30" rx="6" fill="#DBEAFE"/>
+  <text x="780" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#1E40AF" text-anchor="middle">正确性 4/5 ✓</text>
+  <rect x="660" y="205" width="240" height="30" rx="6" fill="#FEF3C7"/>
+  <text x="780" y="225" font-family="Segoe UI, sans-serif" font-size="11" fill="#92400E" text-anchor="middle">完整性 3/5 — 缺细节</text>
+  <rect x="660" y="240" width="240" height="30" rx="6" fill="#FEE2E2"/>
+  <text x="780" y="260" font-family="Segoe UI, sans-serif" font-size="11" fill="#991B1B" text-anchor="middle">安全性 Fail ✗ — 含 PII</text>
+  <rect x="660" y="275" width="240" height="30" rx="6" fill="#D1FAE5"/>
+  <text x="780" y="295" font-family="Segoe UI, sans-serif" font-size="11" fill="#065F46" text-anchor="middle">效率 5/5 — 路径最优</text>
+
+  <text x="780" y="340" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">每个维度独立评分</text>
+  <text x="780" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">信息量最大</text>
+  <text x="780" y="380" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#2563EB" text-anchor="middle">推荐默认使用</text>
+</svg>

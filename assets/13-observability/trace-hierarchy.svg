@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="460" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Trace 三层层次结构</text>
+
+  <!-- Layer 1: Trace - Episode -->
+  <rect x="180" y="65" width="600" height="55" rx="10" fill="#1E293B"/>
+  <text x="480" y="90" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">Trace (Episode) — 一次完整交互</text>
+  <text x="480" y="110" font-family="Segoe UI, sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">trace_id: req_abc123 | status: success | duration: 1860ms</text>
+
+  <path d="M 480 120 L 480 145" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Steps -->
+  <rect x="50" y="145" width="860" height="130" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+
+  <rect x="70" y="160" width="250" height="60" rx="8" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="195" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">Step 1: 意图识别</text>
+  <text x="195" y="203" font-family="Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">type: llm_call | duration: 780ms</text>
+
+  <path d="M 195 220 L 195 245" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="355" y="160" width="250" height="60" rx="8" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="480" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">Step 2: 工具调用</text>
+  <text x="480" y="203" font-family="Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">type: tool_call | duration: 230ms</text>
+
+  <path d="M 480 220 L 480 245" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="160" width="250" height="60" rx="8" fill="#DBEAFE" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="765" y="183" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">Step 3: 回答生成</text>
+  <text x="765" y="203" font-family="Segoe UI, sans-serif" font-size="10" fill="#475569" text-anchor="middle">type: llm_call | duration: 850ms</text>
+
+  <path d="M 640 190 L 320 190" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="480" y="142" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Step — Agent 循环的一轮 (observe → think → act)</text>
+
+  <!-- Layer 3: Actions within Step 1 -->
+  <rect x="50" y="280" width="860" height="140" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+
+  <rect x="70" y="300" width="175" height="42" rx="6" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="157" y="320" font-family="Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">llm_call</text>
+  <text x="157" y="336" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">input_tokens: 1200</text>
+
+  <rect x="260" y="300" width="175" height="42" rx="6" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1"/>
+  <text x="347" y="320" font-family="Segoe UI, sans-serif" font-size="12" fill="#92400E" text-anchor="middle">tool_call</text>
+  <text x="347" y="336" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">query_order</text>
+
+  <rect x="450" y="300" width="175" height="42" rx="6" fill="#D1FAE5" stroke="#86EFAC" stroke-width="1"/>
+  <text x="537" y="320" font-family="Segoe UI, sans-serif" font-size="12" fill="#065F46" text-anchor="middle">retrieval</text>
+  <text x="537" y="336" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">search_kb</text>
+
+  <rect x="640" y="300" width="175" height="42" rx="6" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="727" y="320" font-family="Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">decision</text>
+  <text x="727" y="336" font-family="Segoe UI, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">route/terminate</text>
+
+  <text x="480" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Action — 原子操作：LLM 调用 / 工具调用 / 检索 / 决策</text>
+  <text x="480" y="390" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">统一结构 {type, input, output, duration, status}</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" width="960" height="450">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D97706"/>
+    </marker>
+  </defs>
+  <rect width="960" height="450" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">离线评测 ↔ 在线评测 闭环</text>
+
+  <!-- Left column: Offline -->
+  <rect x="40" y="65" width="400" height="350" rx="12" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <rect x="40" y="65" width="400" height="40" rx="12" fill="#2563EB"/>
+  <text x="240" y="91" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">离线评测</text>
+
+  <rect x="70" y="120" width="340" height="44" rx="8" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="240" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">人工标注评测集</text>
+  <text x="240" y="155" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">黄金集 · 回归集 · 对抗集 · 空跑集</text>
+
+  <path d="M 240 164 L 240 185" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <rect x="70" y="185" width="340" height="44" rx="8" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="240" y="203" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">LLM-as-Judge 自动评分</text>
+  <text x="240" y="220" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">代码检查 + 执行验证 + 参考比对 + LLM 评分</text>
+
+  <path d="M 240 229 L 240 250" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <rect x="70" y="250" width="340" height="44" rx="8" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="240" y="268" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">CI/CD 门禁</text>
+  <text x="240" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Stage 1: 空跑 | Stage 2: 组件 | Stage 3: 全量</text>
+
+  <text x="240" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">覆盖 95%+ 已知场景</text>
+  <text x="240" y="348" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">数据来源：人工标注 + 生产回填</text>
+
+  <!-- Right column: Online -->
+  <rect x="520" y="65" width="400" height="350" rx="12" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+  <rect x="520" y="65" width="400" height="40" rx="12" fill="#059669"/>
+  <text x="720" y="91" font-family="PingFang SC, Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">在线评测</text>
+
+  <rect x="550" y="120" width="340" height="44" rx="8" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="720" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">用户显式反馈</text>
+  <text x="720" y="155" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">👍 / 👎 评分 · 满意度调查</text>
+
+  <path d="M 720 164 L 720 185" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <rect x="550" y="185" width="340" height="44" rx="8" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="720" y="203" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">用户隐式信号</text>
+  <text x="720" y="220" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">重复提问 · 中断对话 · 转人工 · 复制回答</text>
+
+  <path d="M 720 229 L 720 250" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <rect x="550" y="250" width="340" height="44" rx="8" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="720" y="268" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#166534" text-anchor="middle">生产回放 + 漂移检测</text>
+  <text x="720" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">TSR 趋势 · 输入分布 · 模型漂移</text>
+
+  <text x="720" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">覆盖全量真实场景</text>
+  <text x="720" y="348" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">数据来源：生产环境真实流量</text>
+
+  <!-- Connecting arrows -->
+  <path d="M 440 140 L 510 140" stroke="#D97706" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-amber)"/>
+  <text x="475" y="132" font-family="Segoe UI, sans-serif" font-size="9" fill="#D97706" text-anchor="middle">上线</text>
+
+  <path d="M 510 270 L 440 270" stroke="#D97706" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-amber)"/>
+  <text x="475" y="262" font-family="Segoe UI, sans-serif" font-size="9" fill="#D97706" text-anchor="middle">回填</text>
+  <text x="475" y="278" font-family="Segoe UI, sans-serif" font-size="9" fill="#D97706" text-anchor="middle">评测集</text>
+</svg>

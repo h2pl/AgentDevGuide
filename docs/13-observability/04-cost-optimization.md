@@ -22,6 +22,10 @@
 
 一个生产环境的 Agent，成本不是单一的 LLM API 费用。
 
+<p align="center">
+  <img src="../../assets/13-observability/cost-breakdown.svg" alt="Agent 成本构成与管控体系" width="95%"/>
+</p>
+
 | 成本项 | 典型占比 | 控制手段 |
 |--------|---------|---------|
 | LLM 推理 | 70-85% | 模型选择、token 压缩、减少调用次数 |

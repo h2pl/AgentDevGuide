@@ -121,17 +121,9 @@ Span 设计决定了你后续能怎么查询和分析数据。设计不好的 Sp
 
 一个 Agent Trace 的 Span 应该有三层：
 
-```
-Trace (agent_episode) ← 一次完整交互
-├── Span (step_1)     ← Agent 循环的一轮
-│   ├── Span (llm_call)     ← LLM 调用
-│   ├── Span (tool_call)    ← 工具调用
-│   └── Span (retrieval)    ← 检索
-├── Span (step_2)
-│   ├── Span (llm_call)
-│   └── Span (tool_call)
-└── Span (final_response)  ← 最终响应
-```
+<p align="center">
+  <img src="../../assets/13-observability/trace-hierarchy.svg" alt="Trace 三层层次结构" width="95%"/>
+</p>
 
 不要平铺所有 Span。层次结构让你能回答不同粒度的问题——"这个请求整体多慢"（Trace 级别）、"哪一轮最慢"（Step 级别）、"LLM 调用本身多慢"（Span 级别）。
 

@@ -22,6 +22,10 @@
 
 评测驱动开发 (Eval-Driven Development) 的核心思想是：**在修改 Agent 行为之前，先定义"什么是好的"**。
 
+<p align="center">
+  <img src="../../assets/12-eval/edd-workflow.svg" alt="EDD 工作流" width="95%"/>
+</p>
+
 传统开发模式：
 
 ```

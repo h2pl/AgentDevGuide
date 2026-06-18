@@ -36,6 +36,10 @@ Agent 系统的排查难度完全不同：
 
 传统可观测性有三根支柱：日志 (Logs)、指标 (Metrics)、追踪 (Traces)。对于 Agent 系统，它们的优先级和含义都不同。
 
+<p align="center">
+  <img src="../../assets/13-observability/o11y-pillars.svg" alt="可观测性三支柱在 Agent 系统中的优先级" width="95%"/>
+</p>
+
 ### 日志 (Logs)：退居次要
 
 传统软件排查问题时，第一反应是"看日志"。但在 Agent 系统中，**日志不再是第一排查手段**。原因：

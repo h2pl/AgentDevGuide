@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="440" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">可观测性三支柱在 Agent 系统中的优先级</text>
+
+  <!-- Traces (1st priority) -->
+  <rect x="40" y="70" width="280" height="340" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="180" cy="105" r="22" fill="#2563EB"/>
+  <text x="180" y="111" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">1</text>
+  <text x="180" y="145" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">Traces 追踪</text>
+
+  <rect x="60" y="165" width="240" height="36" rx="6" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="180" y="188" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">第一优先 · 排查核心手段</text>
+
+  <rect x="60" y="210" width="240" height="36" rx="6" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="180" y="233" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">自动关联请求全链路</text>
+
+  <rect x="60" y="255" width="240" height="36" rx="6" fill="#FFF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="180" y="278" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">记录完整输入输出</text>
+
+  <text x="180" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">追踪解决 80% 的排查问题</text>
+  <text x="180" y="350" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">先做追踪，再考虑其他</text>
+
+  <!-- Metrics (2nd priority) -->
+  <rect x="340" y="70" width="280" height="340" rx="12" fill="#F0FDF4" stroke="#059669" stroke-width="2"/>
+  <circle cx="480" cy="105" r="22" fill="#059669"/>
+  <text x="480" y="111" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">2</text>
+  <text x="480" y="145" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#166534" text-anchor="middle">Metrics 指标</text>
+
+  <rect x="360" y="165" width="240" height="36" rx="6" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="480" y="188" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#166534" text-anchor="middle">需要重新定义 Agent 指标</text>
+
+  <rect x="360" y="210" width="240" height="36" rx="6" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="480" y="233" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">语义指标: TSR · 工具准确率</text>
+
+  <rect x="360" y="255" width="240" height="36" rx="6" fill="#FFF" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="480" y="278" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">成本指标: Token · 每请求成本</text>
+
+  <text x="480" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">告警和仪表盘必须用指标</text>
+  <text x="480" y="350" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">从 Trace 数据中聚合生成</text>
+
+  <!-- Logs (3rd priority) -->
+  <rect x="640" y="70" width="280" height="340" rx="12" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+  <circle cx="780" cy="105" r="22" fill="#EF4444"/>
+  <text x="780" y="111" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">3</text>
+  <text x="780" y="145" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#991B1B" text-anchor="middle">Logs 日志</text>
+
+  <rect x="660" y="165" width="240" height="36" rx="6" fill="#FFF" stroke="#FECACA" stroke-width="1"/>
+  <text x="780" y="188" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">退居次要 · 仅记录异常</text>
+
+  <rect x="660" y="210" width="240" height="36" rx="6" fill="#FFF" stroke="#FECACA" stroke-width="1"/>
+  <text x="780" y="233" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">Agent 输出是自然语言</text>
+
+  <rect x="660" y="255" width="240" height="36" rx="6" fill="#FFF" stroke="#FECACA" stroke-width="1"/>
+  <text x="780" y="278" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569" text-anchor="middle">日志关联困难 · 存储成本高</text>
+
+  <text x="780" y="330" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">不要用日志做排查</text>
+  <text x="780" y="350" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">保留用于审计和合规</text>
+</svg>

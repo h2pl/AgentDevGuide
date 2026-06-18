@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">性能瓶颈定位四步流程</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="70" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <circle cx="60" cy="86" r="12" fill="#2563EB"/>
+  <text x="60" y="91" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">1</text>
+  <text x="140" y="96" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">看整体</text>
+  <text x="140" y="116" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">P50 vs P99 都高？</text>
+  <text x="140" y="136" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">普遍问题 vs 个别问题</text>
+
+  <path d="M 240 110 L 290 110" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="290" y="70" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <circle cx="310" cy="86" r="12" fill="#2563EB"/>
+  <text x="310" y="91" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">2</text>
+  <text x="390" y="96" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">找最慢 Span</text>
+  <text x="390" y="116" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">按 type 聚合总耗时</text>
+  <text x="390" y="136" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">llm_call 占 68% → 瓶颈</text>
+
+  <path d="M 490 110 L 540 110" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="540" y="70" width="200" height="80" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+  <circle cx="560" cy="86" r="12" fill="#059669"/>
+  <text x="560" y="91" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">3</text>
+  <text x="640" y="96" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">下钻</text>
+  <text x="640" y="116" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">哪个具体操作慢？</text>
+  <text x="640" y="136" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">gpt-4o avg 2.1s</text>
+
+  <path d="M 740 110 L 790 110" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="790" y="70" width="150" height="80" rx="10" fill="#FEF3C7" stroke="#FCD34D" stroke-width="1.5"/>
+  <circle cx="810" cy="86" r="12" fill="#D97706"/>
+  <text x="810" y="91" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">4</text>
+  <text x="865" y="96" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#92400E" text-anchor="middle">优化</text>
+  <text x="865" y="116" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">影响最大的</text>
+  <text x="865" y="136" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">某项</text>
+
+  <!-- Five latency patterns -->
+  <rect x="40" y="185" width="880" height="210" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="480" y="208" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">五种常见的 Agent 延迟模式</text>
+
+  <rect x="60" y="220" width="160" height="68" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="140" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">TTFT 高</text>
+  <text x="140" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">模型太大</text>
+  <text x="140" y="276" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">prompt 太长</text>
+
+  <rect x="230" y="220" width="160" height="68" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="310" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">上下文膨胀</text>
+  <text x="310" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">token 逐轮递增</text>
+  <text x="310" y="276" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">未做历史压缩</text>
+
+  <rect x="400" y="220" width="160" height="68" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="480" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#D97706" text-anchor="middle">工具链过深</text>
+  <text x="480" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">简单任务拆多步</text>
+  <text x="480" y="276" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">工具粒度过细</text>
+
+  <rect x="570" y="220" width="160" height="68" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="650" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#DC2626" text-anchor="middle">死循环</text>
+  <text x="650" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">同工具反复调用</text>
+  <text x="650" y="276" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">缺少终止条件</text>
+
+  <rect x="740" y="220" width="160" height="68" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="820" y="242" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#64748B" text-anchor="middle">外部依赖慢</text>
+  <text x="820" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">API 响应慢</text>
+  <text x="820" y="276" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">重试浪费</text>
+
+  <text x="480" y="325" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">排查时对照清单逐项检查 Trace 数据</text>
+  <rect x="330" y="340" width="300" height="30" rx="15" fill="#2563EB"/>
+  <text x="480" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">不猜测 · 不靠感觉 · 从 Trace 找答案</text>
+</svg>

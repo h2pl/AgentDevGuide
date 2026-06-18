@@ -21,6 +21,10 @@
 
 当用户反馈"Agent 有点慢"时，按这个流程定位：
 
+<p align="center">
+  <img src="../../assets/13-observability/perf-analysis-flow.svg" alt="性能瓶颈定位四步流程" width="95%"/>
+</p>
+
 **第一步：确认是普遍问题还是个别问题**
 
 看 P50 / P95 / P99 延迟：
