@@ -26,14 +26,15 @@
 | 03 | [Prompt 工程](./docs/03-prompt-engineering/README.md) | 怎么精确控制 LLM 输出？ | 结构化输出 + CoT demo |
 | 04 | [工具调用](./docs/04-tool-use/README.md) | LLM 怎么调用外部函数？ | 多工具对话 demo |
 | 05 | [Agent 循环](./docs/05-agent-loop/README.md) | Agent 的核心循环怎么工作？ | ⭐ 最小 ReAct Agent |
-| 06 | [知识检索](./docs/06-rag-pipeline/README.md) | 怎么让 Agent 基于外部知识回答？ | RAG 问答系统 |
-| 07 | [框架与编排](./docs/07-framework/README.md) | 怎么用框架管理复杂 Agent？ | LangGraph Agent |
-| 08 | [记忆与上下文](./docs/08-memory-context/README.md) | Agent 怎么记住之前的事？ | 带记忆的 Agent |
-| 09 | [扩展协议与标准](./docs/09-protocols/README.md) | MCP / Skills / AGENTS.md 是什么？ | MCP Server + Skill |
-| 10 | [多 Agent 协作](./docs/10-multi-agent/README.md) | 多个 Agent 怎么协作？ | 多 Agent 系统 |
-| 11 | [评测与可观测](./docs/11-eval-trace/README.md) | 怎么知道 Agent 好不好？ | 评测集 + Trace |
-| 12 | [安全与治理](./docs/12-safety/README.md) | 怎么防止 Agent 越权？ | 安全加固方案 |
-| 13 | [产品交付](./docs/13-ship-to-prod/README.md) | 怎么部署上线？ | 🎯 可部署的 Agent 系统 |
+| 06 | [记忆管理](./docs/06-memory-management/README.md) | Agent 怎么记住之前的事？ | 带记忆的 Agent |
+| 07 | [上下文工程](./docs/07-context-engineering/README.md) | 怎么高效管理 Agent 的上下文窗口？ | 上下文优化方案 |
+| 08 | [知识检索](./docs/08-rag-pipeline/README.md) | 怎么让 Agent 基于外部知识回答？ | RAG 问答系统 |
+| 09 | [框架与编排](./docs/09-framework/README.md) | 怎么用框架管理复杂 Agent？ | LangGraph Agent |
+| 10 | [扩展协议与标准](./docs/10-protocols/README.md) | MCP / Skills / AGENTS.md 是什么？ | MCP Server + Skill |
+| 11 | [多 Agent 协作](./docs/11-multi-agent/README.md) | 多个 Agent 怎么协作？ | 多 Agent 系统 |
+| 12 | [评测与可观测](./docs/12-eval-trace/README.md) | 怎么知道 Agent 好不好？ | 评测集 + Trace |
+| 13 | [安全与治理](./docs/13-safety/README.md) | 怎么防止 Agent 越权？ | 安全加固方案 |
+| 14 | [产品交付](./docs/14-ship-to-prod/README.md) | 怎么部署上线？ | 🎯 可部署的 Agent 系统 |
 
 ---
 
