@@ -1,40 +1,18 @@
-# 12 — 安全与治理
+# 13 — 安全与治理
 
-## 目录
+> Agent 有执行能力，安全是不可忽视的基础设施。从 prompt 注入防护到人工审批，建立纵深防御体系。
 
-- [概述](#概述)
-- [Prompt 注入攻击与防御](#prompt-注入攻击与防御)
-- [权限控制](#权限控制)
-- [输出过滤](#输出过滤)
-- [沙箱执行](#沙箱执行)
-- [危险操作审批](#危险操作审批)
-- [参考链接](#参考链接)
+## 文章列表
 
-## 概述
-
-<!-- TODO: Agent 有执行能力，安全问题不可忽视 -->
-
-## Prompt 注入攻击与防御
-
-<!-- TODO: 攻击方式分类、检测方法、防御策略 -->
-
-## 权限控制
-
-<!-- TODO: 工具级别、数据级别、操作级别的权限分层 -->
-
-## 输出过滤
-
-<!-- TODO: 敏感信息、有害内容、幻觉检测 -->
-
-## 沙箱执行
-
-<!-- TODO: 代码执行隔离、文件系统隔离 -->
-
-## 危险操作审批
-
-<!-- TODO: Human-in-the-loop 安全机制，高风险操作强制审批 -->
+| # | 文章 | 核心内容 |
+|---|------|---------|
+| 01 | [Prompt 注入攻击与防御](01-prompt-injection.md) | 攻击分类、五层防御体系、注入检测器 |
+| 02 | [访问控制与沙箱执行](02-access-control-and-sandbox.md) | 工具/数据/操作三层权限、沙箱隔离策略 |
+| 03 | [输出过滤与人工审批](03-output-and-human-in-loop.md) | 输出过滤策略、幻觉检测、HITL 审批流程 |
 
 ## 参考链接
 
 - [OWASP — LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - [OWASP — MCP Top 10 (Beta)](https://genai.owasp.org/resource/mcp-top-10/)
+- [Anthropic — Security Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/security)
+- [NIST — AI Risk Management Framework](https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence)

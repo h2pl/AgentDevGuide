@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Prompt 注入防御五层次</text>
+
+  <!-- Attack -->
+  <text x="80" y="70" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#DC2626">攻击入口</text>
+
+  <rect x="360" y="52" width="240" height="32" rx="6" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="480" y="73" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#DC2626" text-anchor="middle">恶意输入 / 污染内容</text>
+
+  <line x1="480" y1="84" x2="480" y2="100" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 1: Input Sanitization -->
+  <rect x="120" y="105" width="720" height="55" rx="8" fill="#FFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="120" y="105" width="140" height="55" rx="8" fill="#64748B"/>
+  <text x="190" y="127" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">L1 输入净化</text>
+  <text x="190" y="148" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#CBD5E1" text-anchor="middle">规则过滤</text>
+  <text x="290" y="135" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">关键词拦截、编码检测、长度限制</text>
+  <text x="600" y="135" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">防线强度: ⭐</text>
+
+  <line x1="480" y1="160" x2="480" y2="175" stroke="#64748B" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Instruction Isolation -->
+  <rect x="120" y="180" width="720" height="55" rx="8" fill="#FFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="120" y="180" width="140" height="55" rx="8" fill="#2563EB"/>
+  <text x="190" y="202" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">L2 指令隔离</text>
+  <text x="190" y="223" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#BFDBFE" text-anchor="middle">核心防御</text>
+  <text x="290" y="210" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">结构化消息、XML 标签封装、分隔符</text>
+  <text x="600" y="210" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">防线强度: ⭐⭐⭐</text>
+
+  <line x1="480" y1="235" x2="480" y2="250" stroke="#64748B" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: Least Privilege -->
+  <rect x="120" y="255" width="720" height="55" rx="8" fill="#FFF" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="120" y="255" width="140" height="55" rx="8" fill="#D97706"/>
+  <text x="190" y="277" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">L3 权限最小化</text>
+  <text x="190" y="298" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#FEF3C7" text-anchor="middle">兜底防线</text>
+  <text x="290" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">工具白名单、参数约束、操作分级</text>
+  <text x="600" y="285" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">防线强度: ⭐⭐⭐⭐</text>
+
+  <line x1="480" y1="310" x2="480" y2="325" stroke="#64748B" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Layer 4: Output Encoding -->
+  <rect x="120" y="330" width="720" height="55" rx="8" fill="#FFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="120" y="330" width="140" height="55" rx="8" fill="#059669"/>
+  <text x="190" y="352" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">L4 输出编码</text>
+  <text x="190" y="373" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#A7F3D0" text-anchor="middle">最后检查</text>
+  <text x="290" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">敏感信息脱敏、HTML 过滤、链接验证</text>
+  <text x="600" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">防线强度: ⭐⭐</text>
+
+  <line x1="480" y1="385" x2="480" y2="400" stroke="#64748B" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Layer 5: Detection -->
+  <rect x="120" y="405" width="720" height="55" rx="8" fill="#FFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="120" y="405" width="140" height="55" rx="8" fill="#7C3AED"/>
+  <text x="190" y="427" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">L5 检测响应</text>
+  <text x="190" y="448" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#EDE9FE" text-anchor="middle">实时监控</text>
+  <text x="290" y="435" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">注入检测器、行为基线、异常告警</text>
+  <text x="600" y="435" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">防线强度: ⭐⭐⭐</text>
+
+  <text x="880" y="440" font-family="PingFang SC, Segoe UI, sans-serif" font-size="9" fill="#94A3B8">任何一层都可能被突破，多层叠加才有真正的安全性</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Human-in-the-Loop 审批流程</text>
+
+  <!-- Step 1: User Request -->
+  <rect x="80" y="60" width="800" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="80" y="60" width="120" height="55" rx="8" fill="#2563EB"/>
+  <text x="140" y="82" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Step 1</text>
+  <text x="140" y="102" font-family="Segoe UI, sans-serif" font-size="10" fill="#BFDBFE" text-anchor="middle">用户请求</text>
+  <text x="240" y="93" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#475569">用户发起操作请求（如取消订单、转账）</text>
+
+  <line x1="480" y1="115" x2="480" y2="130" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Agent Processes -->
+  <rect x="80" y="135" width="800" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="80" y="135" width="120" height="55" rx="8" fill="#D97706"/>
+  <text x="140" y="157" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Step 2</text>
+  <text x="140" y="177" font-family="Segoe UI, sans-serif" font-size="10" fill="#FEF3C7" text-anchor="middle">Agent 处理</text>
+  <text x="240" y="168" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#475569">Agent 理解意图，生成操作建议和风险评估</text>
+
+  <line x1="480" y1="190" x2="480" y2="205" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Risk Assessment -->
+  <rect x="80" y="210" width="800" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="80" y="210" width="120" height="55" rx="8" fill="#D97706"/>
+  <text x="140" y="232" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Step 3</text>
+  <text x="140" y="252" font-family="Segoe UI, sans-serif" font-size="10" fill="#FEF3C7" text-anchor="middle">风险评分</text>
+  <text x="240" y="243" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#475569">系统自动评分：操作影响 × 数据敏感度 × 操作量级</text>
+
+  <!-- Decision diamond -->
+  <polygon points="480,275 540,295 480,315 420,295" fill="#FFF" stroke="#D97706" stroke-width="2"/>
+  <text x="480" y="300" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#D97706" text-anchor="middle">高危?</text>
+
+  <!-- Low risk path (right) -->
+  <line x1="540" y1="295" x2="720" y2="295" stroke="#059669" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="670" y="265" width="100" height="24" rx="4" fill="#D1FAE5"/>
+  <text x="720" y="282" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#065F46" text-anchor="middle">低风险</text>
+  <rect x="725" y="280" width="200" height="55" rx="8" fill="#FFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="725" y="280" width="60" height="55" rx="8" fill="#059669"/>
+  <text x="755" y="302" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">执行</text>
+  <text x="755" y="320" font-family="Segoe UI, sans-serif" font-size="8" fill="#A7F3D0" text-anchor="middle">Auto</text>
+  <text x="810" y="315" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#475569">Agent 自动执行，记录审计</text>
+
+  <!-- High risk path (down) -->
+  <line x1="480" y1="315" x2="480" y2="340" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="430" y="340" width="100" height="24" rx="4" fill="#FEF2F2"/>
+  <text x="480" y="357" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#DC2626" text-anchor="middle">高风险</text>
+
+  <line x1="480" y1="364" x2="480" y2="380" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Send for Approval -->
+  <rect x="80" y="385" width="800" height="55" rx="8" fill="#FFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect x="80" y="385" width="120" height="55" rx="8" fill="#DC2626"/>
+  <text x="140" y="407" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Step 4</text>
+  <text x="140" y="427" font-family="Segoe UI, sans-serif" font-size="10" fill="#FECACA" text-anchor="middle">发送审批</text>
+  <text x="240" y="418" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#475569">独立通道发送审批请求（IM/邮件/系统），附带上下文和风险评估</text>
+
+  <line x1="480" y1="440" x2="480" y2="455" stroke="#64748B" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Human Decision -->
+  <rect x="280" y="460" width="400" height="45" rx="8" fill="#FFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="280" y="460" width="120" height="45" rx="8" fill="#7C3AED"/>
+  <text x="340" y="482" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#FFF" text-anchor="middle">Step 5</text>
+  <text x="340" y="497" font-family="Segoe UI, sans-serif" font-size="10" fill="#EDE9FE" text-anchor="middle">人工决策</text>
+  <text x="430" y="488" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#475569">同意 / 拒绝 / 修改后执行 / 转其他审批人</text>
+</svg>

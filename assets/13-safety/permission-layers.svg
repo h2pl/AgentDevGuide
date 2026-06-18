@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">Agent 权限三层模型</text>
+
+  <!-- Layer 3: Operation Level (top) -->
+  <rect x="80" y="65" width="800" height="110" rx="10" fill="#FFF" stroke="#DC2626" stroke-width="2"/>
+  <rect x="80" y="65" width="800" height="110" rx="10" fill="#DC2626" opacity="0.05"/>
+  <rect x="80" y="65" width="200" height="110" rx="10" fill="#DC2626"/>
+  <text x="180" y="105" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">操作级</text>
+  <text x="180" y="130" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#FECACA" text-anchor="middle">Operation-Level</text>
+  <text x="180" y="160" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#FECACA" text-anchor="middle">最严格 / 人工审批</text>
+
+  <rect x="310" y="78" width="170" height="35" rx="6" fill="#FEF2F2"/>
+  <text x="395" y="100" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">删除 / 转账 / 封禁</text>
+  <text x="395" y="105" font-family="Segoe UI, sans-serif" font-size="9" fill="#991B1B" text-anchor="middle">Delete / Transfer / Ban</text>
+
+  <rect x="500" y="78" width="170" height="35" rx="6" fill="#FEF2F2"/>
+  <text x="585" y="100" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">配置修改 / 权限变更</text>
+  <text x="585" y="105" font-family="Segoe UI, sans-serif" font-size="9" fill="#991B1B" text-anchor="middle">Config / Permission Change</text>
+
+  <rect x="690" y="78" width="170" height="35" rx="6" fill="#FEF2F2"/>
+  <text x="775" y="100" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">批量操作 / 通知发送</text>
+  <text x="775" y="105" font-family="Segoe UI, sans-serif" font-size="9" fill="#991B1B" text-anchor="middle">Batch / Notification</text>
+
+  <text x="775" y="155" font-family="Segoe UI, sans-serif" font-size="10" fill="#EF4444">需要 HITL 审批</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="175" x2="480" y2="195" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Data Level -->
+  <rect x="80" y="200" width="800" height="110" rx="10" fill="#FFF" stroke="#D97706" stroke-width="2"/>
+  <rect x="80" y="200" width="800" height="110" rx="10" fill="#D97706" opacity="0.05"/>
+  <rect x="80" y="200" width="200" height="110" rx="10" fill="#D97706"/>
+  <text x="180" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">数据级</text>
+  <text x="180" y="265" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#FEF3C7" text-anchor="middle">Data-Level</text>
+  <text x="180" y="295" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#FEF3C7" text-anchor="middle">中等 / 隔离+脱敏</text>
+
+  <rect x="310" y="213" width="115" height="35" rx="6" fill="#FFFBEB"/>
+  <text x="367" y="235" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E" text-anchor="middle">L1 公开</text>
+  <text x="367" y="240" font-family="Segoe UI, sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Public</text>
+
+  <rect x="435" y="213" width="115" height="35" rx="6" fill="#FFFBEB"/>
+  <text x="492" y="235" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#92400E" text-anchor="middle">L2 内部</text>
+  <text x="492" y="240" font-family="Segoe UI, sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Internal</text>
+
+  <rect x="560" y="213" width="115" height="35" rx="6" fill="#FEF2F2"/>
+  <text x="617" y="235" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#991B1B" text-anchor="middle">L3 敏感</text>
+  <text x="617" y="240" font-family="Segoe UI, sans-serif" font-size="9" fill="#991B1B" text-anchor="middle">Sensitive</text>
+
+  <text x="720" y="238" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">用户隔离 + 自动脱敏</text>
+
+  <!-- Arrow -->
+  <line x1="480" y1="310" x2="480" y2="330" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 1: Tool Level -->
+  <rect x="80" y="335" width="800" height="110" rx="10" fill="#FFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="80" y="335" width="800" height="110" rx="10" fill="#2563EB" opacity="0.05"/>
+  <rect x="80" y="335" width="200" height="110" rx="10" fill="#2563EB"/>
+  <text x="180" y="375" font-family="PingFang SC, Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">工具级</text>
+  <text x="180" y="400" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#BFDBFE" text-anchor="middle">Tool-Level</text>
+  <text x="180" y="430" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#BFDBFE" text-anchor="middle">基础 / 白名单</text>
+
+  <rect x="310" y="348" width="160" height="35" rx="6" fill="#DBEAFE"/>
+  <text x="390" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">工具白名单</text>
+  <text x="390" y="375" font-family="Segoe UI, sans-serif" font-size="9" fill="#1E40AF" text-anchor="middle">Tool Whitelist</text>
+
+  <rect x="480" y="348" width="160" height="35" rx="6" fill="#DBEAFE"/>
+  <text x="560" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">参数约束</text>
+  <text x="560" y="375" font-family="Segoe UI, sans-serif" font-size="9" fill="#1E40AF" text-anchor="middle">Param Constraints</text>
+
+  <rect x="650" y="348" width="160" height="35" rx="6" fill="#DBEAFE"/>
+  <text x="730" y="370" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" fill="#1E40AF" text-anchor="middle">频率限制</text>
+  <text x="730" y="375" font-family="Segoe UI, sans-serif" font-size="9" fill="#1E40AF" text-anchor="middle">Rate Limit</text>
+
+  <text x="730" y="425" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569">每个工具独立授权，默认拒绝</text>
+</svg>
