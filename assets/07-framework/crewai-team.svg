@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 320" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif">
+  <defs>
+    <marker id="a4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="375" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">CrewAI 协作模式：角色 → 任务 → 团队</text>
+
+  <!-- Agents -->
+  <text x="130" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#666">Agent（角色）</text>
+
+  <rect x="40" y="85" width="100" height="55" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="90" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">研究员</text>
+  <text x="90" y="126" text-anchor="middle" font-size="10" fill="#a16207">搜集资料</text>
+
+  <rect x="155" y="85" width="100" height="55" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="205" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#0c4a6e">作家</text>
+  <text x="205" y="126" text-anchor="middle" font-size="10" fill="#0369a1">撰写文章</text>
+
+  <rect x="270" y="85" width="100" height="55" rx="8" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="320" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">编辑</text>
+  <text x="320" y="126" text-anchor="middle" font-size="10" fill="#be185d">审核质量</text>
+
+  <!-- Arrows from agents to tasks -->
+  <line x1="90" y1="140" x2="90" y2="170" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a4)"/>
+  <line x1="205" y1="140" x2="205" y2="170" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a4)"/>
+  <line x1="320" y1="140" x2="320" y2="170" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a4)"/>
+
+  <!-- Tasks -->
+  <text x="205" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#666">Task（任务）</text>
+
+  <rect x="40" y="180" width="100" height="45" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="90" y="200" text-anchor="middle" font-size="11" fill="#166534">调研任务</text>
+  <text x="90" y="215" text-anchor="middle" font-size="9" fill="#15803d">description + output</text>
+
+  <rect x="155" y="180" width="100" height="45" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="205" y="200" text-anchor="middle" font-size="11" fill="#166534">写作任务</text>
+  <text x="205" y="215" text-anchor="middle" font-size="9" fill="#15803d">context=[调研]</text>
+
+  <rect x="270" y="180" width="100" height="45" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="320" y="200" text-anchor="middle" font-size="11" fill="#166534">审核任务</text>
+  <text x="320" y="215" text-anchor="middle" font-size="9" fill="#15803d">context=[写作]</text>
+
+  <!-- Crew box -->
+  <rect x="410" y="85" width="300" height="160" rx="12" fill="#f9fafb" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="560" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Crew（团队）</text>
+
+  <!-- Sequential flow inside crew -->
+  <rect x="435" y="125" width="70" height="35" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="470" y="147" text-anchor="middle" font-size="11" fill="#92400e">研究</text>
+
+  <line x1="505" y1="142" x2="530" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a4)"/>
+
+  <rect x="535" y="125" width="70" height="35" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="570" y="147" text-anchor="middle" font-size="11" fill="#0c4a6e">写作</text>
+
+  <line x1="605" y1="142" x2="630" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a4)"/>
+
+  <rect x="635" y="125" width="55" height="35" rx="5" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+  <text x="662" y="147" text-anchor="middle" font-size="11" fill="#9d174d">审核</text>
+
+  <!-- kickoff -->
+  <rect x="480" y="185" width="160" height="35" rx="6" fill="#2563eb" stroke="none"/>
+  <text x="560" y="207" text-anchor="middle" font-size="13" font-weight="bold" fill="white">crew.kickoff()</text>
+
+  <!-- Result -->
+  <text x="560" y="245" text-anchor="middle" font-size="11" fill="#666">→ 最终输出</text>
+</svg>

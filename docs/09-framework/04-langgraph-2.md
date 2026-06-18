@@ -360,7 +360,7 @@ for chunk in app.stream(None, new_config, stream_mode="values"):
 - **Human-in-the-Loop**：`interrupt()` 暂停 + `Command(resume=...)` 恢复，适合审批、确认等场景
 - **时间旅行**：`get_state_history()` 浏览历史，`update_state()` 修改后重新执行
 
-> 下一篇将进入 CrewAI——用角色扮演的方式组织多个 Agent 协作，让不同角色的 Agent 各司其职完成复杂任务。
+> 下一篇 [CrewAI 详解](./05-crewai.md)——用角色扮演的方式组织多个 Agent 协作，让不同角色的 Agent 各司其职完成复杂任务。
 
 ## 参考链接
 
