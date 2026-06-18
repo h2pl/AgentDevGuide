@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="960" height="440" fill="#F8FAFC" rx="8" filter="url(#shadow)"/>
+  <text x="480" y="35" font-family="PingFang SC, Segoe UI, sans-serif" font-size="20" font-weight="bold" fill="#1E293B" text-anchor="middle">评测方法谱系</text>
+
+  <!-- Spectrum bar -->
+  <rect x="60" y="65" width="840" height="30" rx="15" fill="#E2E8F0"/>
+  <rect x="60" y="65" width="168" height="30" rx="15" fill="#059669"/>
+  <rect x="228" y="65" width="168" height="30" rx="0" fill="#10B981"/>
+  <rect x="396" y="65" width="168" height="30" rx="0" fill="#F59E0B"/>
+  <rect x="564" y="65" width="168" height="30" rx="0" fill="#F97316"/>
+  <rect x="732" y="65" width="168" height="30" rx="15" fill="#EF4444"/>
+
+  <text x="144" y="85" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">确定</text>
+  <text x="816" y="85" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#FFF" text-anchor="middle">灵活</text>
+
+  <!-- Method cards -->
+  <rect x="60" y="115" width="168" height="200" rx="8" fill="#FFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="60" y="115" width="168" height="35" rx="8" fill="#059669"/>
+  <text x="144" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">代码检查</text>
+  <text x="80" y="170" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">精确匹配</text>
+  <text x="80" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">Schema 校验</text>
+  <text x="80" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">正则表达式</text>
+  <text x="80" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">微秒级 · 零成本</text>
+  <text x="80" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#059669">100% 可靠</text>
+
+  <rect x="236" y="115" width="168" height="200" rx="8" fill="#FFF" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="236" y="115" width="168" height="35" rx="8" fill="#10B981"/>
+  <text x="320" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">执行验证</text>
+  <text x="256" y="170" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">编译 + 跑测试</text>
+  <text x="256" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">SQL 执行比对</text>
+  <text x="256" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">沙箱运行验证</text>
+  <text x="256" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">秒级 · 需环境</text>
+  <text x="256" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#059669">确定可复现</text>
+
+  <rect x="412" y="115" width="168" height="200" rx="8" fill="#FFF" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="412" y="115" width="168" height="35" rx="8" fill="#F59E0B"/>
+  <text x="496" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">形式验证</text>
+  <text x="432" y="170" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">DFA 路径建模</text>
+  <text x="432" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">规则引擎检查</text>
+  <text x="432" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">安全约束验证</text>
+  <text x="432" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">毫秒级 · 需建模</text>
+  <text x="432" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#D97706">数学保证</text>
+
+  <rect x="588" y="115" width="168" height="200" rx="8" fill="#FFF" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="588" y="115" width="168" height="35" rx="8" fill="#F97316"/>
+  <text x="672" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">参考比对</text>
+  <text x="608" y="170" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">轨迹路径比对</text>
+  <text x="608" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">状态快照比对</text>
+  <text x="608" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">子序列匹配</text>
+  <text x="608" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">秒级 · 需参考</text>
+  <text x="608" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#D97706">依赖参考质量</text>
+
+  <rect x="764" y="115" width="168" height="200" rx="8" fill="#FFF" stroke="#EF4444" stroke-width="1.5"/>
+  <rect x="764" y="115" width="168" height="35" rx="8" fill="#EF4444"/>
+  <text x="848" y="138" font-family="PingFang SC, Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#FFF" text-anchor="middle">LLM 评分</text>
+  <text x="784" y="170" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">LLM-as-Judge</text>
+  <text x="784" y="190" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">多维评分</text>
+  <text x="784" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569">成对比较</text>
+  <text x="784" y="240" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#94A3B8">秒级 · 有成本</text>
+  <text x="784" y="260" font-family="PingFang SC, Segoe UI, sans-serif" font-size="10" fill="#DC2626">需校准防偏差</text>
+
+  <!-- Bottom principle -->
+  <rect x="60" y="335" width="840" height="85" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="480" y="360" font-family="PingFang SC, Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">工业界最佳实践：多范式组合</text>
+  <text x="480" y="385" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#475569" text-anchor="middle">AlphaEval 每个任务平均使用 2.8 种方法 · BADGER 混合 LLM+ 确定性评分 · CORE 形式验证 + 执行验证</text>
+  <text x="480" y="405" font-family="PingFang SC, Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#2563EB" text-anchor="middle">原则：能用确定性方法就不用 LLM</text>
+</svg>
