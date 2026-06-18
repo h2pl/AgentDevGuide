@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22C55E"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">多工具编排：并行调用 vs 链式依赖 vs 动态筛选</text>
+
+  <!-- ===================== TOP LEFT: Parallel ===================== -->
+  <rect x="20" y="55" width="440" height="210" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="55" width="440" height="36" rx="10" fill="#DBEAFE"/>
+  <rect x="20" y="81" width="440" height="10" fill="#DBEAFE"/>
+  <text x="240" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">并行调用 — "北京和上海天气"</text>
+
+  <!-- User query -->
+  <rect x="40" y="100" width="160" height="35" rx="6" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="120" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E293B">用户提问</text>
+
+  <!-- Two parallel arrows -->
+  <line x1="200" y1="112" x2="240" y2="98" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arr-b)"/>
+  <line x1="200" y1="122" x2="240" y2="140" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arr-b)"/>
+
+  <!-- Tool 1 -->
+  <rect x="245" y="82" width="190" height="30" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="340" y="102" text-anchor="middle" font-size="11" fill="#1D4ED8">get_weather(city="北京")</text>
+
+  <!-- Tool 2 -->
+  <rect x="245" y="122" width="190" height="30" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="340" y="142" text-anchor="middle" font-size="11" fill="#1D4ED8">get_weather(city="上海")</text>
+
+  <!-- Parallel indicator -->
+  <text x="225" y="120" font-size="10" fill="#3B82F6" font-weight="bold">并行</text>
+
+  <!-- Merge -->
+  <line x1="435" y1="97" x2="445" y2="117" stroke="#22C55E" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="435" y1="137" x2="445" y2="122" stroke="#22C55E" stroke-width="1.5" marker-end="url(#arr-g)"/>
+
+  <!-- Result -->
+  <rect x="35" y="165" width="410" height="35" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="240" y="187" text-anchor="middle" font-size="11" fill="#15803D">✓ 同时执行，总耗时 ≈ max(工具1, 工具2)，用 asyncio 实现</text>
+
+  <!-- Condition -->
+  <rect x="35" y="210" width="410" height="30" rx="5" fill="#DBEAFE"/>
+  <text x="240" y="230" text-anchor="middle" font-size="11" fill="#1D4ED8">前提：两个调用之间无依赖关系，参数可独立确定</text>
+
+  <!-- ===================== TOP RIGHT: Chain ===================== -->
+  <rect x="500" y="55" width="440" height="210" rx="10" fill="white" stroke="#E9D5FF" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="500" y="55" width="440" height="36" rx="10" fill="#F3E8FF"/>
+  <rect x="500" y="81" width="440" height="10" fill="#F3E8FF"/>
+  <text x="720" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#7C3AED">链式依赖 — "查订单然后发邮件"</text>
+
+  <!-- Step 1 -->
+  <rect x="520" y="100" width="180" height="38" rx="6" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="1"/>
+  <text x="610" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#7C3AED">① get_order("12345")</text>
+  <text x="610" y="130" text-anchor="middle" font-size="9" fill="#64748B">→ email, tracking_no</text>
+
+  <!-- Arrow -->
+  <line x1="610" y1="138" x2="610" y2="155" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="625" y="150" font-size="9" fill="#7C3AED">依赖结果</text>
+
+  <!-- Step 2 -->
+  <rect x="520" y="158" width="180" height="38" rx="6" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="1"/>
+  <text x="610" y="173" text-anchor="middle" font-size="11" font-weight="bold" fill="#7C3AED">② send_email(to=email)</text>
+  <text x="610" y="188" text-anchor="middle" font-size="9" fill="#64748B">→ "通知已发送"</text>
+
+  <!-- Result -->
+  <rect x="515" y="210" width="410" height="35" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="720" y="232" text-anchor="middle" font-size="11" fill="#15803D">必须串行：工具 B 依赖工具 A 的结果作为参数</text>
+
+  <!-- Modes table -->
+  <rect x="720" y="100" width="200" height="95" rx="6" fill="#F8FAFC"/>
+  <text x="730" y="118" font-size="11" font-weight="bold" fill="#334155">两种驱动模式：</text>
+  <text x="730" y="138" font-size="10" fill="#64748B">模型驱动链：循环调 LLM</text>
+  <text x="730" y="155" font-size="10" fill="#7C3AED">→ 灵活，适合开放任务</text>
+  <text x="730" y="175" font-size="10" fill="#64748B">代码驱动链：硬编码顺序</text>
+  <text x="730" y="192" font-size="10" fill="#7C3AED">→ 可控，适合固定流程</text>
+
+  <!-- ===================== BOTTOM: Tool Selection ===================== -->
+  <rect x="20" y="280" width="920" height="220" rx="10" fill="white" stroke="#FDE68A" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="280" width="920" height="36" rx="10" fill="#FEF3C7"/>
+  <rect x="20" y="306" width="920" height="10" fill="#FEF3C7"/>
+  <text x="480" y="303" text-anchor="middle" font-size="14" font-weight="bold" fill="#D97706">动态工具筛选 — 控制 Token 成本与选择准确率</text>
+
+  <!-- Full tool set -->
+  <rect x="40" y="330" width="280" height="60" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="180" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">完整工具库（20+ 工具）</text>
+  <text x="180" y="370" text-anchor="middle" font-size="10" fill="#DC2626">全部发送 → 准确率 72%，成本高</text>
+  <text x="180" y="383" text-anchor="middle" font-size="10" fill="#64748B">3000+ tokens 额外开销</text>
+
+  <!-- Arrow with filter -->
+  <line x1="320" y1="360" x2="370" y2="360" stroke="#D97706" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="345" y="350" text-anchor="middle" font-size="10" fill="#D97706" font-weight="bold">筛选</text>
+
+  <!-- Selected tools -->
+  <rect x="375" y="330" width="220" height="60" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="485" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">相关工具（3~5 个）</text>
+  <text x="485" y="370" text-anchor="middle" font-size="10" fill="#15803D">只发相关 → 准确率 95%</text>
+  <text x="485" y="383" text-anchor="middle" font-size="10" fill="#64748B">500~800 tokens</text>
+
+  <!-- Arrow to LLM -->
+  <line x1="595" y1="360" x2="640" y2="360" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- LLM call -->
+  <rect x="645" y="330" width="140" height="60" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="715" y="355" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803D">LLM 精准选择</text>
+  <text x="715" y="375" text-anchor="middle" font-size="10" fill="#64748B">低噪声，高准确率</text>
+
+  <!-- Strategies -->
+  <rect x="810" y="330" width="115" height="60" rx="6" fill="#FEF3C7"/>
+  <text x="867" y="348" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400E">筛选策略：</text>
+  <text x="817" y="365" font-size="10" fill="#64748B">• 关键词匹配</text>
+  <text x="817" y="380" font-size="10" fill="#64748B">• 轻量模型路由</text>
+
+  <!-- Context management -->
+  <rect x="40" y="410" width="895" height="72" rx="6" fill="#F8FAFC"/>
+  <text x="55" y="432" font-size="12" font-weight="bold" fill="#334155">上下文管理（多轮调用后 Token 膨胀）：</text>
+  <text x="55" y="452" font-size="11" fill="#64748B">① 摘要回传 — 500 token JSON → 50 token 文本</text>
+  <text x="380" y="452" font-size="11" fill="#64748B">② 截断策略 — 只保留最近 3 轮工具结果</text>
+  <text x="680" y="452" font-size="11" fill="#64748B">③ Prompt Caching — 复用固定部分 KV 张量</text>
+  <text x="55" y="472" font-size="11" fill="#D97706">10 轮工具调用后，上下文从 1K → 15K+ tokens，必须主动控制成本</text>
+
+</svg>

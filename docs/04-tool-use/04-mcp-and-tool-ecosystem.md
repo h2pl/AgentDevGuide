@@ -31,6 +31,8 @@ MCP 的思路是在 LLM 的 Function Calling 和外部工具之间插入一个**
 
 ## MCP 是什么
 
+<img src="../../assets/04-tool-use/mcp-architecture.svg" alt="MCP 协议架构：Host→Client→Server→外部工具，三大原语" width="95%"/>
+
 MCP 是一个运行在 JSON-RPC 2.0 之上的协议层，借鉴了 VS Code 的 Language Server Protocol（LSP）的设计。它定义了四个角色：
 
 | 角色 | 职责 | 示例 |

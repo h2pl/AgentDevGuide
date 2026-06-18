@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+  </defs>
+
+  <rect width="960" height="520" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Schema 设计对比：模糊描述 vs 精确描述</text>
+
+  <!-- ===================== LEFT: BAD ===================== -->
+  <rect x="20" y="55" width="440" height="440" rx="10" fill="white" stroke="#FECACA" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="55" width="440" height="40" rx="10" fill="#FEE2E2"/>
+  <rect x="20" y="85" width="440" height="10" fill="#FEE2E2"/>
+  <text x="240" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#DC2626">❌ 模糊 Schema — 模型频繁选错</text>
+
+  <!-- Tool name -->
+  <rect x="40" y="112" width="400" height="38" rx="6" fill="#FEF2F2"/>
+  <text x="50" y="137" font-size="13" fill="#334155" font-family="'Courier New', monospace">"name": <tspan fill="#DC2626" font-weight="bold">"query"</tspan></text>
+
+  <!-- Description -->
+  <rect x="40" y="157" width="400" height="38" rx="6" fill="#FEF2F2"/>
+  <text x="50" y="182" font-size="13" fill="#334155" font-family="'Courier New', monospace">"description": <tspan fill="#DC2626" font-weight="bold">"查询数据"</tspan></text>
+
+  <!-- Parameters -->
+  <rect x="40" y="202" width="400" height="58" rx="6" fill="#FEF2F2"/>
+  <text x="50" y="222" font-size="12" fill="#334155" font-family="'Courier New', monospace">"parameters": {</text>
+  <text x="70" y="242" font-size="12" fill="#DC2626" font-family="'Courier New', monospace">"q": {"type": "string"}</text>
+  <text x="50" y="254" font-size="12" fill="#334155" font-family="'Courier New', monospace">}</text>
+
+  <!-- Problems -->
+  <rect x="40" y="275" width="400" height="140" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
+  <text x="55" y="295" font-size="12" font-weight="bold" fill="#9A3412">⚠ 四个致命问题：</text>
+  <text x="55" y="316" font-size="12" fill="#9A3412">1. name "query" 太泛，与所有查询类工具重叠</text>
+  <text x="55" y="336" font-size="12" fill="#9A3412">2. description "查询数据" 不匹配任何用户表达</text>
+  <text x="55" y="356" font-size="12" fill="#9A3412">3. 参数名 "q" 无语义，模型不知道传什么</text>
+  <text x="55" y="376" font-size="12" fill="#9A3412">4. 没有格式说明，模型猜格式（通常猜错）</text>
+  <text x="55" y="400" font-size="12" fill="#DC2626" font-weight="bold">→ 用户说"查我昨天买的手机"，模型传 {"q":"手机"}</text>
+  <text x="55" y="418" font-size="12" fill="#DC2626" font-weight="bold">  但后端期望 {"order_id":"ORD-20260615-0892"}</text>
+
+  <!-- Accuracy -->
+  <rect x="40" y="430" width="400" height="32" rx="5" fill="#FEE2E2"/>
+  <text x="240" y="451" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">工具选择准确率 ≈ 45%</text>
+
+  <!-- ===================== RIGHT: GOOD ===================== -->
+  <rect x="500" y="55" width="440" height="440" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="500" y="55" width="440" height="40" rx="10" fill="#DCFCE7"/>
+  <rect x="500" y="85" width="440" height="10" fill="#DCFCE7"/>
+  <text x="720" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803D">✅ 精确 Schema — 轻量模型也准确</text>
+
+  <!-- Tool name -->
+  <rect x="520" y="112" width="400" height="38" rx="6" fill="#F0FDF4"/>
+  <text x="530" y="137" font-size="13" fill="#334155" font-family="'Courier New', monospace">"name": <tspan fill="#15803D" font-weight="bold">"get_order_details"</tspan></text>
+
+  <!-- Description -->
+  <rect x="520" y="157" width="400" height="58" rx="6" fill="#F0FDF4"/>
+  <text x="530" y="175" font-size="12" fill="#334155" font-family="'Courier New', monospace">"description":</text>
+  <text x="540" y="193" font-size="11" fill="#15803D" font-family="'Courier New', monospace">"当用户想了解已购买商品的状态、</text>
+  <text x="540" y="208" font-size="11" fill="#15803D" font-family="'Courier New', monospace">物流信息或退款进度时查询订单详情"</text>
+
+  <!-- Parameters -->
+  <rect x="520" y="222" width="400" height="78" rx="6" fill="#F0FDF4"/>
+  <text x="530" y="240" font-size="12" fill="#334155" font-family="'Courier New', monospace">"parameters": {</text>
+  <text x="550" y="258" font-size="11" fill="#15803D" font-family="'Courier New', monospace">"order_id": {"type": "string",</text>
+  <text x="570" y="275" font-size="11" fill="#15803D" font-family="'Courier New', monospace">"description": "格式 ORD-YYYYMMDD-XXXX"}</text>
+  <text x="530" y="293" font-size="12" fill="#334155" font-family="'Courier New', monospace">}  "required": ["order_id"]</text>
+
+  <!-- Improvements -->
+  <rect x="520" y="315" width="400" height="105" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="535" y="335" font-size="12" font-weight="bold" fill="#166534">✓ 四条原则全部命中：</text>
+  <text x="535" y="356" font-size="12" fill="#166534">1. name 语义明确，不会与其他工具重叠</text>
+  <text x="535" y="376" font-size="12" fill="#166534">2. description 描述问题场景，匹配用户表达</text>
+  <text x="535" y="396" font-size="12" fill="#166534">3. 参数有格式示例，模型知道传什么</text>
+  <text x="535" y="413" font-size="12" fill="#166534">4. required 强制必填，杜绝漏参</text>
+
+  <!-- Accuracy -->
+  <rect x="520" y="430" width="400" height="32" rx="5" fill="#DCFCE7"/>
+  <text x="720" y="451" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">工具选择准确率 ≈ 95%</text>
+
+  <!-- Bottom insight -->
+  <text x="480" y="488" text-anchor="middle" font-size="13" fill="#64748B">同一个功能，描述写法不同，准确率差距可达 50% — 不是改"提示"，而是在改概率分布的激活模式</text>
+
+</svg>

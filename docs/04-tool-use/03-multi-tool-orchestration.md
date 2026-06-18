@@ -31,6 +31,8 @@
 
 ## 并行调用：一次请求，多个动作
 
+<img src="../../assets/04-tool-use/multi-tool-orchestration.svg" alt="多工具编排模式：并行调用、链式依赖、动态筛选" width="95%"/>
+
 2024 年后，主流模型（GPT-4o、Claude 3.5+、Gemini 1.5+）都支持**原生并行工具调用**。模型在一次回复中输出多个工具调用请求，你的代码同时执行它们，大幅缩短总耗时。
 
 ```python

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.10"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748B"/>
+    </marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#22C55E"/>
+    </marker>
+    <marker id="arr-p" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7C3AED"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="520" rx="12" fill="#F8FAFC"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">工具调用完整流程：定义 → 选择 → 执行 → 回传</text>
+
+  <!-- ===================== STAGE 1: DEFINE ===================== -->
+  <rect x="20" y="60" width="215" height="395" rx="10" fill="white" stroke="#BFDBFE" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="20" y="60" width="215" height="40" rx="10" fill="#DBEAFE"/>
+  <rect x="20" y="90" width="215" height="10" fill="#DBEAFE"/>
+  <text x="127" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#1D4ED8">① 定义 Definition</text>
+
+  <!-- Developer provides tools -->
+  <rect x="35" y="118" width="185" height="55" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="127" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">开发者提供工具清单</text>
+  <text x="127" y="158" text-anchor="middle" font-size="10" fill="#64748B">JSON Schema 格式</text>
+
+  <!-- Tool Schema example -->
+  <rect x="35" y="183" width="185" height="100" rx="6" fill="#F1F5F9"/>
+  <text x="45" y="200" font-size="10" fill="#334155" font-family="'Courier New', monospace">{</text>
+  <text x="55" y="215" font-size="10" fill="#334155" font-family="'Courier New', monospace">"name": "get_weather",</text>
+  <text x="55" y="230" font-size="10" fill="#334155" font-family="'Courier New', monospace">"description":</text>
+  <text x="65" y="245" font-size="10" fill="#DC2626" font-family="'Courier New', monospace">"获取城市天气"</text>
+  <text x="55" y="260" font-size="10" fill="#334155" font-family="'Courier New', monospace">"parameters": {...}</text>
+  <text x="45" y="275" font-size="10" fill="#334155" font-family="'Courier New', monospace">}</text>
+
+  <!-- Token cost -->
+  <rect x="35" y="295" width="185" height="40" rx="5" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+  <text x="127" y="313" text-anchor="middle" font-size="10" fill="#DC2626">⚠ 每个工具消耗 100~300 tokens</text>
+  <text x="127" y="328" text-anchor="middle" font-size="10" fill="#DC2626">20 个工具以上准确率显著下降</text>
+
+  <!-- Your code label -->
+  <rect x="55" y="350" width="150" height="28" rx="5" fill="#DBEAFE"/>
+  <text x="130" y="368" text-anchor="middle" font-size="11" fill="#1D4ED8">你的代码控制</text>
+
+  <!-- Arrow right -->
+  <line x1="235" y1="255" x2="255" y2="255" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr-b)"/>
+
+  <!-- ===================== STAGE 2: SELECT ===================== -->
+  <rect x="260" y="60" width="215" height="395" rx="10" fill="white" stroke="#E9D5FF" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="260" y="60" width="215" height="40" rx="10" fill="#F3E8FF"/>
+  <rect x="260" y="90" width="215" height="10" fill="#F3E8FF"/>
+  <text x="367" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#7C3AED">② 选择 Selection</text>
+
+  <!-- LLM decides -->
+  <rect x="275" y="118" width="185" height="55" rx="8" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="1"/>
+  <text x="367" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">LLM 判断是否需要工具</text>
+  <text x="367" y="158" text-anchor="middle" font-size="10" fill="#64748B">SFT 条件概率 → 语义匹配</text>
+
+  <!-- Output tool call JSON -->
+  <rect x="275" y="183" width="185" height="95" rx="6" fill="#F1F5F9"/>
+  <text x="367" y="200" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">输出结构化 tool_calls:</text>
+  <text x="285" y="218" font-size="10" fill="#334155" font-family="'Courier New', monospace">"name":"get_weather"</text>
+  <text x="285" y="233" font-size="10" fill="#334155" font-family="'Courier New', monospace">"arguments":</text>
+  <text x="295" y="248" font-size="10" fill="#334155" font-family="'Courier New', monospace">{"city":"上海"}</text>
+  <text x="285" y="268" font-size="10" fill="#7C3AED" font-family="'Courier New', monospace">// 不是执行，只是描述</text>
+
+  <!-- Key insight -->
+  <rect x="275" y="295" width="185" height="45" rx="5" fill="#F3E8FF"/>
+  <text x="367" y="313" text-anchor="middle" font-size="10" fill="#7C3AED">description 质量决定选对率</text>
+  <text x="367" y="328" text-anchor="middle" font-size="10" fill="#7C3AED">Schema 重叠 → 模型选错</text>
+
+  <!-- LLM label -->
+  <rect x="295" y="350" width="150" height="28" rx="5" fill="#F3E8FF"/>
+  <text x="370" y="368" text-anchor="middle" font-size="11" fill="#7C3AED">LLM 内部决策</text>
+
+  <!-- Arrow right -->
+  <line x1="475" y1="255" x2="495" y2="255" stroke="#7C3AED" stroke-width="2" marker-end="url(#arr-p)"/>
+
+  <!-- ===================== STAGE 3: EXECUTE ===================== -->
+  <rect x="500" y="60" width="215" height="395" rx="10" fill="white" stroke="#BBF7D0" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="500" y="60" width="215" height="40" rx="10" fill="#DCFCE7"/>
+  <rect x="500" y="90" width="215" height="10" fill="#DCFCE7"/>
+  <text x="607" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803D">③ 执行 Execution</text>
+
+  <!-- Your code executes -->
+  <rect x="515" y="118" width="185" height="55" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+  <text x="607" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">你的代码解析并执行</text>
+  <text x="607" y="158" text-anchor="middle" font-size="10" fill="#64748B">参数校验 / 权限检查 / 超时控制</text>
+
+  <!-- Code example -->
+  <rect x="515" y="183" width="185" height="90" rx="6" fill="#F1F5F9"/>
+  <text x="525" y="200" font-size="10" fill="#334155" font-family="'Courier New', monospace">def execute(call):</text>
+  <text x="535" y="215" font-size="10" fill="#334155" font-family="'Courier New', monospace">args = parse(call)</text>
+  <text x="535" y="230" font-size="10" fill="#334155" font-family="'Courier New', monospace">result = api.call(args)</text>
+  <text x="535" y="245" font-size="10" fill="#22C55E" font-family="'Courier New', monospace">return result</text>
+  <text x="525" y="265" font-size="10" fill="#64748B" font-family="'Courier New', monospace"># 完全在你的控制下</text>
+
+  <!-- Safety boundary -->
+  <rect x="515" y="295" width="185" height="40" rx="5" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="607" y="313" text-anchor="middle" font-size="10" fill="#15803D">✓ 安全边界在这里</text>
+  <text x="607" y="328" text-anchor="middle" font-size="10" fill="#15803D">LLM 无法直接执行任何操作</text>
+
+  <!-- Your code label -->
+  <rect x="535" y="350" width="150" height="28" rx="5" fill="#DCFCE7"/>
+  <text x="610" y="368" text-anchor="middle" font-size="11" fill="#15803D">你的代码控制</text>
+
+  <!-- Arrow right -->
+  <line x1="715" y1="255" x2="735" y2="255" stroke="#22C55E" stroke-width="2" marker-end="url(#arr-g)"/>
+
+  <!-- ===================== STAGE 4: OBSERVE ===================== -->
+  <rect x="740" y="60" width="200" height="395" rx="10" fill="white" stroke="#FDE68A" stroke-width="1.5" filter="url(#s)"/>
+  <rect x="740" y="60" width="200" height="40" rx="10" fill="#FEF3C7"/>
+  <rect x="740" y="90" width="200" height="10" fill="#FEF3C7"/>
+  <text x="840" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#D97706">④ 回传 Observation</text>
+
+  <!-- Result back to LLM -->
+  <rect x="755" y="118" width="170" height="55" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="840" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">结果注入对话上下文</text>
+  <text x="840" y="158" text-anchor="middle" font-size="10" fill="#64748B">role: "tool"</text>
+
+  <!-- Tool result -->
+  <rect x="755" y="183" width="170" height="60" rx="6" fill="#F1F5F9"/>
+  <text x="765" y="200" font-size="10" fill="#334155" font-family="'Courier New', monospace">{"role": "tool",</text>
+  <text x="775" y="215" font-size="10" fill="#334155" font-family="'Courier New', monospace">"content":</text>
+  <text x="775" y="230" font-size="10" fill="#D97706" font-family="'Courier New', monospace">"多云 26°C"}</text>
+
+  <!-- LLM generates final -->
+  <rect x="755" y="258" width="170" height="55" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="840" y="278" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E293B">LLM 生成最终回复</text>
+  <text x="840" y="298" text-anchor="middle" font-size="10" fill="#64748B">"上海今天多云，26°C"</text>
+
+  <!-- Loop indicator -->
+  <rect x="755" y="325" width="170" height="28" rx="5" fill="#FEF3C7"/>
+  <text x="840" y="343" text-anchor="middle" font-size="11" fill="#D97706">循环可重复多次</text>
+
+  <!-- Loop back arrow -->
+  <path d="M 840 400 Q 840 470 480 480 Q 120 470 120 410" stroke="#64748B" stroke-width="1.5" stroke-dasharray="5" fill="none" marker-end="url(#arr)"/>
+  <text x="480" y="498" text-anchor="middle" font-size="11" fill="#64748B">多轮工具调用链：结果回传后模型可再次选择工具</text>
+
+</svg>

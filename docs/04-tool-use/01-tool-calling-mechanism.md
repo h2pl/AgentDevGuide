@@ -38,6 +38,8 @@ OpenAI 在 2023 年 6 月首次推出 **Function Calling** 时，这是一个 AP
 
 ## 工具调用的完整流程
 
+<img src="../../assets/04-tool-use/tool-calling-flow.svg" alt="工具调用完整流程：定义→选择→执行→回传四阶段" width="95%"/>
+
 一次完整的工具调用包含四个阶段，像接力赛一样环环相扣：
 
 ### 1. 定义（Definition）
