@@ -57,7 +57,6 @@
 
 ## 02 LLM 基础
 
-
 LLM 是什么？怎么工作、能做什么、不能做什么？
 
 **核心概念**：
@@ -102,7 +101,6 @@ LLM 是什么？怎么工作、能做什么、不能做什么？
 
 ## 05 工具调用
 
-
 LLM 怎么调用外部函数和工具？
 
 - [工具调用机制](./docs/05-tool-use/01-tool-calling-mechanism.md)
@@ -112,7 +110,6 @@ LLM 怎么调用外部函数和工具？
 - [MCP 实战](./docs/05-tool-use/05-mcp-in-practice.md)
 
 ## 06 Agent 循环
-
 
 Agent 的核心循环怎么工作？
 
@@ -153,7 +150,6 @@ Agent 的核心循环怎么工作？
 
 ## 09 记忆管理
 
-
 Agent 怎么记住之前发生的事？
 
 - [记忆分层架构](./docs/09-memory-management/01-memory-layers.md)
@@ -175,7 +171,6 @@ Agent 怎么记住之前发生的事？
 - [OpenAI SDK 与 Google ADK](./docs/10-framework/07-openai-sdk-google-adk.md)
 
 ## 11 扩展协议
-
 
 MCP / A2A / AGENTS.md 是什么？
 
