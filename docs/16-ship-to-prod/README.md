@@ -1,6 +1,6 @@
 # 16 — 产品交付
 
-从架构设计到项目文档，把 Agent 知识凝结为一个可部署的系统。五篇文章从 [系统架构设计](./01-architecture.md) 和 [API 服务化](./02-api-service.md) 切入，再到 [部署方案](./03-deployment.md) 和 [运维实战](./04-operations.md)，最后以 [项目文档](./05-documentation.md) 收尾。
+从架构设计到部署运维，把 Agent 知识凝结为一个可部署的系统。四篇文章从 [系统架构设计](./01-architecture.md) 和 [API 服务化](./02-api-service.md) 切入，再到 [部署方案](./03-deployment.md)，最后以 [运维实战](./04-operations.md) 收尾。
 
 ## 文章列表
 
@@ -10,7 +10,6 @@
 | 02 | [API 服务化](02-api-service.md) | REST/SSE/WebSocket 设计、认证限流、客户端 SDK |
 | 03 | [Agent 部署方案](03-deployment.md) | Docker/K8s/CI/CD/多环境/发布策略/密钥管理 |
 | 04 | [Agent 运维实战](04-operations.md) | 日常巡检、故障响应、灾难恢复、Runbook |
-| 05 | [项目文档](05-documentation.md) | 文档体系、ADR、Agent 专属文档、Changelog |
 
 ## 参考链接
 
