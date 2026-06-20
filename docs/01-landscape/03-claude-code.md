@@ -15,7 +15,7 @@
 - [总结](#总结)
 - [参考链接](#参考链接)
 
-你好，我是江小湖。在[全景概览](./02-mainstream-agents.md)中你看到了编程 Agent 这个品类。Claude Code 是目前这个品类里关注度最高的产品——它定义了"编程 Agent 应该是什么样"。
+你好，我是江小湖。在[2026 主流 Agent 全景](./02-mainstream-agents.md)中你看到了编程 Agent 这个品类。Claude Code 是目前这个品类里关注度最高的产品——它定义了"编程 Agent 应该是什么样"。
 
 ## Claude Code 是什么
 

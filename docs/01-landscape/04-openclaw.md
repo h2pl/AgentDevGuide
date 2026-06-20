@@ -14,7 +14,7 @@
 - [总结](#总结)
 - [参考链接](#参考链接)
 
-你好，我是江小湖。在[全景概览](./02-mainstream-agents.md)中你看到了个人助理这个品类。OpenClaw 是这个品类的代表——379K Stars，AI 开源项目第一。
+你好，我是江小湖。在[2026 主流 Agent 全景](./02-mainstream-agents.md)中你看到了个人助理这个品类。OpenClaw 是这个品类的代表——379K Stars，AI 开源项目第一。
 
 ## OpenClaw 是什么
 

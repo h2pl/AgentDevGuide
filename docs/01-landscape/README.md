@@ -12,7 +12,7 @@
 
 ### 2. 看清市场全貌
 
-[2026 主流 Agent 全景](./02-mainstream-agents.md) 用一个双维框架（七大品类 × L1-L5 能力分级）帮你纵览整个 Agent 市场。这一篇是地图——后续所有章节涉及的具体技术概念，都能在这张地图上找到位置。
+[2026 主流 Agent 全景](./02-mainstream-agents.md) 按使用场景帮你理清市场上 7 个 Agent 品类，每个品类选什么产品、适合谁、怎么选。这一篇是地图——后续所有章节涉及的具体技术概念，都能在这张地图上找到位置。
 
 ### 3. 三个典型产品
 
@@ -29,7 +29,7 @@
 | 文章 | 内容 |
 |------|------|
 | [什么是 AI Agent](./01-what-is-agent.md) | Agent 核心定义、与 Chatbot/Workflow 的区别、适用场景 |
-| [2026 主流 Agent 全景](./02-mainstream-agents.md) | 七大品类 × L1-L5 双维框架：编程、研究、个人助理、企业平台等 |
+| [2026 主流 Agent 全景](./02-mainstream-agents.md) | 7 大品类按场景分类：编程、研究、自动化、个人助理、企业平台等 |
 | [Claude Code：编程 Agent 的标杆](./03-claude-code.md) | 终端原生编程 Agent，深度代码理解，SWE-bench ~72% |
 | [OpenClaw：本地优先的个人 AI 助理](./04-openclaw.md) | 本地运行，20+ 通道覆盖，持久记忆 |
 | [Hermes Agent：自主成长的开源 Agent](./05-hermes-agent.md) | 200+ 模型自由切换，自动技能创建，编码 Agent 编排 |

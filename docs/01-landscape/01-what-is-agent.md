@@ -193,7 +193,7 @@ Chatbot 出了问题看日志就知道哪一步错了。Agent 出了问题，你
 
 这篇文章帮你建立了对 Agent 的整体认知。接下来看看 2026 年的 Agent 生态全景——市面上到底有哪些 Agent、怎么分类、怎么选。
 
-> 继续阅读 [2026 主流 Agent 全景](./02-mainstream-agents.md)，了解 Agent 市场的七大品类和能力分级。
+> 继续阅读 [2026 主流 Agent 全景](./02-mainstream-agents.md)，了解市场上都有哪些 Agent、各自解决什么问题。
 
 ## 参考链接
 
