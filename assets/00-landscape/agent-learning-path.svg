@@ -9,7 +9,7 @@
 
   <!-- Title -->
   <text x="550" y="42" text-anchor="middle" font-family="Segoe UI, PingFang SC, sans-serif" font-size="22" font-weight="700" fill="#0F172A">AI Agent 知识体系全景</text>
-  <text x="550" y="66" text-anchor="middle" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" fill="#64748B">5 层 · 16 章 · 91 篇 · 从认知到交付的完整知识栈</text>
+  <text x="550" y="66" text-anchor="middle" font-family="Segoe UI, PingFang SC, sans-serif" font-size="13" fill="#64748B">5 层 · 16 章 · 从认知到交付的完整知识栈</text>
 
   <!-- ==================== LAYER 1: 认知建立 ==================== -->
   <g transform="translate(30, 90)">
