@@ -1,62 +1,12 @@
 # 15 — CLI 命令系统
 
-## 核心问题
-Claude Code 的 40+ slash 命令如何注册与分发？命令生命周期是什么？
+Claude Code 有 40+ slash 命令，从 `/compact` 到 `/resume` 到 `/doctor`。本章拆解命令注册、分发和生命周期。
 
-## 关键源码
-- `src/commands/` — 40+ 命令实现
-- `src/commands.ts` — 命令注册中心
-- `src/commands/advisor.ts` — 命令顾问
-- `src/commands/init.ts` — 初始化命令
+## 目录
 
-## 主要内容
+| # | 文章 | 内容 |
+|---|------|------|
+| 01 | [命令注册与分发](./01-registration.md) | `commands/` 目录结构、Commander 集成、动态发现 |
+| 02 | [命令生命周期](./02-lifecycle.md) | 解析、执行、中断、清理 |
 
-### 1. 命令注册中心
-```typescript
-// commands.ts 统一管理
-// 类似 tools.ts 的设计
-// 统一注册、按需加载
-// 支持 feature flag 动态开关
-```
-
-### 2. 40+ 命令分类
-| 类别 | 命令示例 | 数量 |
-|------|---------|------|
-| 会话管理 | /clear, /compact, /resume | 5 |
-| 配置管理 | /config, /model, /permissions | 6 |
-| 工具管理 | /mcp, /hooks, /skills, /plugins | 4 |
-| 任务管理 | /tasks, /plan, /review | 3 |
-| 系统命令 | /doctor, /status, /usage | 5 |
-| 其他 | /vim, /voice, /theme, /stickers | 17 |
-
-### 3. 命令生命周期
-```typescript
-// 1. 解析用户输入（/command args）
-// 2. 查找命令注册表
-// 3. 执行 PreCommand hooks
-// 4. 执行命令逻辑
-// 5. 执行 PostCommand hooks
-// 6. 通知命令完成
-```
-
-### 4. 命令系统不是装饰品
-```typescript
-// 命令不只是快捷操作
-// 是系统能力的暴露
-// 是用户控制 Agent 的接口
-// 是调试和审计的入口
-```
-
-### 5. 命令与工具的协作
-```typescript
-// 命令可以调用工具
-// 工具可以触发命令
-// 但职责清晰：
-// - 命令：用户主动触发
-// - 工具：Agent 自主调用
-```
-
-## 学习目标
-- 理解命令注册中心的设计
-- 掌握命令生命周期
-- 明白命令系统的工程意义
+> 学完本章后，请继续阅读 [16 — 终端 UI 框架](../16-terminal-ui/README.md)，看 React + Ink 如何渲染终端界面。
