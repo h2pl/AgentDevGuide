@@ -16,6 +16,7 @@
 | 创造能力 | [04 多模态生成](./04-multimodal-generation/README.md) | 怎么让模型生成图像和视频？ |
 | 综合与推理 | [05 多模态集成](./05-multimodal-integration/README.md) | 多模态综合推理、检索与 Agent 怎么做？ |
 | 工程实践 | [06 多模态工程](./06-multimodal-engineering/README.md) | 从 demo 到生产要补什么？ |
+| 源码解析 | [07 Claude Code 源码](./07-cc-source-analysis/README.md) | 生产级 Agent 怎么把理论落地？ |
 
 
 ## 两条技术路线
@@ -51,4 +52,13 @@
 | | [多模态 RAG](./05-multimodal-integration/02-multimodal-rag.md) | 多模态检索、CLIP 索引、视觉知识库、框架支持 |
 | | [多模态 Agent](./05-multimodal-integration/03-multimodal-agents.md) | Computer Use、视觉 grounding、Agent 规划、方案对比 |
 | 06 多模态工程 | [多模态工程实践](./06-multimodal-engineering/02-multimodal-in-production.md) | 评估指标、成本模型、可观测性、安全治理、上线 checklist |
+| 07 CC源码解析 | [query.ts Agent循环](./07-cc-source-analysis/01-query-ts-agent-loop.md) | 600行while True、turn计数、stop_reason、并发工具执行 |
+| | [Tool.ts 工具系统](./07-cc-source-analysis/02-tool-ts-tool-system.md) | buildTool工厂、Schema自动生成、权限回调 |
+| | [API调用层](./07-cc-source-analysis/03-api-service.md) | 统一调用、重试、token追踪 |
+| | [系统提示](./07-cc-source-analysis/04-system-prompt.md) | 提示组装、前缀缓存冻结 |
+| | [上下文压缩](./07-cc-source-analysis/05-context-compaction.md) | 三级压缩、首尾保留+中间摘要 |
+| | [记忆系统](./07-cc-source-analysis/06-memory-memdir.md) | 文件级持久记忆、反思提炼 |
+| | [子Agent](./07-cc-source-analysis/07-agent-tool.md) | 上下文隔离、消息路由 |
+| | [权限系统](./07-cc-source-analysis/08-permissions.md) | 分级权限、危险模式拦截 |
+| | [可观测性](./07-cc-source-analysis/09-telemetry.md) | Span树、成本追踪 |
 
