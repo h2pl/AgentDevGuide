@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="barInfra" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <linearGradient id="barUI" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="barPerm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="barTool" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="barCmd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="barCore" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- 标题 -->
+  <text x="480" y="48" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E293B">Claude Code 51 万行代码分布</text>
+  <text x="480" y="74" text-anchor="middle" font-size="14" fill="#64748B">AI 决策逻辑仅占 1.6%，其余 98.4% 是工程基础设施</text>
+
+  <!-- 条形图 -->
+  <g transform="translate(80, 110)">
+    <!-- 基础设施 64% -->
+    <rect x="0" y="0" width="640" height="38" rx="6" fill="url(#barInfra)" filter="url(#shadow)"/>
+    <text x="12" y="24" fill="#fff" font-size="13" font-weight="600">基础设施 64%</text>
+    <text x="620" y="24" text-anchor="end" fill="#fff" font-size="12">~330,000 行</text>
+
+    <!-- 终端 UI 14% -->
+    <rect x="0" y="52" width="140" height="38" rx="6" fill="url(#barUI)" filter="url(#shadow)"/>
+    <text x="12" y="76" fill="#fff" font-size="13" font-weight="600">终端 UI 14%</text>
+    <text x="128" y="76" text-anchor="end" fill="#fff" font-size="12">~70K</text>
+
+    <!-- 权限安全 12% -->
+    <rect x="0" y="104" width="120" height="38" rx="6" fill="url(#barPerm)" filter="url(#shadow)"/>
+    <text x="12" y="128" fill="#fff" font-size="13" font-weight="600">权限安全 12%</text>
+    <text x="108" y="128" text-anchor="end" fill="#fff" font-size="12">~60K</text>
+
+    <!-- 工具系统 6% -->
+    <rect x="0" y="156" width="60" height="38" rx="6" fill="url(#barTool)" filter="url(#shadow)"/>
+    <text x="10" y="180" fill="#fff" font-size="12" font-weight="600">工具 6%</text>
+
+    <!-- 命令系统 3% -->
+    <rect x="0" y="208" width="30" height="38" rx="6" fill="url(#barCmd)" filter="url(#shadow)"/>
+    <text x="8" y="232" fill="#fff" font-size="11" font-weight="600">命令 3%</text>
+
+    <!-- Agent 核心 1.6% -->
+    <rect x="0" y="260" width="16" height="38" rx="6" fill="url(#barCore)" filter="url(#shadow)"/>
+    <text x="24" y="284" fill="#DC2626" font-size="12" font-weight="700">Agent 核心 1.6%</text>
+  </g>
+
+  <!-- 右侧说明 -->
+  <g transform="translate(760, 110)">
+    <rect x="0" y="0" width="180" height="260" fill="#fff" stroke="#E2E8F0" stroke-width="1" rx="8" filter="url(#shadow)"/>
+    <text x="90" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">关键洞察</text>
+    <text x="16" y="64" font-size="12" fill="#475569">核心 while 循环仅 88 行</text>
+    <text x="16" y="92" font-size="12" fill="#475569">包裹它的工程代码约 40 万行</text>
+    <text x="16" y="120" font-size="12" fill="#475569">每个生产级 Agent 都需要</text>
+    <text x="16" y="148" font-size="12" fill="#475569">这样的确定性外壳</text>
+    <line x1="16" y1="170" x2="164" y2="170" stroke="#E2E8F0"/>
+    <text x="90" y="210" text-anchor="middle" font-size="18" font-weight="bold" fill="#DC2626">1.6%</text>
+    <text x="90" y="234" text-anchor="middle" font-size="12" fill="#64748B">AI 决策逻辑占比</text>
+  </g>
+
+  <!-- 底部注释 -->
+  <text x="480" y="480" text-anchor="middle" font-size="12" fill="#94A3B8">数据来源：Claude Code 泄露源码（2026 年 3 月），按模块职责估算</text>
+</svg>

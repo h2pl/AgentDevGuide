@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
+    <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+    <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#D97706"/></linearGradient>
+    <linearGradient id="layer4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient>
+    <linearGradient id="layer5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="640" fill="url(#bg)" rx="12"/>
+
+  <text x="480" y="48" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E293B">Claude Code 五层架构</text>
+  <text x="480" y="74" text-anchor="middle" font-size="14" fill="#64748B">从用户输入到模型调用，每层职责单一</text>
+
+  <!-- 5 层堆叠 -->
+  <g transform="translate(280, 110)">
+    <!-- Layer 1: CLI 入口 -->
+    <rect x="0" y="0" width="400" height="70" rx="8" fill="url(#layer1)" filter="url(#shadow)"/>
+    <text x="20" y="30" font-size="15" font-weight="bold" fill="#fff">1. CLI 入口层</text>
+    <text x="20" y="52" font-size="12" fill="#DBEAFE">cli.tsx / main.tsx · 模式分发 + 启动优化</text>
+
+    <!-- Arrow -->
+    <line x1="200" y1="70" x2="200" y2="88" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Layer 2: Agent 循环 -->
+    <rect x="0" y="96" width="400" height="70" rx="8" fill="url(#layer2)" filter="url(#shadow)"/>
+    <text x="20" y="126" font-size="15" font-weight="bold" fill="#fff">2. Agent 循环层</text>
+    <text x="20" y="148" font-size="12" fill="#D1FAE5">query.ts · while 循环 + 错误恢复</text>
+
+    <line x1="200" y1="166" x2="200" y2="184" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Layer 3: 工具执行 -->
+    <rect x="0" y="192" width="400" height="70" rx="8" fill="url(#layer3)" filter="url(#shadow)"/>
+    <text x="20" y="222" font-size="15" font-weight="bold" fill="#fff">3. 工具执行层</text>
+    <text x="20" y="244" font-size="12" fill="#FEF3C7">Tool.ts / tools/ · 42 工具 + 并发调度</text>
+
+    <line x1="200" y1="262" x2="200" y2="280" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Layer 4: 权限控制 -->
+    <rect x="0" y="288" width="400" height="70" rx="8" fill="url(#layer4)" filter="url(#shadow)"/>
+    <text x="20" y="318" font-size="15" font-weight="bold" fill="#fff">4. 权限控制层</text>
+    <text x="20" y="340" font-size="12" fill="#EDE9FE">permissions/ · 三层防护 + ML 分类器</text>
+
+    <line x1="200" y1="358" x2="200" y2="376" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Layer 5: 系统提示 -->
+    <rect x="0" y="384" width="400" height="70" rx="8" fill="url(#layer5)" filter="url(#shadow)"/>
+    <text x="20" y="414" font-size="15" font-weight="bold" fill="#fff">5. 系统提示层</text>
+    <text x="20" y="436" font-size="12" fill="#FEE2E2">prompts.ts · 动态拼装 + 缓存保护</text>
+  </g>
+
+  <!-- 右侧说明 -->
+  <g transform="translate(720, 140)">
+    <rect x="0" y="0" width="200" height="380" fill="#fff" stroke="#E2E8F0" stroke-width="1" rx="8" filter="url(#shadow)"/>
+    <text x="100" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">数据流方向</text>
+    
+    <text x="16" y="70" font-size="12" fill="#475569">用户输入</text>
+    <text x="16" y="92" font-size="12" fill="#94A3B8">↓ 从上到下</text>
+    
+    <text x="16" y="130" font-size="12" fill="#475569">模型调用</text>
+    <text x="16" y="152" font-size="12" fill="#94A3B8">在系统提示层</text>
+    
+    <text x="16" y="190" font-size="12" fill="#475569">模型输出</text>
+    <text x="16" y="212" font-size="12" fill="#94A3B8">↓ 逆向返回</text>
+    
+    <text x="16" y="250" font-size="12" fill="#475569">工具执行</text>
+    <text x="16" y="272" font-size="12" fill="#94A3B8">结果逐层回传</text>
+
+    <line x1="16" y1="300" x2="184" y2="300" stroke="#E2E8F0"/>
+    <text x="100" y="330" text-anchor="middle" font-size="12" fill="#64748B">每层只和相邻层</text>
+    <text x="100" y="350" text-anchor="middle" font-size="12" fill="#64748B">直接交互</text>
+  </g>
+
+  <text x="480" y="610" text-anchor="middle" font-size="12" fill="#64748B">层与层之间边界清晰，每层可独立测试、独立优化</text>
+</svg>
