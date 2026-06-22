@@ -57,8 +57,8 @@
 | | [Agent 循环](./07-cc-source-analysis/03-agent-loop/README.md) | query.ts 1729行 while True、turn管理、stop_reason |
 | | [工具系统](./07-cc-source-analysis/04-tool-system/README.md) | Tool.ts buildTool工厂、Schema生成、权限回调 |
 | | [LLM 调用层](./07-cc-source-analysis/05-llm-calling/README.md) | 3419行统一调用、重试、token追踪、多模型路由 |
-| | [系统提示](./07-cc-source-analysis/06-system-prompt/README.md) | 提示组装、缓存冻结、DYNAMIC_BOUNDARY |
-| | [上下文压缩](./07-cc-source-analysis/07-context-compaction/README.md) | 五层压缩管线、autoCompact、microCompact |
+| | [系统提示词](./07-cc-source-analysis/06-system-prompt-engineering/README.md) | 提示词组装、缓存冻结、DYNAMIC_BOUNDARY |
+| | [上下文工程](./07-cc-source-analysis/07-context-engineering/README.md) | 五层压缩管线、autoCompact、microCompact |
 | | [记忆系统](./07-cc-source-analysis/08-memory/README.md) | memdir文件级持久、autoDream反思提炼 |
 | | [子Agent](./07-cc-source-analysis/09-subagent/README.md) | AgentTool 2657行、上下文隔离、Git Worktree |
 | | [权限系统](./07-cc-source-analysis/10-permissions/README.md) | 七种权限模式、ML分类器、危险模式拦截 |
