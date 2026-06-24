@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card" x="-2%" y="-2%" width="104%" height="110%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+
+  <rect width="960" height="520" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+
+  <!-- 标题 -->
+  <text x="480" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E293B">2026 多模态产品品类</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#64748B">按"你能用它们做什么"分成 6 大品类</text>
+
+  <!-- 卡片1: 全能对话 -->
+  <rect x="20" y="85" width="295" height="130" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="20" y="85" width="295" height="4" rx="2" fill="#2563EB"/>
+  <text x="40" y="110" font-size="15" font-weight="700" fill="#2563EB">💬 全能对话</text>
+  <text x="40" y="132" font-size="11" fill="#64748B">聊天 + 看图 + 语音 + 生图 一站搞定</text>
+  <text x="40" y="156" font-size="12" fill="#334155">ChatGPT</text><text x="130" y="156" font-size="10" fill="#94A3B8">200亿月活</text>
+  <text x="40" y="174" font-size="12" fill="#334155">Gemini</text><text x="130" y="174" font-size="10" fill="#94A3B8">7.5亿月活</text>
+  <text x="40" y="192" font-size="12" fill="#334155">豆包</text><text x="100" y="192" font-size="10" fill="#94A3B8">3.15亿月活·国内第一</text>
+
+  <!-- 卡片2: 图像生成 -->
+  <rect x="333" y="85" width="295" height="130" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="333" y="85" width="295" height="4" rx="2" fill="#D97706"/>
+  <text x="353" y="110" font-size="15" font-weight="700" fill="#D97706">🎨 图像生成</text>
+  <text x="353" y="132" font-size="11" fill="#64748B">文字描述 → 高质量图片</text>
+  <text x="353" y="156" font-size="12" fill="#334155">Midjourney</text><text x="463" y="156" font-size="10" fill="#94A3B8">审美天花板</text>
+  <text x="353" y="174" font-size="12" fill="#334155">DALL-E</text><text x="463" y="174" font-size="10" fill="#94A3B8">ChatGPT内置</text>
+  <text x="353" y="192" font-size="12" fill="#334155">SD/Flux</text><text x="463" y="192" font-size="10" fill="#94A3B8">开源可控·本地部署</text>
+
+  <!-- 卡片3: 视频生成 -->
+  <rect x="645" y="85" width="295" height="130" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="645" y="85" width="295" height="4" rx="2" fill="#059669"/>
+  <text x="665" y="110" font-size="15" font-weight="700" fill="#059669">🎬 视频生成</text>
+  <text x="665" y="132" font-size="11" fill="#64748B">文字/图片 → 视频片段</text>
+  <text x="665" y="156" font-size="12" fill="#334155">Runway</text><text x="765" y="156" font-size="10" fill="#94A3B8">专业创作工具</text>
+  <text x="665" y="174" font-size="12" fill="#334155">可灵·Seedance</text><text x="785" y="174" font-size="10" fill="#94A3B8">国产双雄</text>
+  <text x="665" y="192" font-size="12" fill="#334155">Pika·Luma·Veo</text><text x="785" y="192" font-size="10" fill="#94A3B8">更多选择</text>
+
+  <!-- 卡片4: 语音交互 -->
+  <rect x="20" y="235" width="295" height="105" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="20" y="235" width="295" height="4" rx="2" fill="#8B5CF6"/>
+  <text x="40" y="260" font-size="15" font-weight="700" fill="#8B5CF6">🎤 语音交互</text>
+  <text x="40" y="282" font-size="11" fill="#64748B">让AI能听会说 · 实时对话</text>
+  <text x="40" y="306" font-size="12" fill="#334155">ElevenLabs·OpenAI Realtime·Whisper</text>
+  <text x="40" y="324" font-size="12" fill="#334155">通义听悟·Fish Audio·GPT-SoVITS</text>
+
+  <!-- 卡片5: 音乐音频 -->
+  <rect x="333" y="235" width="295" height="105" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="333" y="235" width="295" height="4" rx="2" fill="#EF4444"/>
+  <text x="353" y="260" font-size="15" font-weight="700" fill="#EF4444">🎵 音乐音频</text>
+  <text x="353" y="282" font-size="11" fill="#64748B">一句话生成完整歌曲</text>
+  <text x="353" y="306" font-size="12" fill="#334155">Suno</text><text x="433" y="306" font-size="10" fill="#94A3B8">现象级产品·一句话出歌</text>
+  <text x="353" y="324" font-size="12" fill="#334155">Udio·海绵音乐</text>
+
+  <!-- 卡片6: 开发者API -->
+  <rect x="645" y="235" width="295" height="105" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="645" y="235" width="295" height="4" rx="2" fill="#0EA5E9"/>
+  <text x="665" y="260" font-size="15" font-weight="700" fill="#0EA5E9">💻 开发者API</text>
+  <text x="665" y="282" font-size="11" fill="#64748B">代码调用多模态能力</text>
+  <text x="665" y="306" font-size="12" fill="#334155">OpenAI Vision·Gemini Vision·Claude</text>
+  <text x="665" y="324" font-size="12" fill="#334155">HuggingFace·Replicate·Ollama</text>
+
+  <!-- 底部: 总量统计 -->
+  <rect x="20" y="360" width="920" height="55" rx="8" fill="#2563EB" opacity="0.06"/>
+  <text x="480" y="385" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">📊 本文覆盖 40+ 款主流多模态产品</text>
+  <text x="480" y="406" text-anchor="middle" font-size="12" fill="#64748B">从免费到企业级 · 从国际到国产 · 从全能到专精</text>
+
+  <!-- 底部统计块 -->
+  <rect x="40" y="430" width="135" height="45" rx="6" fill="white" filter="url(#card)"/>
+  <text x="107" y="450" text-anchor="middle" font-size="10" fill="#64748B">全能对话</text>
+  <text x="107" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">11 款</text>
+
+  <rect x="195" y="430" width="135" height="45" rx="6" fill="white" filter="url(#card)"/>
+  <text x="262" y="450" text-anchor="middle" font-size="10" fill="#64748B">图像·视频·语音</text>
+  <text x="262" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#D97706">21 款</text>
+
+  <rect x="350" y="430" width="135" height="45" rx="6" fill="white" filter="url(#card)"/>
+  <text x="417" y="450" text-anchor="middle" font-size="10" fill="#64748B">音乐·音乐</text>
+  <text x="417" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#EF4444">3 款</text>
+
+  <rect x="505" y="430" width="135" height="45" rx="6" fill="white" filter="url(#card)"/>
+  <text x="572" y="450" text-anchor="middle" font-size="10" fill="#64748B">开发者 API</text>
+  <text x="572" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#0EA5E9">5 款</text>
+
+  <rect x="660" y="430" width="280" height="45" rx="6" fill="white" filter="url(#card)"/>
+  <text x="800" y="450" text-anchor="middle" font-size="10" fill="#64748B">总覆盖</text>
+  <text x="800" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#059669">40+ 款产品</text>
+</svg>

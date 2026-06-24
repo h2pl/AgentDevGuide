@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+
+  <rect width="960" height="460" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">多模态架构三代演进</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">2021 → 2023 → 2025：每一次架构变化都在解决上一代的根本问题</text>
+
+  <!-- 第一代 -->
+  <rect x="20" y="80" width="295" height="160" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="20" y="80" width="295" height="4" rx="2" fill="#94A3B8"/>
+  <text x="167" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#475569">第一代 · 拼接式</text>
+  <text x="167" y="128" text-anchor="middle" font-size="11" fill="#94A3B8">2021-2023</text>
+
+  <rect x="45" y="140" width="80" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="85" y="158" text-anchor="middle" font-size="10" fill="#475569">ViT编码</text>
+  <text x="140" y="158" font-size="14" fill="#94A3B8">→</text>
+  <rect x="160" y="140" width="80" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="200" y="158" text-anchor="middle" font-size="10" fill="#475569">投影层</text>
+  <text x="255" y="158" font-size="14" fill="#94A3B8">→</text>
+  <text x="275" y="158" font-size="11" fill="#64748B">LLM</text>
+
+  <text x="167" y="198" text-anchor="middle" font-size="11" fill="#2563EB">LLaVA · BLIP-2 · MiniGPT-4</text>
+  <text x="167" y="218" text-anchor="middle" font-size="10" fill="#64748B">复用现成模型 · 只训练翻译层</text>
+  <text x="167" y="234" text-anchor="middle" font-size="10" fill="#EF4444">问题：信息压缩5倍 · 细节丢失</text>
+
+  <!-- 箭头1 -->
+  <text x="330" y="165" font-size="20" fill="#94A3B8">→</text>
+
+  <!-- 第二代 -->
+  <rect x="345" y="80" width="270" height="160" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="345" y="80" width="270" height="4" rx="2" fill="#D97706"/>
+  <text x="480" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#D97706">第二代 · 指令微调</text>
+  <text x="480" y="128" text-anchor="middle" font-size="11" fill="#94A3B8">2023-2024</text>
+
+  <text x="480" y="155" text-anchor="middle" font-size="11" fill="#475569">ViT + 投影层 + LLM → 联合微调</text>
+  <text x="480" y="175" text-anchor="middle" font-size="10" fill="#2563EB">高质量指令数据 · 高分辨率输入</text>
+
+  <text x="480" y="198" text-anchor="middle" font-size="11" fill="#D97706">LLaVA 1.5/1.6 · Qwen-VL · InstructBLIP</text>
+  <text x="480" y="218" text-anchor="middle" font-size="10" fill="#64748B">从能看图 → 能理解图</text>
+  <text x="480" y="234" text-anchor="middle" font-size="10" fill="#EF4444">问题：仍是拼接 · 不能生成</text>
+
+  <!-- 箭头2 -->
+  <text x="630" y="165" font-size="20" fill="#94A3B8">→</text>
+
+  <!-- 第三代 -->
+  <rect x="645" y="80" width="295" height="160" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="645" y="80" width="295" height="4" rx="2" fill="#059669"/>
+  <text x="792" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#059669">第三代 · 原生统一</text>
+  <text x="792" y="128" text-anchor="middle" font-size="11" fill="#94A3B8">2025-2026</text>
+
+  <text x="792" y="155" text-anchor="middle" font-size="11" fill="#475569">统一 Token 空间 → 单一 Transformer</text>
+  <text x="792" y="175" text-anchor="middle" font-size="10" fill="#059669">图片直接变 Token · 无需翻译</text>
+
+  <text x="792" y="198" text-anchor="middle" font-size="11" fill="#059669">GPT-4o · Gemini 2.5 · Claude 4</text>
+  <text x="792" y="218" text-anchor="middle" font-size="10" fill="#64748B">端到端理解+生成 · 原生多模态</text>
+  <text x="792" y="234" text-anchor="middle" font-size="10" fill="#059669">✓ 无信息瓶颈 · ✓ 支持生成</text>
+
+  <!-- 对比表 -->
+  <rect x="30" y="265" width="900" height="180" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="292" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">三代对比</text>
+
+  <line x1="30" y1="305" x2="930" y2="305" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="120" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">代表模型</text>
+  <text x="260" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">训练成本</text>
+  <text x="400" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">本地部署</text>
+  <text x="540" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">跨模态推理</text>
+  <text x="700" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">生成能力</text>
+  <text x="860" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">适用场景</text>
+
+  <line x1="30" y1="335" x2="930" y2="335" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="120" y="352" text-anchor="middle" font-size="10" fill="#64748B">LLaVA · BLIP-2</text>
+  <text x="260" y="352" text-anchor="middle" font-size="10" fill="#475569">~$1000</text>
+  <text x="400" y="352" text-anchor="middle" font-size="10" fill="#059669">消费级GPU ✓</text>
+  <text x="540" y="352" text-anchor="middle" font-size="10" fill="#EF4444">弱</text>
+  <text x="700" y="352" text-anchor="middle" font-size="10" fill="#EF4444">无</text>
+  <text x="860" y="352" text-anchor="middle" font-size="10" fill="#64748B">简单问答·原型</text>
+
+  <line x1="30" y1="370" x2="930" y2="370" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="120" y="387" text-anchor="middle" font-size="10" fill="#64748B">LLaVA 1.6 · Qwen-VL</text>
+  <text x="260" y="387" text-anchor="middle" font-size="10" fill="#475569">~$5000</text>
+  <text x="400" y="387" text-anchor="middle" font-size="10" fill="#D97706">中端GPU</text>
+  <text x="540" y="387" text-anchor="middle" font-size="10" fill="#D97706">中</text>
+  <text x="700" y="387" text-anchor="middle" font-size="10" fill="#EF4444">无</text>
+  <text x="860" y="387" text-anchor="middle" font-size="10" fill="#64748B">文档·OCR·图表</text>
+
+  <line x1="30" y1="405" x2="930" y2="405" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="120" y="422" text-anchor="middle" font-size="10" fill="#64748B">GPT-4o · Gemini</text>
+  <text x="260" y="422" text-anchor="middle" font-size="10" fill="#EF4444">百万美元+</text>
+  <text x="400" y="422" text-anchor="middle" font-size="10" fill="#EF4444">仅API</text>
+  <text x="540" y="422" text-anchor="middle" font-size="10" fill="#059669">强</text>
+  <text x="700" y="422" text-anchor="middle" font-size="10" fill="#059669">原生支持</text>
+  <text x="860" y="422" text-anchor="middle" font-size="10" fill="#64748B">生产级·复杂推理</text>
+</svg>

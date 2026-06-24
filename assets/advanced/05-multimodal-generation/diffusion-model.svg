@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="400" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">扩散模型：从噪声到图片</text>
+
+  <!-- 前向过程 -->
+  <text x="480" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#D97706">前向过程：逐步加噪（训练时学习去噪）</text>
+
+  <rect x="60" y="85" width="55" height="55" rx="6" fill="#059669" opacity="0.2"/>
+  <text x="87" y="128" text-anchor="middle" font-size="10" fill="#059669">清晰图</text>
+  <text x="135" y="118" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="165" y="90" width="55" height="45" rx="6" fill="#94A3B8" opacity="0.3"/>
+  <text x="200" y="145" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="260" y="95" width="55" height="35" rx="6" fill="#94A3B8" opacity="0.4"/>
+  <text x="295" y="145" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="355" y="100" width="55" height="25" rx="6" fill="#94A3B8" opacity="0.5"/>
+  <text x="390" y="145" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="450" y="105" width="55" height="15" rx="6" fill="#94A3B8" opacity="0.6"/>
+  <text x="485" y="145" font-size="14" fill="#94A3B8">⋯</text>
+
+  <rect x="580" y="110" width="55" height="45" rx="6" fill="#EF4444" opacity="0.2"/>
+  <text x="607" y="148" text-anchor="middle" font-size="10" fill="#EF4444">纯噪声</text>
+
+  <!-- 逆向过程 -->
+  <text x="480" y="185" text-anchor="middle" font-size="13" font-weight="600" fill="#2563EB">逆向过程：逐步去噪（推理时从噪声恢复 + 文字指引方向）</text>
+
+  <rect x="100" y="200" width="55" height="45" rx="6" fill="#EF4444" opacity="0.2"/>
+  <text x="135" y="245" font-size="14" fill="#94A3B8">←</text>
+
+  <rect x="195" y="210" width="55" height="35" rx="6" fill="#2563EB" opacity="0.15"/>
+  <text x="195" y="195" text-anchor="middle" font-size="9" fill="#2563EB">第900步</text>
+  <text x="230" y="245" font-size="14" fill="#94A3B8">←</text>
+
+  <rect x="290" y="215" width="55" height="45" rx="6" fill="#2563EB" opacity="0.25"/>
+  <text x="290" y="200" text-anchor="middle" font-size="9" fill="#2563EB">第600步</text>
+
+  <!-- 文字引导 -->
+  <text x="360" y="190" font-size="11" fill="#D97706">文字指引:</text>
+  <text x="360" y="206" font-size="10" fill="#64748B">"一只穿西装的橘猫"</text>
+  <line x1="360" y1="215" x2="340" y2="240" stroke="#D97706" stroke-width="1" stroke-dasharray="3"/>
+
+  <text x="345" y="245" font-size="14" fill="#94A3B8">←</text>
+
+  <rect x="420" y="215" width="55" height="45" rx="6" fill="#2563EB" opacity="0.4"/>
+  <text x="420" y="200" text-anchor="middle" font-size="9" fill="#2563EB">第300步</text>
+
+  <text x="345" y="235" font-size="14" fill="#94A3B8">←</text>
+
+  <text x="495" y="245" font-size="14" fill="#94A3B8">←</text>
+
+  <rect x="530" y="210" width="65" height="55" rx="6" fill="#059669" opacity="0.25"/>
+  <text x="562" y="248" text-anchor="middle" font-size="10" fill="#059669">最终输出</text>
+
+  <!-- 底部: 关键公式 -->
+  <rect x="40" y="275" width="880" height="110" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="302" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">扩散模型的关键洞察</text>
+
+  <rect x="65" y="315" width="260" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="195" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">① 前向：确定性加噪</text>
+  <text x="195" y="358" text-anchor="middle" font-size="10" fill="#64748B">x_t = a_t · x_0 + b_t · ε</text>
+
+  <rect x="350" y="315" width="260" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="480" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">② 逆向：神经网络去噪</text>
+  <text x="480" y="358" text-anchor="middle" font-size="10" fill="#64748B">ε_θ(x_t, t, text_prompt) ≈ 真实噪声 ε</text>
+
+  <rect x="635" y="315" width="260" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="765" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">③ 训练目标</text>
+  <text x="765" y="358" text-anchor="middle" font-size="10" fill="#64748B">min ‖ε_θ — ε‖²  ·  学习从噪声中恢复</text>
+</svg>

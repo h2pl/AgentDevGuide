@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#94A3B8"/></marker>
+  </defs>
+
+  <rect width="960" height="380" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">纯文本 AI vs 多模态 AI</text>
+
+  <!-- 左侧: 纯文本 AI -->
+  <rect x="30" y="55" width="430" height="145" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="30" y="55" width="430" height="4" rx="2" fill="#94A3B8"/>
+  <text x="245" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#475569">📝 纯文本 AI</text>
+  <text x="245" y="104" text-anchor="middle" font-size="12" fill="#64748B">只能处理文字 — 活在文字世界里</text>
+
+  <rect x="55" y="118" width="180" height="30" rx="6" fill="#F1F5F9"/>
+  <text x="145" y="138" text-anchor="middle" font-size="11" fill="#475569">📄 文字输入</text>
+
+  <rect x="55" y="156" width="180" height="30" rx="6" fill="#F1F5F9"/>
+  <text x="145" y="176" text-anchor="middle" font-size="11" fill="#475569">📄 文字输出</text>
+
+  <text x="270" y="138" font-size="12" fill="#EF4444">✗ 看不到图片</text>
+  <text x="270" y="158" font-size="12" fill="#EF4444">✗ 听不到语音</text>
+  <text x="270" y="178" font-size="12" fill="#EF4444">✗ 不能生图</text>
+
+  <!-- 右侧: 多模态 AI -->
+  <rect x="500" y="55" width="430" height="145" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="500" y="55" width="430" height="4" rx="2" fill="#2563EB"/>
+  <text x="715" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">🌐 多模态 AI</text>
+  <text x="715" y="104" text-anchor="middle" font-size="12" fill="#64748B">文字 + 图片 + 语音 + 视频 — 全感官</text>
+
+  <rect x="525" y="118" width="180" height="30" rx="6" fill="#DBEAFE"/>
+  <text x="615" y="138" text-anchor="middle" font-size="11" fill="#2563EB">📄 📷 🎤 多模态输入</text>
+
+  <rect x="525" y="156" width="180" height="30" rx="6" fill="#DBEAFE"/>
+  <text x="615" y="176" text-anchor="middle" font-size="11" fill="#2563EB">📄 🎨 🔊 多模态输出</text>
+
+  <text x="740" y="138" font-size="12" fill="#059669">✓ 看懂图片</text>
+  <text x="740" y="158" font-size="12" fill="#059669">✓ 听懂语音</text>
+  <text x="740" y="178" font-size="12" fill="#059669">✓ 生成图像/视频</text>
+
+  <!-- 分割线 -->
+  <rect x="475" y="70" width="10" height="115" rx="5" fill="#E2E8F0"/>
+
+  <!-- 下半部分: 实际场景对比 -->
+  <rect x="30" y="218" width="900" height="145" rx="10" fill="white" filter="url(#card)"/>
+  <text x="480" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#1E293B">实际使用场景对比</text>
+
+  <!-- 场景行 -->
+  <rect x="55" y="262" width="200" height="36" rx="6" fill="#F1F5F9"/>
+  <text x="155" y="284" text-anchor="middle" font-size="12" fill="#475569">📊 分析财报图表</text>
+
+  <text x="280" y="284" font-size="12" fill="#EF4444">❌ 无法处理</text>
+  <text x="400" y="284" font-size="12" fill="#2563EB">→ 报表示例图</text>
+  <text x="560" y="284" font-size="12" fill="#059669">✅ 直接分析</text>
+  <text x="680" y="284" font-size="12" fill="#2563EB">→ 财报截图</text>
+
+  <rect x="55" y="305" width="200" height="36" rx="6" fill="#F1F5F9"/>
+  <text x="155" y="327" text-anchor="middle" font-size="12" fill="#475569">🗣️ 会议录音→纪要</text>
+
+  <text x="280" y="327" font-size="12" fill="#EF4444">❌ 需要人工转文字</text>
+  <text x="560" y="327" font-size="12" fill="#059669">✅ 直接上传音频→纪要</text>
+
+  <text x="480" y="356" text-anchor="middle" font-size="11" fill="#64748B">省掉的不是一类功能，是"从非文字转成文字"的摩擦步骤</text>
+</svg>
