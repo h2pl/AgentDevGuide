@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="360" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">委托式生成 vs 原生输出</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">两种架构范式对理解-生成链路的根本差异</text>
+
+  <!-- 委托式 -->
+  <rect x="20" y="85" width="450" height="145" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="20" y="85" width="450" height="4" rx="2" fill="#94A3B8"/>
+  <text x="245" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">委托式生成（LLM + DALL-E）</text>
+
+  <rect x="40" y="128" width="80" height="30" rx="5" fill="#F1F5F9"/>
+  <text x="80" y="148" text-anchor="middle" font-size="10" fill="#475569">LLM理解</text>
+  <text x="130" y="148" font-size="12" fill="#94A3B8">→</text>
+
+  <rect x="155" y="128" width="80" height="30" rx="5" fill="#F1F5F9"/>
+  <text x="195" y="148" text-anchor="middle" font-size="10" fill="#475569">翻译Prompt</text>
+  <text x="245" y="148" font-size="12" fill="#94A3B8">→</text>
+
+  <rect x="270" y="128" width="80" height="30" rx="5" fill="#F1F5F9"/>
+  <text x="310" y="148" text-anchor="middle" font-size="10" fill="#475569">DALL-E生成</text>
+
+  <text x="245" y="178" text-anchor="middle" font-size="10" fill="#EF4444">✗ 两个信息瓶颈：意图→Prompt翻译损失 + DALL-E不"看到"上下文</text>
+  <text x="245" y="196" text-anchor="middle" font-size="10" fill="#EF4444">✗ "编辑"=重新生成整张图 · 多轮一致性靠运气</text>
+  <text x="245" y="214" text-anchor="middle" font-size="10" fill="#EF4444">✗ 文字渲染出错 — 模型把文字当视觉纹理处理</text>
+
+  <!-- 原生 -->
+  <rect x="490" y="85" width="450" height="145" rx="10" fill="white" filter="url(#card)"/>
+  <rect x="490" y="85" width="450" height="4" rx="2" fill="#2563EB"/>
+  <text x="715" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">原生输出（GPT-4o 统一模型）</text>
+
+  <rect x="600" y="135" width="230" height="40" rx="5" fill="#DBEAFE"/>
+  <text x="715" y="155" text-anchor="middle" font-size="11" fill="#2563EB">同一模型 · 理解+生成 · 同一组参数</text>
+
+  <text x="715" y="182" text-anchor="middle" font-size="10" fill="#059669">✓ 无翻译损失 — 用户指令直达模型输出</text>
+  <text x="715" y="198" text-anchor="middle" font-size="10" fill="#059669">✓ 真编辑 — 只改领结颜色，猫咪和背景不变</text>
+  <text x="715" y="214" text-anchor="middle" font-size="10" fill="#059669">✓ 文字渲染稳定 — 模型"理解"文字而非"画"字形</text>
+
+  <!-- 底部对比 -->
+  <rect x="20" y="250" width="920" height="95" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="278" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">关键差异总结</text>
+
+  <rect x="40" y="296" width="170" height="36" rx="5" fill="#F1F5F9"/>
+  <text x="125" y="319" text-anchor="middle" font-size="10" fill="#475569">迭代编辑: ✗ vs ✓</text>
+
+  <rect x="230" y="296" width="170" height="36" rx="5" fill="#F1F5F9"/>
+  <text x="315" y="319" text-anchor="middle" font-size="10" fill="#475569">文字渲染: ✗ vs ✓</text>
+
+  <rect x="420" y="296" width="170" height="36" rx="5" fill="#F1F5F9"/>
+  <text x="505" y="319" text-anchor="middle" font-size="10" fill="#475569">多轮一致性: ✗ vs ✓</text>
+
+  <rect x="610" y="296" width="170" height="36" rx="5" fill="#F1F5F9"/>
+  <text x="695" y="319" text-anchor="middle" font-size="10" fill="#475569">画质上限: ✓ vs △</text>
+
+  <rect x="800" y="296" width="115" height="36" rx="5" fill="#DBEAFE"/>
+  <text x="857" y="319" text-anchor="middle" font-size="10" fill="#2563EB">共存·不替代</text>
+</svg>

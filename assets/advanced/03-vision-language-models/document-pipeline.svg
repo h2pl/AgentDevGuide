@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="360" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">文档理解三层流水线</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">OCR+版面分析 → 跨页合并 → VLM语义理解</text>
+
+  <!-- 流水线 -->
+  <rect x="20" y="80" width="210" height="85" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="20" y="80" width="210" height="4" rx="2" fill="#2563EB"/>
+  <text x="125" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">第一层</text>
+  <text x="125" y="126" text-anchor="middle" font-size="11" fill="#334155">OCR + 版面分析</text>
+  <text x="125" y="144" text-anchor="middle" font-size="10" fill="#64748B">精确提取 · 99.5%+ 精度</text>
+  <text x="125" y="158" text-anchor="middle" font-size="9" fill="#94A3B8">LayoutParser · PaddleOCR</text>
+
+  <text x="240" y="128" font-size="16" fill="#94A3B8">→</text>
+
+  <rect x="265" y="80" width="200" height="85" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="265" y="80" width="200" height="4" rx="2" fill="#D97706"/>
+  <text x="365" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#D97706">第二层</text>
+  <text x="365" y="126" text-anchor="middle" font-size="11" fill="#334155">跨页合并</text>
+  <text x="365" y="144" text-anchor="middle" font-size="10" fill="#64748B">检测跨页表格/段落</text>
+  <text x="365" y="158" text-anchor="middle" font-size="9" fill="#94A3B8">合并为完整结构</text>
+
+  <text x="475" y="128" font-size="16" fill="#94A3B8">→</text>
+
+  <rect x="500" y="80" width="210" height="85" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="500" y="80" width="210" height="4" rx="2" fill="#059669"/>
+  <text x="605" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">第三层</text>
+  <text x="605" y="126" text-anchor="middle" font-size="11" fill="#334155">VLM 语义理解</text>
+  <text x="605" y="144" text-anchor="middle" font-size="10" fill="#64748B">分析 + 推理 + 判断</text>
+  <text x="605" y="158" text-anchor="middle" font-size="9" fill="#94A3B8">GPT-4o · Claude · Qwen-VL</text>
+
+  <!-- 右侧: VLM直接看 -->
+  <rect x="725" y="80" width="215" height="85" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="725" y="80" width="215" height="4" rx="2" fill="#EF4444"/>
+  <text x="832" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">对比：VLM直接看图</text>
+  <text x="832" y="128" text-anchor="middle" font-size="10" fill="#64748B">精度: 85-95%</text>
+  <text x="832" y="146" text-anchor="middle" font-size="10" fill="#64748B">✗ 表格数值易错</text>
+  <text x="832" y="160" text-anchor="middle" font-size="10" fill="#64748B">✗ 跨页丢失连续性</text>
+
+  <!-- 底部: 不同文档类型的最佳方案 -->
+  <rect x="20" y="185" width="920" height="160" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="215" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">按文档类型选方案</text>
+
+  <rect x="40" y="235" width="270" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="175" y="258" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">简单文档（通知/信件）</text>
+  <text x="175" y="276" text-anchor="middle" font-size="10" fill="#059669">→ VLM直接看 就够了</text>
+
+  <rect x="40" y="295" width="270" height="40" rx="6" fill="#F1F5F9"/>
+  <text x="175" y="320" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">复杂PDF（合同/论文/财报）</text>
+
+  <text x="320" y="320" font-size="14" fill="#94A3B8">→</text>
+  <text x="350" y="320" font-size="10" fill="#2563EB">必须三层流水线</text>
+
+  <rect x="500" y="260" width="200" height="55" rx="6" fill="#DBEAFE"/>
+  <text x="600" y="285" text-anchor="middle" font-size="10" font-weight="600" fill="#2563EB">ColPali 方案</text>
+  <text x="600" y="302" text-anchor="middle" font-size="9" fill="#64748B">不对PDF做OCR</text>
+  <text x="600" y="315" text-anchor="middle" font-size="9" fill="#059669">直接编码页面图片</text>
+
+  <rect x="720" y="260" width="200" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="820" y="282" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">工具选型</text>
+  <text x="820" y="300" text-anchor="middle" font-size="9" fill="#64748B">LayoutParser + PaddleOCR</text>
+  <text x="820" y="315" text-anchor="middle" font-size="9" fill="#64748B">Unstructured.io · LlamaParse</text>
+</svg>
