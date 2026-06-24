@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="220" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">图像生成：五个典型场景 × 最佳工具</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">从左到右：方便 → 高画质 · 从便宜到贵</text>
+
+  <rect x="20" y="80" width="175" height="70" rx="8" fill="white"/>
+  <text x="107" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">日常配图</text>
+  <text x="107" y="122" text-anchor="middle" font-size="10" fill="#334155">ChatGPT DALL-E</text>
+  <text x="107" y="138" text-anchor="middle" font-size="9" fill="#059669">零切换成本</text>
+
+  <rect x="210" y="80" width="175" height="70" rx="8" fill="white"/>
+  <text x="297" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">高画质创作</text>
+  <text x="297" y="122" text-anchor="middle" font-size="10" fill="#334155">Midjourney</text>
+  <text x="297" y="138" text-anchor="middle" font-size="9" fill="#D97706">审美天花板</text>
+
+  <rect x="400" y="80" width="175" height="70" rx="8" fill="white"/>
+  <text x="487" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#059669">反复修改</text>
+  <text x="487" y="122" text-anchor="middle" font-size="10" fill="#334155">GPT-4o 原生</text>
+  <text x="487" y="138" text-anchor="middle" font-size="9" fill="#059669">真编辑·多轮一致</text>
+
+  <rect x="590" y="80" width="175" height="70" rx="8" fill="white"/>
+  <text x="677" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#8B5CF6">大批量自动化</text>
+  <text x="677" y="122" text-anchor="middle" font-size="10" fill="#334155">SD/Flux 本地</text>
+  <text x="677" y="138" text-anchor="middle" font-size="9" fill="#8B5CF6">完全可脚本化</text>
+
+  <rect x="780" y="80" width="160" height="70" rx="8" fill="white"/>
+  <text x="860" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">中文电商</text>
+  <text x="860" y="122" text-anchor="middle" font-size="10" fill="#334155">Seedream·万相</text>
+  <text x="860" y="138" text-anchor="middle" font-size="9" fill="#EF4444">中文文字渲染</text>
+
+  <rect x="20" y="165" width="920" height="40" rx="6" fill="white" filter="url(#shadow)"/>
+  <text x="480" y="190" text-anchor="middle" font-size="11" fill="#2563EB">策略: 初期用ChatGPT快速验证→定稿用Midjourney出高画质→大批量用SD本地</text>
+</svg>

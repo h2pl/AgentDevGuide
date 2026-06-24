@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="200" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">语音克隆：商业 vs 开源</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">四款方案的精度·成本·自由度对比</text>
+
+  <rect x="20" y="80" width="220" height="55" rx="6" fill="white"/>
+  <text x="130" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">ElevenLabs</text>
+  <text x="130" y="120" text-anchor="middle" font-size="9" fill="#64748B">自然度 ★★★★★ · $99+/月</text>
+
+  <rect x="255" y="80" width="220" height="55" rx="6" fill="white"/>
+  <text x="365" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">OpenAI TTS</text>
+  <text x="365" y="120" text-anchor="middle" font-size="9" fill="#64748B">快速集成 ★★★★ · 按量付费</text>
+
+  <rect x="490" y="80" width="220" height="55" rx="6" fill="white"/>
+  <text x="600" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#059669">Fish Audio</text>
+  <text x="600" y="120" text-anchor="middle" font-size="9" fill="#64748B">开源中文 ★★★ · 免费</text>
+
+  <rect x="725" y="80" width="215" height="55" rx="6" fill="white"/>
+  <text x="832" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#8B5CF6">GPT-SoVITS</text>
+  <text x="832" y="120" text-anchor="middle" font-size="9" fill="#64748B">5秒克隆 ★★★ · 免费·本地</text>
+
+  <text x="480" y="168" text-anchor="middle" font-size="10" fill="#64748B">选择: 最高自然度→ElevenLabs | 快速集成→OpenAI | 中文克隆→Fish Audio·GPT-SoVITS</text>
+  <text x="480" y="186" text-anchor="middle" font-size="9" fill="#94A3B8">注意: 开源方案违法的声音克隆同样可行—滥用风险需自行管控</text>
+</svg>

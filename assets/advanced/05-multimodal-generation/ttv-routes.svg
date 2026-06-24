@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="240" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">文生视频三大技术路线对比</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">从扩散模型到混合方案</text>
+
+  <rect x="20" y="80" width="295" height="90" rx="8" fill="white"/>
+  <text x="167" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#D97706">路线一：视频扩散 U-Net</text>
+  <text x="167" y="128" text-anchor="middle" font-size="9" fill="#64748B">2D扩散→3D空间+时间扩展</text>
+  <text x="167" y="148" text-anchor="middle" font-size="9" fill="#059669">✓ 复用预训练·效率高</text>
+  <text x="167" y="164" text-anchor="middle" font-size="9" fill="#EF4444">✗ 长时序一致性不足</text>
+
+  <rect x="335" y="80" width="295" height="90" rx="8" fill="white"/>
+  <text x="482" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">路线二：DiT Transformer</text>
+  <text x="482" y="128" text-anchor="middle" font-size="9" fill="#64748B">扩散模型+自注意力</text>
+  <text x="482" y="148" text-anchor="middle" font-size="9" fill="#059669">✓ 长时序·涌现3D能力</text>
+  <text x="482" y="164" text-anchor="middle" font-size="9" fill="#EF4444">✗ 算力黑洞·成本极高</text>
+
+  <rect x="650" y="80" width="290" height="90" rx="8" fill="white"/>
+  <text x="795" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">路线三：图生视频混合</text>
+  <text x="795" y="128" text-anchor="middle" font-size="9" fill="#64748B">确定起点→视频扩散</text>
+  <text x="795" y="148" text-anchor="middle" font-size="9" fill="#059669">✓ 成本可控·实用价值高</text>
+  <text x="795" y="164" text-anchor="middle" font-size="9" fill="#D97706">△ 画质上限不如DiT</text>
+
+  <rect x="20" y="185" width="920" height="40" rx="6" fill="white"/>
+  <text x="480" y="210" text-anchor="middle" font-size="11" fill="#2563EB">当前主流：混合方案（Runway/可灵/Seedance）·最佳平衡：质量×成本×实用性</text>
+</svg>

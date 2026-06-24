@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="220" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">延迟预算：多模态应用的响应时间金字塔</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">不同场景可接受的延迟上限</text>
+
+  <rect x="40" y="85" width="130" height="50" rx="8" fill="#EF4444" opacity="0.12"/>
+  <text x="105" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">实时对话</text>
+  <text x="105" y="126" text-anchor="middle" font-size="10" fill="#EF4444">&lt; 1秒</text>
+
+  <text x="185" y="112" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="210" y="95" width="130" height="40" rx="8" fill="#D97706" opacity="0.12"/>
+  <text x="275" y="120" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">聊天应用 &lt; 3s</text>
+
+  <text x="355" y="117" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="380" y="100" width="130" height="35" rx="8" fill="#2563EB" opacity="0.08"/>
+  <text x="445" y="122" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">分析工具 &lt; 10s</text>
+
+  <text x="525" y="119" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="550" y="102" width="130" height="30" rx="8" fill="#059669" opacity="0.08"/>
+  <text x="615" y="122" text-anchor="middle" font-size="11" font-weight="600" fill="#059669">批量处理 &gt; 10s</text>
+
+  <rect x="40" y="160" width="880" height="45" rx="8" fill="white" filter="url(#shadow)"/>
+  <text x="480" y="185" text-anchor="middle" font-size="11" fill="#334155">实时: GPT-4o-mini or Realtime API | 聊天: GPT-4o | 分析: GPT-4o+抽帧 | 批量: 异步队列+SD本地</text>
+</svg>
