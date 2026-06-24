@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="240" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">多模态应用上线 Checklist</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">部署到生产前逐项验证 · 9 项必查</text>
+
+  <rect x="20" y="80" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="35" y="103" font-size="11" fill="#059669">□ 灰度策略已配置</text>
+  <rect x="333" y="80" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="348" y="103" font-size="11" fill="#059669">□ 自动回滚条件已设定</text>
+  <rect x="646" y="80" width="294" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="661" y="103" font-size="11" fill="#059669">□ 全链路追踪已接入</text>
+
+  <rect x="20" y="120" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="35" y="143" font-size="11" fill="#059669">□ 监控面板已搭建</text>
+  <rect x="333" y="120" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="348" y="143" font-size="11" fill="#059669">□ P0 告警已配置</text>
+  <rect x="646" y="120" width="294" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="661" y="143" font-size="11" fill="#059669">□ Fallback 策略已测试</text>
+
+  <rect x="20" y="160" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="35" y="183" font-size="11" fill="#059669">□ 负载测试已完成(2x峰值)</text>
+  <rect x="333" y="160" width="300" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="348" y="183" font-size="11" fill="#059669">□ 回滚预案已确认</text>
+  <rect x="646" y="160" width="294" height="35" rx="5" fill="#F1F5F9"/>
+  <text x="661" y="183" font-size="11" fill="#059669">□ 用户通知模板已准备</text>
+
+  <rect x="20" y="205" width="920" height="25" rx="5" fill="#2563EB" opacity="0.08"/>
+  <text x="480" y="222" text-anchor="middle" font-size="10" fill="#2563EB">灰度: 5%→20%→50%→100% · 回滚: 准确率&lt;90% 或 延迟&gt;3s 或 投诉&gt;1%</text>
+</svg>

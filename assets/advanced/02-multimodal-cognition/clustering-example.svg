@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="220" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">Token 成本的高分辨策略</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">同一张图·不同分辨率的 Token 消耗差异</text>
+
+  <rect x="30" y="80" width="135" height="55" rx="6" fill="white"/>
+  <text x="97" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#94A3B8">low 模式</text>
+  <text x="97" y="122" text-anchor="middle" font-size="10" fill="#334155">512×512</text>
+  <text x="97" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">85 Token</text>
+
+  <text x="185" y="112" font-size="16" fill="#94A3B8">→</text>
+
+  <rect x="210" y="80" width="135" height="55" rx="6" fill="white"/>
+  <text x="277" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">标准</text>
+  <text x="277" y="122" text-anchor="middle" font-size="10" fill="#334155">1024×1024</text>
+  <text x="277" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#D97706">765 Token</text>
+
+  <text x="365" y="112" font-size="16" fill="#94A3B8">→</text>
+
+  <rect x="390" y="80" width="135" height="55" rx="6" fill="white"/>
+  <text x="457" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">4K</text>
+  <text x="457" y="122" text-anchor="middle" font-size="10" fill="#334155">2048×2048</text>
+  <text x="457" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#2563EB">2805 Token</text>
+
+  <text x="545" y="112" font-size="16" fill="#94A3B8">→</text>
+
+  <rect x="570" y="80" width="135" height="55" rx="6" fill="white"/>
+  <text x="637" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">5张高清</text>
+  <text x="637" y="122" text-anchor="middle" font-size="10" fill="#334155">5 × 1100</text>
+  <text x="637" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#EF4444">5500 Token</text>
+
+  <rect x="725" y="80" width="205" height="55" rx="6" fill="white"/>
+  <text x="827" y="103" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">选择?</text>
+  <text x="827" y="122" text-anchor="middle" font-size="9" fill="#64748B">有猫→low | 文档→high | 精细OCR→4K</text>
+  <text x="827" y="138" text-anchor="middle" font-size="9" fill="#2563EB">按需选择分辨率</text>
+
+  <rect x="30" y="155" width="900" height="50" rx="8" fill="white" filter="url(#shadow)"/>
+  <text x="480" y="178" text-anchor="middle" font-size="11" fill="#1E293B">公式: Token = 85 + (512×512_Tile数 × 170) · 一张4K图 = 85 + 16×170 = 2805 Token</text>
+  <text x="480" y="196" text-anchor="middle" font-size="10" fill="#64748B">省钱: 简单识别→low(85) · 文档阅读→high(~500) · OCR→high+高清DPI源图</text>
+</svg>

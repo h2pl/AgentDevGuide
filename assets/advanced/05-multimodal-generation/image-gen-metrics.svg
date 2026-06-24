@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="960" height="220" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">FID vs CLIP Score：生成质量的两个维度</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">一个量化画质 · 一个量化理解 · 两者不互相替代</text>
+
+  <rect x="30" y="85" width="430" height="70" rx="8" fill="white"/>
+  <rect x="30" y="85" width="430" height="4" rx="2" fill="#2563EB"/>
+  <text x="245" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#2563EB">FID ↓ 越低越好 — 衡量画质</text>
+  <text x="245" y="130" text-anchor="middle" font-size="9" fill="#64748B">生成图vs真实图的分布距离 · 值越小越接近真实 · DALL-E3: ~5 · SD: ~8-12</text>
+  <text x="245" y="148" text-anchor="middle" font-size="9" fill="#EF4444">局限: 只看整体统计不看单张 · 不是"好看"的完美度量</text>
+
+  <rect x="500" y="85" width="430" height="70" rx="8" fill="white"/>
+  <rect x="500" y="85" width="430" height="4" rx="2" fill="#D97706"/>
+  <text x="715" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#D97706">CLIP Score ↑ 越高越好 — 衡量理解</text>
+  <text x="715" y="130" text-anchor="middle" font-size="9" fill="#64748B">cos(CLIP(图), CLIP(Prompt文字)) · 值越大越图文一致</text>
+  <text x="715" y="148" text-anchor="middle" font-size="9" fill="#EF4444">局限: 只看图文匹配不看审美 · 丑陋的图如果跟Prompt匹配度很高</text>
+
+  <rect x="30" y="170" width="900" height="35" rx="6" fill="white" filter="url(#shadow)"/>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#475569">理想: FID低 + CLIP Score高 = 画质好且理解准</text>
+  <text x="700" y="192" text-anchor="middle" font-size="10" fill="#64748B">最终标准: 人类A/B测试 · FID+CLIP做大规模筛选</text>
+</svg>
