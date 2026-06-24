@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="380" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">TTS 技术三代演进 + 零样本克隆</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">从机械拼接 → 神经合成 → 开放式语音克隆</text>
+
+  <!-- 第一代 -->
+  <rect x="20" y="80" width="200" height="120" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="20" y="80" width="200" height="4" rx="2" fill="#94A3B8"/>
+  <text x="120" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">第一代 · 拼接式</text>
+  <text x="120" y="126" text-anchor="middle" font-size="10" fill="#94A3B8">~2000年代</text>
+  <text x="120" y="150" text-anchor="middle" font-size="10" fill="#64748B">预录音节→拼接</text>
+  <text x="120" y="168" text-anchor="middle" font-size="10" fill="#EF4444">✗ 机械感重</text>
+  <text x="120" y="184" text-anchor="middle" font-size="10" fill="#EF4444">✗ 不自然停顿</text>
+
+  <text x="235" y="145" font-size="14" fill="#94A3B8">→</text>
+
+  <!-- 第二代 -->
+  <rect x="260" y="80" width="220" height="120" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="260" y="80" width="220" height="4" rx="2" fill="#D97706"/>
+  <text x="370" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#D97706">第二代 · 神经TTS</text>
+  <text x="370" y="126" text-anchor="middle" font-size="10" fill="#94A3B8">2017-2022</text>
+  <text x="370" y="150" text-anchor="middle" font-size="10" fill="#64748B">Tacotron2+WaveNet</text>
+  <text x="370" y="168" text-anchor="middle" font-size="10" fill="#64748B">FastSpeech·VITS</text>
+  <text x="370" y="184" text-anchor="middle" font-size="10" fill="#059669">✓ 自然度大幅提升</text>
+
+  <text x="495" y="145" font-size="14" fill="#94A3B8">→</text>
+
+  <!-- 第三代 -->
+  <rect x="520" y="80" width="420" height="120" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="520" y="80" width="420" height="4" rx="2" fill="#059669"/>
+  <text x="730" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">第三代 · 零样本克隆 + 原生语音</text>
+  <text x="730" y="126" text-anchor="middle" font-size="10" fill="#94A3B8">2023-2026</text>
+  <text x="730" y="150" text-anchor="middle" font-size="10" fill="#64748B">ElevenLabs·GPT-4o原生·Fish Audio</text>
+  <text x="730" y="168" text-anchor="middle" font-size="10" fill="#059669">✓ 30秒音频→克隆声音</text>
+  <text x="730" y="184" text-anchor="middle" font-size="10" fill="#059669">✓ 情感控制+跨语言</text>
+
+  <!-- 底部: 零样本克隆详解 -->
+  <rect x="20" y="220" width="920" height="145" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">零样本语音克隆的技术流程</text>
+
+  <rect x="40" y="265" width="200" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="140" y="288" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">① 上传样本</text>
+  <text x="140" y="306" text-anchor="middle" font-size="9" fill="#64748B">30秒-1分钟音频</text>
+
+  <text x="250" y="295" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="275" y="265" width="200" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="375" y="288" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">② 提取声纹特征</text>
+  <text x="375" y="306" text-anchor="middle" font-size="9" fill="#64748B">音高·音色·节奏·口音</text>
+
+  <text x="485" y="295" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="510" y="265" width="200" height="55" rx="6" fill="#F1F5F9"/>
+  <text x="610" y="288" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">③ 驱动TTS模型</text>
+  <text x="610" y="306" text-anchor="middle" font-size="9" fill="#64748B">用特征辅助推理</text>
+
+  <text x="720" y="295" font-size="14" fill="#94A3B8">→</text>
+
+  <rect x="745" y="265" width="175" height="55" rx="6" fill="#DBEAFE"/>
+  <text x="832" y="288" text-anchor="middle" font-size="10" font-weight="600" fill="#2563EB">④ 任意文本出声</text>
+  <text x="832" y="306" text-anchor="middle" font-size="9" fill="#2563EB">用你的声音说出任何话</text>
+
+  <text x="480" y="348" text-anchor="middle" font-size="10" fill="#D97706">开源方案: GPT-SoVITS(5秒可克隆) · Fish Audio(中文最佳) | 商业方案: ElevenLabs(29语言)</text>
+</svg>

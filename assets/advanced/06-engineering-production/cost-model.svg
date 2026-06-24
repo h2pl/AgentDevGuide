@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="360" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">多模态应用成本模型</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">各模态 Token 消耗与月成本估算（GPT-4o 基准）</text>
+
+  <!-- 柱状图区域 -->
+  <text x="60" y="310" font-size="10" fill="#64748B">纯文字</text>
+  <rect x="55" y="175" width="50" height="135" rx="3" fill="#2563EB" opacity="0.6"/>
+  <text x="80" y="168" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">1×</text>
+  <text x="80" y="158" text-anchor="middle" font-size="8" fill="#64748B">~$0.006</text>
+
+  <text x="145" y="310" font-size="10" fill="#64748B">低分辨图</text>
+  <rect x="140" y="245" width="50" height="65" rx="3" fill="#2563EB" opacity="0.4"/>
+  <text x="165" y="238" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">0.4×</text>
+
+  <text x="230" y="310" font-size="10" fill="#64748B">标准图片</text>
+  <rect x="225" y="210" width="50" height="100" rx="3" fill="#D97706" opacity="0.6"/>
+  <text x="250" y="203" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">0.8×</text>
+  <text x="250" y="193" text-anchor="middle" font-size="8" fill="#64748B">~$0.008</text>
+
+  <text x="315" y="310" font-size="10" fill="#64748B">高清图片</text>
+  <rect x="310" y="175" width="50" height="135" rx="3" fill="#D97706" opacity="0.8"/>
+  <text x="335" y="168" text-anchor="middle" font-size="11" font-weight="600" fill="#D97706">2.8×</text>
+
+  <text x="400" y="310" font-size="10" fill="#64748B">5张图片</text>
+  <rect x="395" y="130" width="50" height="180" rx="3" fill="#EF4444" opacity="0.5"/>
+  <text x="420" y="123" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">4×</text>
+  <text x="420" y="113" text-anchor="middle" font-size="8" fill="#64748B">~$0.02</text>
+
+  <text x="485" y="310" font-size="10" fill="#64748B">视频16帧</text>
+  <rect x="480" y="95" width="50" height="215" rx="3" fill="#EF4444" opacity="0.6"/>
+  <text x="505" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">8×</text>
+
+  <text x="570" y="310" font-size="10" fill="#64748B">5分钟视频</text>
+  <rect x="565" y="40" width="50" height="270" rx="3" fill="#EF4444" opacity="0.8"/>
+  <text x="590" y="33" text-anchor="middle" font-size="11" font-weight="600" fill="#EF4444">25×</text>
+  <text x="590" y="23" text-anchor="middle" font-size="8" fill="#64748B">~$0.15</text>
+
+  <!-- 优化建议 -->
+  <rect x="650" y="75" width="290" height="245" rx="8" fill="white" filter="url(#card)"/>
+  <text x="795" y="102" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">省钱策略</text>
+
+  <rect x="670" y="118" width="250" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="795" y="137" text-anchor="middle" font-size="11" fill="#475569">模型路由: mini先筛 → 省 75%</text>
+
+  <rect x="670" y="154" width="250" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="795" y="173" text-anchor="middle" font-size="11" fill="#475569">Prompt缓存: 参考图 → 省 50%</text>
+
+  <rect x="670" y="190" width="250" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="795" y="209" text-anchor="middle" font-size="11" fill="#475569">低分辨率: 简单任务 → 省 80%</text>
+
+  <rect x="670" y="226" width="250" height="28" rx="5" fill="#F1F5F9"/>
+  <text x="795" y="245" text-anchor="middle" font-size="11" fill="#475569">本地部署SD: 高频→ 省 90%+</text>
+
+  <rect x="670" y="262" width="250" height="28" rx="5" fill="#DBEAFE"/>
+  <text x="795" y="281" text-anchor="middle" font-size="11" fill="#2563EB">日预算熔断: 防API账单爆炸</text>
+</svg>

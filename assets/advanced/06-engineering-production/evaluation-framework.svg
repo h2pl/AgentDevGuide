@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="400" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">多模态评估体系全景</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">理解侧 · 生成侧 · 视频 · 语音 — 四大领域的评估方法</text>
+
+  <!-- 理解侧 -->
+  <rect x="20" y="80" width="220" height="145" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="20" y="80" width="220" height="4" rx="2" fill="#2563EB"/>
+  <text x="130" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">理解侧评估</text>
+  <text x="130" y="126" text-anchor="middle" font-size="10" fill="#64748B">图文理解 · 准确率</text>
+  <text x="130" y="154" text-anchor="middle" font-size="11" fill="#334155">MMBench · 20维综合</text>
+  <text x="130" y="172" text-anchor="middle" font-size="11" fill="#334155">MME · 感知+认知</text>
+  <text x="130" y="190" text-anchor="middle" font-size="11" fill="#334155">OCRBench · 文字精度</text>
+  <text x="130" y="208" text-anchor="middle" font-size="11" fill="#334155">MathVista · 数学视觉</text>
+
+  <!-- 生成侧 -->
+  <rect x="260" y="80" width="220" height="145" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="260" y="80" width="220" height="4" rx="2" fill="#D97706"/>
+  <text x="370" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#D97706">生成侧评估</text>
+  <text x="370" y="126" text-anchor="middle" font-size="10" fill="#64748B">画质 · 图文匹配</text>
+  <text x="370" y="154" text-anchor="middle" font-size="11" fill="#334155">FID · 画质分布距离</text>
+  <text x="370" y="172" text-anchor="middle" font-size="11" fill="#334155">CLIP Score · 图文匹配度</text>
+  <text x="370" y="190" text-anchor="middle" font-size="11" fill="#334155">A/B测试 · 人类评判</text>
+  <text x="370" y="208" text-anchor="middle" font-size="11" fill="#334155">MOS · 主观评分1-5</text>
+
+  <!-- 视频 -->
+  <rect x="500" y="80" width="220" height="145" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="500" y="80" width="220" height="4" rx="2" fill="#059669"/>
+  <text x="610" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">视频评估</text>
+  <text x="610" y="126" text-anchor="middle" font-size="10" fill="#64748B">时序一致性</text>
+  <text x="610" y="154" text-anchor="middle" font-size="11" fill="#334155">FVD · 视频分布距离</text>
+  <text x="610" y="172" text-anchor="middle" font-size="11" fill="#334155">帧间SSIM · 结构相似</text>
+  <text x="610" y="190" text-anchor="middle" font-size="11" fill="#334155">时序一致性Loss</text>
+  <text x="610" y="208" text-anchor="middle" font-size="11" fill="#EF4444">⚠ 人工A/B为主</text>
+
+  <!-- 语音 -->
+  <rect x="740" y="80" width="200" height="145" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="740" y="80" width="200" height="4" rx="2" fill="#8B5CF6"/>
+  <text x="840" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#8B5CF6">语音评估</text>
+  <text x="840" y="126" text-anchor="middle" font-size="10" fill="#64748B">STT · TTS</text>
+  <text x="840" y="154" text-anchor="middle" font-size="11" fill="#334155">WER · 词错误率</text>
+  <text x="840" y="172" text-anchor="middle" font-size="11" fill="#334155">CER · 字错误率</text>
+  <text x="840" y="190" text-anchor="middle" font-size="11" fill="#334155">MOS · TTS自然度</text>
+  <text x="840" y="208" text-anchor="middle" font-size="11" fill="#334155">MCD · 频谱失真</text>
+
+  <!-- 底部: Benchmark表 -->
+  <rect x="20" y="245" width="920" height="140" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="275" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">常用 Benchmark</text>
+
+  <rect x="45" y="295" width="430" height="38" rx="5" fill="#F1F5F9"/>
+  <text x="55" y="318" font-size="11" fill="#334155">MMBench / MME</text><text x="240" y="318" font-size="10" fill="#64748B">通用图文理解·20+能力维度</text>
+
+  <rect x="45" y="340" width="430" height="38" rx="5" fill="#F1F5F9"/>
+  <text x="55" y="363" font-size="11" fill="#334155">Video-MME / AISHELL</text><text x="240" y="363" font-size="10" fill="#64748B">视频理解·中文语音</text>
+
+  <rect x="490" y="295" width="430" height="38" rx="5" fill="#F1F5F9"/>
+  <text x="500" y="318" font-size="11" fill="#334155">OCRBench / MathVista</text><text x="700" y="318" font-size="10" fill="#64748B">OCR精度·数学视觉推理</text>
+
+  <rect x="490" y="340" width="430" height="38" rx="5" fill="#F1F5F9"/>
+  <text x="500" y="363" font-size="11" fill="#334155">MMMU / FID / CLIP Score</text><text x="700" y="363" font-size="10" fill="#64748B">大学级理解·画质·图文匹配</text>
+</svg>

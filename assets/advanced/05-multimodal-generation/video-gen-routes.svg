@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" font-family="Segoe UI, PingFang SC, sans-serif">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.08"/></filter>
+    <filter id="card"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/></filter>
+  </defs>
+  <rect width="960" height="380" fill="#F8FAFC" rx="12" filter="url(#shadow)"/>
+  <text x="480" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#1E293B">视频生成技术路线对比</text>
+  <text x="480" y="56" text-anchor="middle" font-size="12" fill="#64748B">三种主流方案的技术差异与产品映射</text>
+
+  <!-- 方案一 -->
+  <rect x="20" y="80" width="295" height="135" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="20" y="80" width="295" height="4" rx="2" fill="#D97706"/>
+  <text x="167" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#D97706">视频扩散模型（U-Net）</text>
+  <text x="167" y="126" text-anchor="middle" font-size="10" fill="#64748B">2D扩散 → 3D空间+时间扩展</text>
+  <text x="167" y="150" text-anchor="middle" font-size="11" fill="#475569">核心：时间注意力层插入U-Net</text>
+  <text x="167" y="170" text-anchor="middle" font-size="10" fill="#2563EB">代表：SVD · AnimateDiff</text>
+  <text x="167" y="190" text-anchor="middle" font-size="10" fill="#059669">✓ 复用图像预训练权重</text>
+  <text x="167" y="206" text-anchor="middle" font-size="10" fill="#EF4444">✗ 长时序一致性不足</text>
+
+  <!-- 方案二 -->
+  <rect x="335" y="80" width="295" height="135" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="335" y="80" width="295" height="4" rx="2" fill="#2563EB"/>
+  <text x="482" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#2563EB">扩散 Transformer（DiT）</text>
+  <text x="482" y="126" text-anchor="middle" font-size="10" fill="#64748B">U-Net → Transformer 骨干</text>
+  <text x="482" y="150" text-anchor="middle" font-size="11" fill="#475569">核心：时空Patch + 自注意力</text>
+  <text x="482" y="170" text-anchor="middle" font-size="10" fill="#2563EB">代表：Sora（DiT架构）</text>
+  <text x="482" y="190" text-anchor="middle" font-size="10" fill="#059669">✓ 长时序理解·涌现3D能力</text>
+  <text x="482" y="206" text-anchor="middle" font-size="10" fill="#EF4444">✗ 成本极高（日均$1500万）</text>
+
+  <!-- 方案三 -->
+  <rect x="650" y="80" width="290" height="135" rx="8" fill="white" filter="url(#card)"/>
+  <rect x="650" y="80" width="290" height="4" rx="2" fill="#059669"/>
+  <text x="795" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">混合方案（当前主流）</text>
+  <text x="795" y="126" text-anchor="middle" font-size="10" fill="#64748B">视频扩散 + 图生视频为主</text>
+  <text x="795" y="150" text-anchor="middle" font-size="11" fill="#475569">核心：确定起点←图生视频</text>
+  <text x="795" y="170" text-anchor="middle" font-size="10" fill="#2563EB">代表：Runway · 可灵 · Seedance</text>
+  <text x="795" y="190" text-anchor="middle" font-size="10" fill="#059669">✓ 成本可控·实用价值高</text>
+  <text x="795" y="206" text-anchor="middle" font-size="10" fill="#D97706">△ 画质上限不如DiT</text>
+
+  <!-- 底部对比 -->
+  <rect x="20" y="235" width="920" height="130" rx="8" fill="white" filter="url(#card)"/>
+  <text x="480" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#1E293B">三种方案的关键权衡</text>
+
+  <rect x="45" y="280" width="175" height="70" rx="6" fill="#F1F5F9"/>
+  <text x="132" y="302" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">U-Net 扩散</text>
+  <text x="132" y="320" text-anchor="middle" font-size="10" fill="#64748B">速度: ★★★★</text>
+  <text x="132" y="338" text-anchor="middle" font-size="10" fill="#64748B">一致性: ★★★·成本: ★★★★</text>
+
+  <rect x="245" y="280" width="175" height="70" rx="6" fill="#F1F5F9"/>
+  <text x="332" y="302" text-anchor="middle" font-size="11" font-weight="600" fill="#475569">DiT Transformer</text>
+  <text x="332" y="320" text-anchor="middle" font-size="10" fill="#64748B">速度: ★★</text>
+  <text x="332" y="338" text-anchor="middle" font-size="10" fill="#64748B">一致性: ★★★★★·成本: ★</text>
+
+  <rect x="445" y="280" width="175" height="70" rx="6" fill="#DBEAFE"/>
+  <text x="532" y="302" text-anchor="middle" font-size="11" font-weight="600" fill="#2563EB">混合方案 ←</text>
+  <text x="532" y="320" text-anchor="middle" font-size="10" fill="#2563EB">速度: ★★★</text>
+  <text x="532" y="338" text-anchor="middle" font-size="10" fill="#2563EB">一致性: ★★★★·成本: ★★★</text>
+  <text x="532" y="352" text-anchor="middle" font-size="9" fill="#059669">当前最佳平衡</text>
+
+  <rect x="645" y="280" width="270" height="70" rx="6" fill="#F1F5F9"/>
+  <text x="780" y="300" text-anchor="middle" font-size="10" fill="#64748B">产物映射:</text>
+  <text x="780" y="318" text-anchor="middle" font-size="11" fill="#1E293B">U-Net → AnimateDiff</text>
+  <text x="780" y="336" text-anchor="middle" font-size="11" fill="#1E293B">DiT → Sora · 混合 → Runway/可灵</text>
+</svg>
